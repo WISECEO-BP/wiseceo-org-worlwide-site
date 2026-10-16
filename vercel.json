@@ -1,0 +1,8 @@
+{
+  "redirects": [
+    { "source": "/:page([a-z0-9-]+)", "destination": "/:page.html", "permanent": true },
+    { "source": "/:page([a-z0-9-]+)/", "destination": "/:page.html", "permanent": true },
+    { "source": "/articles/:page([a-z0-9-]+)", "destination": "/articles/:page.html", "permanent": true },
+    { "source": "/articles/:page([a-z0-9-]+)/", "destination": "/articles/:page.html", "permanent": true }
+  ]
+}
