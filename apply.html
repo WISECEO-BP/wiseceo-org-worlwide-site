@@ -1,0 +1,38 @@
+<!DOCTYPE html><html lang="en"><head><script>document.documentElement.className+=" js";setTimeout(function(){var e=document.querySelectorAll(".fade-in");for(var i=0;i<e.length;i++)e[i].classList.add("visible");},3000);</script><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Apply — W.I.S.E.C.E.O.</title><meta name="description" content="Apply to a W.I.S.E.C.E.O. program, join a waitlist, or partner with us."/><link rel="icon" type="image/webp" href="/logo.webp"/><link rel="stylesheet" href="/styles.css"/></head><body><nav><a href="/" class="nav-logo"><img src="/logo.webp" alt="W.I.S.E.C.E.O. logo"/><span>W.I.S.E.C.E.O.</span></a><div class="nav-links"><a href="/about.html">About</a><a href="/programs.html" class="active">Programs</a><a href="/literacy.html">Literacy</a><a href="/newsletter.html">News</a><a href="/#impact">Impact</a><a href="/give.html">Give</a><a href="/contact.html">Contact</a></div><a href="/give.html" class="nav-cta">Give</a></nav><section id="programs"><div class="programs-inner apply-wrap fade-in">
+<p class="section-label"><a href="/programs.html">Programs</a> · Program Intake</p>
+<h1 class="section-title" id="apply-title">Apply to a program.</h1>
+<p class="article-sub" id="apply-sub">Choose a program on our <a href="/programs.html">Programs page</a>, or complete the form below.</p>
+<div class="apply-note"><b>Your information stays private.</b> Applications go to W.I.S.E.C.E.O.'s secure program intake and are used only to contact you about this program. Applying does <b>not</b> sign you up for our newsletter.<br><b>Under 18?</b> A parent or guardian should complete or co-sign the application. Children under 13 must apply through a parent or guardian.</div>
+<div id="apply-form"></div>
+</div></section>
+<script>
+(function(){
+  // Paste the Airtable shared form link here (Form view -> Share -> copy link), e.g. https://airtable.com/appXXXX/shrXXXX
+  var FORM_URL = "";
+  var programs = {
+    "youth-leadership": ["Youth Leadership Academy", "Apply for the Youth Leadership Academy cohort."],
+    "education-access": ["Education Access & Equity", "Apply for the Education Access & Equity cohort."],
+    "digital-literacy": ["Digital Literacy & Coding (Waitlist)", "Join the waitlist for Digital Literacy & Coding."],
+    "workforce": ["Workforce Development (Waitlist)", "Join the waitlist for Workforce Development."],
+    "entrepreneurship": ["Entrepreneurship & Innovation (Partner)", "Partner with us on Entrepreneurship & Innovation."],
+    "community-resilience": ["Community Economic Resilience (Partner)", "Partner with us on Community Economic Resilience."]
+  };
+  var key = new URLSearchParams(location.search).get("program");
+  var p = programs[key];
+  if (p) {
+    document.getElementById("apply-title").textContent = p[1];
+    document.getElementById("apply-sub").textContent = "Complete the form below and our team will follow up with next steps.";
+  }
+  var box = document.getElementById("apply-form");
+  if (FORM_URL) {
+    var src = FORM_URL.replace("airtable.com/", "airtable.com/embed/");
+    if (p) src += (src.indexOf("?") < 0 ? "?" : "&") + "prefill_Program=" + encodeURIComponent(p[0]);
+    var f = document.createElement("iframe");
+    f.className = "apply-frame"; f.src = src; f.title = "Program application form"; f.loading = "lazy";
+    box.appendChild(f);
+  } else {
+    box.innerHTML = '<div class="apply-note">Online applications are opening soon. In the meantime, please <a href="/contact.html">contact us</a> and mention the program you are interested in.</div>';
+  }
+})();
+</script>
+<footer><div class="footer-logo"><img class="footer-logo-img" src="/logo.webp" alt="W.I.S.E.C.E.O. logo"/><span>W.I.S.E.C.E.O.</span> — Worldwide Institute for Success &amp; Excellence</div><p>"Creating Equity &amp; Opportunity" &nbsp;·&nbsp; 501(c)(3) Nonprofit Organization &nbsp;·&nbsp; EIN: 41-3404888</p><p style="margin-top:6px;">Mailing address: 7240 Towne Centre Blvd, Suite 78, Liberty Twp, OH 45069</p><p style="margin-top:6px;">Donations are tax-deductible to the fullest extent allowed by law.</p><p style="margin-top:12px;">© 2026 W.I.S.E.C.E.O. All rights reserved. &nbsp;·&nbsp; <a href="/about.html">About</a> &nbsp;·&nbsp; <a href="/literacy.html">Literacy</a> &nbsp;·&nbsp; <a href="/newsletter.html">News &amp; Resources</a> &nbsp;·&nbsp; <a href="/contact.html">Contact</a> &nbsp;·&nbsp; <a href="/privacy.html">Privacy Policy</a></p></footer><script src="/reveal.js" defer></script></body></html>
