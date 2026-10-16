@@ -10,3 +10,6 @@
 .news-resources .prog-card .post-tag{margin-bottom:8px}.news-resources .prog-card p{margin-bottom:16px}
 @media(max-width:900px){.industry-grid{grid-template-columns:1fr 1fr}.spotlight{grid-template-columns:1fr;padding:28px}}
 @media(max-width:620px){.post-grid{grid-template-columns:1fr}}
+
+.prog-card .prog-cta{display:table;margin-top:16px;background:var(--blue);color:var(--white);font-size:.82rem;font-weight:600;padding:8px 16px;border-radius:980px;text-decoration:none;transition:background .2s}.prog-card .prog-cta:hover{background:#0077ed}
+.apply-wrap{max-width:820px;margin:0 auto}.apply-frame{width:100%;min-height:1400px;border:0;border-radius:16px;background:var(--white)}.apply-note{background:var(--white);border-radius:16px;padding:20px 24px;margin:20px 0;line-height:1.6;color:#3a3a3c}
