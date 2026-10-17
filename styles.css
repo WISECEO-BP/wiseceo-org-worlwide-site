@@ -102,7 +102,7 @@ footer.site-footer{background:var(--off-white);border-top:1px solid var(--light-
 .footer-cols-wrap{display:grid;grid-template-columns:repeat(5,1fr);gap:28px}
 .footer-brand .footer-logo{display:inline-flex;align-items:center;gap:0;font-size:1rem;margin-bottom:12px}
 .site-footer .footer-brand p{font-size:.85rem;color:#515154;line-height:1.6;max-width:300px}
-.social-links{list-style:none;display:flex;gap:10px;margin:18px 0 0;padding:0}
+.social-links{list-style:none;display:flex;flex-wrap:wrap;gap:10px;max-width:300px;margin:18px 0 0;padding:0}
 .site-footer .social-links a{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:var(--white);border:1px solid var(--light-border);color:var(--dark);transition:background .2s,color .2s,border-color .2s}
 .site-footer .social-links a:hover{background:var(--blue);border-color:var(--blue);color:var(--white)}
 .social-links svg{width:18px;height:18px}
