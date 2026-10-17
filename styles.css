@@ -162,3 +162,41 @@ html.hc :focus-visible{outline:3px solid #ffeb3b!important;outline-offset:3px}
 .form-status a{color:inherit;font-weight:700;text-decoration:underline}
 .hp{position:absolute!important;left:-9999px;width:1px;height:1px;opacity:0}
 @media(max-width:480px){.nl-form{flex-direction:column}.nl-form button{width:100%}}
+
+/* Give dropdown */
+.give-menu{position:relative;margin-left:6px}
+.give-toggle{display:inline-flex;align-items:center;gap:4px;border:0;cursor:pointer;font-family:inherit;margin-left:0}
+.give-chev{width:14px;height:14px;transition:transform .2s}
+.give-toggle[aria-expanded="true"] .give-chev{transform:rotate(180deg)}
+.give-panel{position:absolute;right:0;top:calc(100% + 10px);width:min(320px,calc(100vw - 32px));background:var(--white);border:1px solid var(--light-border);border-radius:18px;box-shadow:0 18px 48px rgba(0,0,0,.18);padding:8px;z-index:1100}
+.give-panel[hidden]{display:none}
+.give-opt{display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:12px;color:var(--dark)}
+.give-opt:hover,.give-opt:focus-visible{background:var(--off-white)}
+.give-opt-member{background:#fff8e1}
+.give-opt-member:hover,.give-opt-member:focus-visible{background:#ffefc2}
+.go-icon{flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:var(--gold);color:var(--dark);display:flex;align-items:center;justify-content:center}
+.go-icon svg{width:17px;height:17px}
+.go-text{display:flex;flex-direction:column;gap:2px}
+.go-title{font-weight:700;font-size:.92rem}
+.go-price{display:inline-block;margin-left:4px;font-size:.75rem;font-weight:700;background:var(--dark);color:var(--white);border-radius:980px;padding:2px 8px;vertical-align:1px}
+.go-desc{font-size:.8rem;color:#515154;line-height:1.4}
+.give-note{font-size:.72rem;color:var(--gray);text-align:center;padding:8px 0 4px}
+.mm-give-once{display:block;text-align:center;margin:-12px 0 24px;color:var(--blue);font-weight:600}
+@media(max-width:620px){.nav-cta{display:inline-flex;padding:7px 12px}.give-menu{margin-left:2px}}
+
+/* Membership card (Give page) */
+.membership-card{background:linear-gradient(160deg,#2a2a2d,#1d1d1f);border:1px solid rgba(245,166,35,.45);border-radius:24px;padding:36px 32px;margin:0 auto 36px;max-width:520px;text-align:center;color:var(--white)}
+.mc-label{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-light);margin-bottom:8px}
+.mc-title{font-size:1.6rem;font-weight:700;letter-spacing:-.02em;margin-bottom:10px}
+.mc-price{margin-bottom:14px}
+.mc-price b{font-size:2.6rem;font-weight:800;letter-spacing:-.03em;color:var(--gold)}
+.mc-price span{color:rgba(255,255,255,.7);font-size:1rem;margin-left:2px}
+#donate .mc-copy{color:rgba(255,255,255,.78);font-size:.98rem;line-height:1.6;margin:0 auto 16px;max-width:420px}
+.mc-perks{list-style:none;padding:0;margin:0 auto 22px;max-width:360px;text-align:left}
+.mc-perks li{position:relative;padding:5px 0 5px 26px;color:rgba(255,255,255,.85);font-size:.92rem}
+.mc-perks li::before{content:"✓";position:absolute;left:4px;color:var(--gold);font-weight:800}
+.mc-btn{display:inline-block}
+.mc-fine{font-size:.78rem;color:rgba(255,255,255,.5);margin-top:14px}
+.give-once-label{color:rgba(255,255,255,.75);font-size:.95rem;margin:0 0 16px}
+html.hc .membership-card,html.hc .give-panel{border:2px solid #fff!important}
+html.hc .go-price{border:1px solid #fff!important}

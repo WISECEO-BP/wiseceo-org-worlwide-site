@@ -48,6 +48,23 @@ if(lang!=='en'){
   document.body.appendChild(gt);
 }
 
+/* ---- Give menu + membership link ---- */
+// One place to change the membership checkout link (e.g. a dedicated Donorbox membership campaign).
+var MEMBERSHIP_URL='https://donorbox.org/wiseceo-donate-today?default_interval=m&amount=4.99';
+$$('[data-membership-link]').forEach(function(a){a.href=MEMBERSHIP_URL;});
+var giveBtn=$('[data-give-toggle]'),givePanel=$('#give-panel');
+function setGive(open){
+  if(!giveBtn||!givePanel)return;
+  givePanel.hidden=!open;giveBtn.setAttribute('aria-expanded',open?'true':'false');
+}
+if(giveBtn&&givePanel){
+  giveBtn.addEventListener('click',function(e){e.stopPropagation();setGive(givePanel.hidden);if(!givePanel.hidden){var f=$('a',givePanel);if(f)f.focus();}});
+  document.addEventListener('click',function(e){if(!givePanel.hidden&&!givePanel.contains(e.target))setGive(false);});
+  givePanel.addEventListener('keydown',function(e){if(e.key==='Escape'){setGive(false);giveBtn.focus();}});
+  giveBtn.addEventListener('keydown',function(e){if(e.key==='Escape')setGive(false);});
+  givePanel.addEventListener('focusout',function(e){if(!givePanel.contains(e.relatedTarget)&&e.relatedTarget!==giveBtn)setGive(false);});
+}
+
 /* ---- Dialog helpers (focus trap + restore) ---- */
 function focusables(el){return $$('a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])',el).filter(function(n){return n.offsetParent!==null;});}
 function trap(el,e){
