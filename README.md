@@ -17,3 +17,9 @@ Every page carries the same utility bar (language selector, high-contrast switch
 main nav, mobile menu, search dialog and footer markup; `site.js` adds the behavior.
 When adding a page, copy that markup from an existing page and set
 `class="active" aria-current="page"` on its nav link.
+
+## Forms → Airtable
+
+The contact and newsletter forms save to Airtable through `api/contact.js` and
+`api/subscribe.js` (Vercel functions). Setup, field list and environment
+variables: [docs/AIRTABLE.md](docs/AIRTABLE.md).
