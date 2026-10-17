@@ -149,3 +149,16 @@ html.hc .sm-backdrop{background-color:rgba(0,0,0,.85)!important}
 html.hc .nav-logo img,html.hc .footer-logo-img,html.hc .hero-logo,html.hc .mm-top img{background-color:#fff!important;border-radius:6px;padding:2px}
 html.hc :focus-visible{outline:3px solid #ffeb3b!important;outline-offset:3px}
 @media (prefers-reduced-motion:reduce){.mobile-menu,nav,.hc-thumb,.hc-track{transition:none}}
+
+/* Newsletter sign-up + form states */
+.nl-signup{width:100%;max-width:460px;margin:0 auto}
+.nl-signup.nl-left{margin:0;flex:1 1 360px}
+.nl-signup.nl-left~.btn-secondary{align-self:flex-start}
+.nl-signup .nl-form{max-width:none}
+.nl-form button{border:0;cursor:pointer;font-family:inherit;white-space:nowrap}
+.nl-form button[disabled],#contactForm button[disabled]{opacity:.6;cursor:progress}
+.nl-signup .form-status{text-align:left;margin-top:12px}
+.form-status.info{display:block;background:var(--off-white);color:var(--dark)}
+.form-status a{color:inherit;font-weight:700;text-decoration:underline}
+.hp{position:absolute!important;left:-9999px;width:1px;height:1px;opacity:0}
+@media(max-width:480px){.nl-form{flex-direction:column}.nl-form button{width:100%}}
