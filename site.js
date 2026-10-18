@@ -6,7 +6,15 @@ function $$(s,c){return Array.prototype.slice.call((c||document).querySelectorAl
 function store(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v);}catch(e){return null;}}
 
 /* ---- Utility bar scroll-away ---- */
-function onScroll(){root.classList.toggle('ub-scrolled',window.scrollY>=36);}
+// Read scroll position inside requestAnimationFrame so it never forces an early layout.
+var scrolled=null,ticking=false;
+function onScroll(){
+  if(ticking)return;ticking=true;
+  requestAnimationFrame(function(){
+    ticking=false;var now=window.scrollY>=36;
+    if(now!==scrolled){scrolled=now;root.classList.toggle('ub-scrolled',now);}
+  });
+}
 window.addEventListener('scroll',onScroll,{passive:true});onScroll();
 
 /* ---- High contrast ---- */
