@@ -50,6 +50,46 @@ if(cf){
   });
 }
 
+/* ---------- Program application ---------- */
+var af=document.getElementById('applyForm');
+if(af){
+  var TITLES={'youth-leadership':'Apply for the Youth Leadership Academy cohort.','education-access':'Apply for the Education Access & Equity cohort.',
+    'digital-literacy':'Join the waitlist for Digital Literacy & Coding.','workforce':'Join the waitlist for Workforce Development.',
+    'entrepreneurship':'Partner with us on Entrepreneurship & Innovation.','community-resilience':'Partner with us on Community Economic Resilience.'};
+  var prog=af.querySelector('[name=program]'),who=af.querySelector('[name=applicant]'),gWrap=document.getElementById('af-guardian-wrap');
+  var key=new URLSearchParams(location.search).get('program');
+  if(TITLES[key]){prog.value=key;document.getElementById('apply-title').textContent=TITLES[key];}
+  var lang=af.querySelector('[name=language]');lang.value=siteLanguage();if(!lang.value)lang.value='English';
+  var syncGuardian=function(){var need=who.value&&who.value!=='adult';gWrap.hidden=!need;af.querySelector('[name=guardian]').required=need;};
+  who.addEventListener('change',syncGuardian);syncGuardian();
+  af.addEventListener('submit',function(e){
+    e.preventDefault();
+    var st=document.getElementById('applyStatus'),d=formData(af);
+    if(d.botcheck)return;
+    var missing=Array.prototype.filter.call(af.querySelectorAll('[required]'),function(el){return !el.value.trim();});
+    if(missing.length||!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test((d.email||'').trim())){
+      setStatus(st,'err','Please fill in the required fields marked with *.');(missing[0]||af.querySelector('[name=email]')).focus();return;
+    }
+    d.page=location.pathname;
+    setStatus(st,'info','Sending your application…');busy(af,true);
+    var label=prog.options[prog.selectedIndex].text;
+    var toAirtable=postJSON('/api/apply',d).then(function(r){return r.ok===true;},function(){return false;});
+    var toEmail=postJSON('https://api.web3forms.com/submit',{access_key:WEB3FORMS_KEY,subject:'Program application: '+label,
+        from_name:'wiseceo.org applications',name:d.name,email:d.email,replyto:d.email,program:label,applicant:who.options[who.selectedIndex].text,
+        guardian:d.guardian||'',phone:d.phone||'',location:d.location||'',language:d.language,goals:d.goals})
+      .then(function(r){return r.success===true;},function(){return false;});
+    Promise.all([toAirtable,toEmail]).then(function(res){
+      busy(af,false);
+      if(res[0]||res[1]){
+        setStatus(st,'ok','Thank you! Your application for '+label+' has been received. Our team will contact you at '+d.email.replace(/[<>&"]/g,'')+' with next steps.');
+        af.reset();lang.value=d.language;syncGuardian();
+      }else{
+        setStatus(st,'err','We couldn’t send your application just now. Please try again, or email us at <a href="mailto:admin@wiseceo.org">admin@wiseceo.org</a>.');
+      }
+    });
+  });
+}
+
 /* ---------- Newsletter sign-up forms ---------- */
 Array.prototype.forEach.call(document.querySelectorAll('[data-newsletter-form]'),function(f){
   var st=f.parentNode.querySelector('[data-nl-status]');
