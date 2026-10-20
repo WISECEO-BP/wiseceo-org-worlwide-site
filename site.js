@@ -73,6 +73,19 @@ if(giveBtn&&givePanel){
   givePanel.addEventListener('focusout',function(e){if(!givePanel.contains(e.relatedTarget)&&e.relatedTarget!==giveBtn)setGive(false);});
 }
 
+/* ---- Lightweight YouTube embeds: load the player only when someone presses play ---- */
+$$('[data-yt]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    e.preventDefault();
+    var f=document.createElement('iframe');
+    f.src='https://www.youtube-nocookie.com/embed/'+a.getAttribute('data-yt')+'?autoplay=1&rel=0';
+    f.title=a.getAttribute('aria-label').replace(/^Play video: /,'');
+    f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+    f.allowFullscreen=true;
+    a.parentNode.replaceChild(f,a);f.focus();
+  });
+});
+
 /* ---- Dialog helpers (focus trap + restore) ---- */
 function focusables(el){return $$('a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])',el).filter(function(n){return n.offsetParent!==null;});}
 function trap(el,e){
