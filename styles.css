@@ -218,3 +218,13 @@ html.hc .go-price{border:1px solid #fff!important}
 /* Contrast touch-ups */
 nav{background:rgba(255,255,255,.96)}
 .state-role{color:#515154}
+
+/* Organization information (About) */
+.org-info{background:var(--white);padding:90px 20px;border-top:1px solid var(--light-border)}
+.org-lead{font-size:1.05rem;color:#3a3a3c;line-height:1.7;max-width:760px;margin-bottom:28px}
+.org-facts{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:0}
+.org-facts>div{background:var(--off-white);border-radius:14px;padding:16px 18px}
+.org-facts dt{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--gray);margin-bottom:4px}
+.org-facts dd{margin:0;font-size:.98rem;color:var(--dark);line-height:1.5}
+.org-facts a{color:var(--blue);font-weight:600}
+@media(max-width:620px){.org-facts{grid-template-columns:1fr}}
