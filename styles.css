@@ -228,3 +228,18 @@ nav{background:rgba(255,255,255,.96)}
 .org-facts dd{margin:0;font-size:.98rem;color:var(--dark);line-height:1.5}
 .org-facts a{color:var(--blue);font-weight:600}
 @media(max-width:620px){.org-facts{grid-template-columns:1fr}}
+
+/* Give page: one-time gift cards (black & gold, matches membership card) */
+.give-once{max-width:700px;margin:8px auto 0}
+.go-heading{color:var(--white);font-size:1.6rem;font-weight:700;letter-spacing:-.02em;margin-bottom:22px}
+.gift-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;text-align:left}
+.gift-card{display:flex;flex-direction:column;gap:8px;background:linear-gradient(160deg,#2a2a2d,#1d1d1f);border:1px solid rgba(245,166,35,.45);border-radius:20px;padding:24px 22px;color:var(--white);transition:transform .15s,border-color .2s,box-shadow .2s}
+.gift-card:hover,.gift-card:focus-visible{transform:translateY(-3px);border-color:var(--gold);box-shadow:0 10px 30px rgba(245,166,35,.15)}
+.gc-amt{font-size:2.1rem;font-weight:800;letter-spacing:-.03em;color:var(--gold);line-height:1}
+.gift-other .gc-amt{font-size:1.6rem}
+.gc-does{color:rgba(255,255,255,.8);font-size:.95rem;line-height:1.5;flex:1}
+.gc-badge{align-self:flex-start;font-size:.72rem;font-weight:700;color:var(--dark);background:var(--gold-light);border-radius:980px;padding:3px 10px}
+.gc-cta{margin-top:6px;font-weight:700;color:var(--gold-light);font-size:.92rem}
+.gift-secure{color:rgba(255,255,255,.65);font-size:.85rem;margin-top:18px;line-height:1.6}
+@media(max-width:620px){.gift-grid{grid-template-columns:1fr}}
+html.hc .gift-card{border:2px solid #fff!important}
