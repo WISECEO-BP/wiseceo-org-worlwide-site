@@ -5,7 +5,7 @@
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noindex">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>ELL Prize Drawing: Claim Your Prize | W.I.S.E.C.E.O.</title>
+<title>Prize Drawing: Claim Your Prize | W.I.S.E.C.E.O.</title>
 <style>
 :root{
   color-scheme: light;
@@ -63,6 +63,7 @@ input[type=text],input[type=email],input[type=tel],select{
 }
 input:focus-visible,select:focus-visible,button:focus-visible,.choice input:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
 .row{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 @media (max-width:560px){.row{grid-template-columns:1fr 1fr}.row .city{grid-column:1 / -1}}
 fieldset{border:0;margin:0 0 14px;padding:0}
 .choices{display:flex;gap:10px;flex-wrap:wrap}
@@ -90,7 +91,7 @@ footer{text-align:center;color:var(--muted);font-size:13px;margin-top:8px}
 <body>
 <div class="wrap">
   <header class="hero">
-    <span class="tag">🏆 ELL Prize Drawing Winner</span>
+    <span class="tag">🏆 Prize Drawing Winner</span>
     <h1>Claim Your Prize</h1>
     <p>Congratulations! Tell us where to mail your prize. It takes about two minutes. We’ll mail your prize once your address is confirmed.</p>
   </header>
@@ -99,14 +100,24 @@ footer{text-align:center;color:var(--muted);font-size:13px;margin-top:8px}
     <p class="note">📦 <strong>U.S. addresses only.</strong> We can ship to any of the 50 states and Washington, D.C. We can’t ship internationally at this time.</p>
 
     <h2>About you</h2>
-    <div class="field">
-      <label for="name">Your full name <span class="req">*</span></label>
-      <input type="text" id="name" name="name" autocomplete="name" maxlength="120" required>
+    <div class="row2">
+      <div class="field">
+        <label for="first">First name <span class="req">*</span></label>
+        <input type="text" id="first" name="first" autocomplete="given-name" maxlength="60" required>
+      </div>
+      <div class="field">
+        <label for="last">Last name <span class="req">*</span></label>
+        <input type="text" id="last" name="last" autocomplete="family-name" maxlength="60" required>
+      </div>
     </div>
     <div class="field">
       <label for="email">Personal email <span class="req">*</span>
         <span class="hint">Please use an email you’ll still check after the school year, not a school account.</span></label>
       <input type="email" id="email" name="email" autocomplete="email" inputmode="email" maxlength="254" required>
+    </div>
+    <div class="field">
+      <label for="email2">Type your email again <span class="req">*</span></label>
+      <input type="email" id="email2" name="email2" autocomplete="email" inputmode="email" maxlength="254" required>
     </div>
     <div class="field">
       <label for="phone">Phone number <span class="req">*</span></label>
@@ -184,7 +195,7 @@ function digits(s){return s.replace(/\D/g,'').replace(/^1(?=\d{10}$)/,'');}
 
 function syncAge(){var m=minor();gWrap.hidden=!m;g.required=m;minorConfirm.hidden=!m;preview();}
 function preview(){
-  var name=val('name'),line1=val('street'),line2=val('street2'),city=val('city'),state=val('state'),zip=val('zip');
+  var name=(val('first')+' '+val('last')).trim(),line1=val('street'),line2=val('street2'),city=val('city'),state=val('state'),zip=val('zip');
   if(!name&&!line1){document.getElementById('labelPreview').textContent='Fill in the form to see your shipping label.';return;}
   var top=(name||'[Your name]')+(minor()?' c/o '+(val('guardian')||'[Parent/guardian name]'):'');
   var lines=[top,(line1||'[Street address]')+(line2?', '+line2:''),(city||'[City]')+', '+(state||'[State]')+' '+(zip||'[ZIP]')];
@@ -212,8 +223,10 @@ function check(){
   Array.prototype.forEach.call(f.querySelectorAll('[aria-invalid]'),function(e){e.removeAttribute('aria-invalid');});
   var bad=[];
   function need(n,ok,msg){var el=f.elements[n];el=el.length&&!el.tagName?el[0]:el;if(!ok){mark(el,msg);bad.push(el);}}
-  need('name',val('name'),'Please enter your full name.');
+  need('first',val('first'),'Please enter your first name.');
+  need('last',val('last'),'Please enter your last name.');
   need('email',EMAIL_RE.test(val('email')),'Please enter a valid email address.');
+  need('email2',val('email2')&&val('email2').toLowerCase()===val('email').toLowerCase(),'The two emails don’t match.');
   need('phone',digits(val('phone')).length===10,'Please enter a 10-digit U.S. phone number.');
   need('adult',val('adult'),'Please choose one.');
   if(minor())need('guardian',val('guardian'),'Please enter your parent or guardian’s full name.');
