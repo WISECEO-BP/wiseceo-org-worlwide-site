@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ELL Prize Drawing: Claim Your Prize | W.I.S.E.C.E.O.</title>
+<style>
+:root{
+  color-scheme: light;
+  --bg-a:#d6ecff; --bg-b:#ffdede; --dots:rgba(30,91,184,.17);
+  --card:#ffffff; --card-soft:#eef5ff; --ink:#14213d; --muted:#55617c; --line:#14213d;
+  --hero-a:#1E5BB8; --hero-b:#13A27C;
+  --red:#E53935; --yellow:#FFD23F; --yellow-ink:#14213d; --blue:#1E5BB8; --green:#13A27C;
+  --err:#b3261e; --ok-bg:#e3f7ee; --err-bg:#fdecea;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --bg-a:#0b1530; --bg-b:#2a0d18; --dots:rgba(120,170,255,.12);
+    --card:#141e38; --card-soft:#1b2849; --ink:#eef2ff; --muted:#a6b1cf; --line:#02040b;
+    --hero-a:#1a4fa3; --hero-b:#0f8a69;
+    --red:#ff5a52; --blue:#6b9ef0; --green:#3ccf9e;
+    --err:#ff8a80; --ok-bg:#12352a; --err-bg:#3a1416;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --bg-a:#0b1530; --bg-b:#2a0d18; --dots:rgba(120,170,255,.12);
+  --card:#141e38; --card-soft:#1b2849; --ink:#eef2ff; --muted:#a6b1cf; --line:#02040b;
+  --hero-a:#1a4fa3; --hero-b:#0f8a69;
+  --red:#ff5a52; --blue:#6b9ef0; --green:#3ccf9e;
+  --err:#ff8a80; --ok-bg:#12352a; --err-bg:#3a1416;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{
+  margin:0; font-family:system-ui,-apple-system,'Segoe UI',sans-serif; color:var(--ink); line-height:1.45;
+  background-color:var(--bg-a);
+  background-image:radial-gradient(var(--dots) 1.3px,transparent 1.7px),linear-gradient(135deg,var(--bg-a) 0%,var(--bg-b) 100%);
+  background-size:14px 14px,100% 100%; background-attachment:fixed;
+}
+.wrap{max-width:720px;margin:0 auto;padding:24px 16px 56px}
+.hero{
+  text-align:center; color:#fff; border:3px solid var(--line); border-radius:18px; box-shadow:6px 6px 0 var(--line);
+  padding:26px 18px 22px; margin-bottom:24px;
+  background:repeating-conic-gradient(from 0deg at 50% 118%, rgba(255,255,255,.11) 0deg 5deg, transparent 5deg 10deg),
+    linear-gradient(135deg,var(--hero-a) 0%,var(--hero-b) 100%);
+}
+.tag{display:inline-block;background:var(--red);color:#fff;border:2px solid var(--line);padding:5px 14px;border-radius:999px;font-weight:900;font-size:14px;transform:rotate(-2deg)}
+h1{font-family:'Impact','Arial Black',sans-serif;font-weight:400;letter-spacing:.04em;font-size:clamp(28px,6vw,42px);margin:12px 0 6px;line-height:1.1;text-shadow:3px 3px 0 var(--line)}
+.hero p{margin:0 auto;max-width:520px}
+.card{background:var(--card);border:3px solid var(--line);border-radius:14px;box-shadow:5px 5px 0 var(--line);padding:20px 18px 22px;margin-bottom:22px}
+h2{font-size:19px;margin:0 0 12px}
+.note{background:rgba(255,210,63,.2);border:2px dashed var(--yellow);padding:10px 14px;border-radius:10px;font-size:15px;margin:0 0 16px}
+.field{margin-bottom:14px}
+label,.legend{display:block;font-weight:800;margin-bottom:5px}
+.req{color:var(--red)}
+.hint{display:block;font-size:13px;color:var(--muted);font-weight:400;margin-top:2px}
+input[type=text],input[type=email],input[type=tel],select{
+  width:100%;font:inherit;font-size:16px;color:var(--ink);background:var(--card-soft);
+  border:2px solid var(--line);border-radius:10px;padding:10px 12px;
+}
+input:focus-visible,select:focus-visible,button:focus-visible,.choice input:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+.row{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px}
+@media (max-width:560px){.row{grid-template-columns:1fr 1fr}.row .city{grid-column:1 / -1}}
+fieldset{border:0;margin:0 0 14px;padding:0}
+.choices{display:flex;gap:10px;flex-wrap:wrap}
+.choice{display:flex;align-items:center;gap:8px;background:var(--card-soft);border:2px solid var(--line);border-radius:999px;padding:8px 14px;font-weight:700;cursor:pointer}
+.choice input{width:18px;height:18px;margin:0}
+.check{display:flex;gap:10px;align-items:flex-start;font-weight:400}
+.check input{width:20px;height:20px;margin-top:2px;flex:none}
+.label-preview{background:var(--card-soft);border:2px solid var(--line);border-radius:10px;padding:12px 14px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:15px;white-space:pre-line;min-height:3em}
+.err-msg{display:block;color:var(--err);font-size:13px;font-weight:700;margin-top:4px}
+[aria-invalid=true]{border-color:var(--err)!important}
+button{font:inherit;font-weight:900;font-size:17px;background:var(--yellow);color:var(--yellow-ink);border:3px solid var(--line);border-radius:999px;padding:12px 26px;box-shadow:3px 3px 0 var(--line);cursor:pointer}
+button:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--line)}
+button[disabled]{opacity:.6;cursor:wait}
+.status{margin-top:14px;padding:12px 14px;border-radius:10px;font-weight:700}
+.status:empty{display:none}
+.status.ok{background:var(--ok-bg);border:2px solid var(--green)}
+.status.err{background:var(--err-bg);border:2px solid var(--err)}
+.status a{color:inherit}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.privacy{font-size:14px;color:var(--muted)}
+.privacy a{color:var(--blue)}
+footer{text-align:center;color:var(--muted);font-size:13px;margin-top:8px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <span class="tag">🏆 ELL Prize Drawing Winner</span>
+    <h1>Claim Your Prize</h1>
+    <p>Congratulations! Tell us where to mail your prize. It takes about two minutes. We’ll mail your prize once your address is confirmed.</p>
+  </header>
+
+  <form class="card" id="prizeForm" novalidate>
+    <p class="note">📦 <strong>U.S. addresses only.</strong> We can ship to any of the 50 states and Washington, D.C. We can’t ship internationally at this time.</p>
+
+    <h2>About you</h2>
+    <div class="field">
+      <label for="name">Your full name <span class="req">*</span></label>
+      <input type="text" id="name" name="name" autocomplete="name" maxlength="120" required>
+    </div>
+    <div class="field">
+      <label for="email">Personal email <span class="req">*</span>
+        <span class="hint">Please use an email you’ll still check after the school year, not a school account.</span></label>
+      <input type="email" id="email" name="email" autocomplete="email" inputmode="email" maxlength="254" required>
+    </div>
+    <div class="field">
+      <label for="phone">Phone number <span class="req">*</span></label>
+      <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="(555) 555-5555" maxlength="20" required>
+    </div>
+
+    <fieldset>
+      <legend class="legend">Are you 18 or older? <span class="req">*</span></legend>
+      <div class="choices" id="ageChoices">
+        <label class="choice"><input type="radio" name="adult" value="yes" required> Yes, I’m 18 or older</label>
+        <label class="choice"><input type="radio" name="adult" value="no"> No, I’m under 18</label>
+      </div>
+    </fieldset>
+    <div class="field" id="guardianWrap" hidden>
+      <label for="guardian">Parent or guardian’s full name <span class="req">*</span>
+        <span class="hint">Because you’re under 18, your prize will be shipped in your name, care of (c/o) your parent or guardian, so it reaches the right person at your address.</span></label>
+      <input type="text" id="guardian" name="guardian" autocomplete="off" maxlength="120">
+    </div>
+
+    <h2>Shipping address</h2>
+    <div class="field">
+      <label for="street">Street address <span class="req">*</span></label>
+      <input type="text" id="street" name="street" autocomplete="address-line1" maxlength="150" required>
+    </div>
+    <div class="field">
+      <label for="street2">Apartment, suite, unit <span class="hint" style="display:inline">(optional)</span></label>
+      <input type="text" id="street2" name="street2" autocomplete="address-line2" maxlength="80">
+    </div>
+    <div class="row">
+      <div class="field city">
+        <label for="city">City <span class="req">*</span></label>
+        <input type="text" id="city" name="city" autocomplete="address-level2" maxlength="80" required>
+      </div>
+      <div class="field">
+        <label for="state">State <span class="req">*</span></label>
+        <select id="state" name="state" autocomplete="address-level1" required><option value="">Choose…</option></select>
+      </div>
+      <div class="field">
+        <label for="zip">ZIP code <span class="req">*</span></label>
+        <input type="text" id="zip" name="zip" autocomplete="postal-code" inputmode="numeric" maxlength="10" placeholder="12345" required>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="legend">Your package will be addressed like this:</span>
+      <div class="label-preview" id="labelPreview" aria-live="polite">Fill in the form to see your shipping label.</div>
+    </div>
+
+    <div class="field">
+      <label class="check"><input type="checkbox" id="confirm" name="confirm" value="yes" required>
+        <span>The information above is correct.<span id="minorConfirm" hidden> My parent or guardian knows I’m sharing this address to receive my prize.</span> <span class="req">*</span></span></label>
+    </div>
+
+    <div class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+
+    <button type="submit">Send my shipping info</button>
+    <div class="status" id="status" role="status" aria-live="polite"></div>
+  </form>
+
+  <p class="privacy">🔒 <strong>Your privacy:</strong> we use this information only to ship your prize and to contact you about it. We don’t sell or share it, and this page has no ads, trackers or cookies. See our <a href="/privacy">privacy policy</a>. Questions? Email <a href="mailto:admin@wiseceo.org">admin@wiseceo.org</a>.</p>
+  <footer>W.I.S.E.C.E.O. · wiseceo.org</footer>
+</div>
+
+<script>
+(function(){
+var STATES=[["AL","Alabama"],["AK","Alaska"],["AZ","Arizona"],["AR","Arkansas"],["CA","California"],["CO","Colorado"],["CT","Connecticut"],["DE","Delaware"],["DC","District of Columbia"],["FL","Florida"],["GA","Georgia"],["HI","Hawaii"],["ID","Idaho"],["IL","Illinois"],["IN","Indiana"],["IA","Iowa"],["KS","Kansas"],["KY","Kentucky"],["LA","Louisiana"],["ME","Maine"],["MD","Maryland"],["MA","Massachusetts"],["MI","Michigan"],["MN","Minnesota"],["MS","Mississippi"],["MO","Missouri"],["MT","Montana"],["NE","Nebraska"],["NV","Nevada"],["NH","New Hampshire"],["NJ","New Jersey"],["NM","New Mexico"],["NY","New York"],["NC","North Carolina"],["ND","North Dakota"],["OH","Ohio"],["OK","Oklahoma"],["OR","Oregon"],["PA","Pennsylvania"],["RI","Rhode Island"],["SC","South Carolina"],["SD","South Dakota"],["TN","Tennessee"],["TX","Texas"],["UT","Utah"],["VT","Vermont"],["VA","Virginia"],["WA","Washington"],["WV","West Virginia"],["WI","Wisconsin"],["WY","Wyoming"]];
+var f=document.getElementById('prizeForm'),st=document.getElementById('status'),sel=document.getElementById('state');
+STATES.forEach(function(s){var o=document.createElement('option');o.value=s[0];o.textContent=s[1];sel.appendChild(o);});
+
+var EMAIL_RE=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/,ZIP_RE=/^\d{5}(-\d{4})?$/;
+var gWrap=document.getElementById('guardianWrap'),g=document.getElementById('guardian'),minorConfirm=document.getElementById('minorConfirm');
+function val(n){var el=f.elements[n];return el&&el.value?el.value.trim():'';}
+function minor(){return val('adult')==='no';}
+function digits(s){return s.replace(/\D/g,'').replace(/^1(?=\d{10}$)/,'');}
+
+function syncAge(){var m=minor();gWrap.hidden=!m;g.required=m;minorConfirm.hidden=!m;preview();}
+function preview(){
+  var name=val('name'),line1=val('street'),line2=val('street2'),city=val('city'),state=val('state'),zip=val('zip');
+  if(!name&&!line1){document.getElementById('labelPreview').textContent='Fill in the form to see your shipping label.';return;}
+  var top=(name||'[Your name]')+(minor()?' c/o '+(val('guardian')||'[Parent/guardian name]'):'');
+  var lines=[top,(line1||'[Street address]')+(line2?', '+line2:''),(city||'[City]')+', '+(state||'[State]')+' '+(zip||'[ZIP]')];
+  document.getElementById('labelPreview').textContent=lines.join('\n');
+}
+Array.prototype.forEach.call(f.querySelectorAll('[name=adult]'),function(r){r.addEventListener('change',syncAge);});
+f.addEventListener('input',preview);
+
+function errHost(el){return el.type==='radio'?document.getElementById('ageChoices'):el.type==='checkbox'?el.closest('.field'):el;}
+function mark(el,msg){
+  el.setAttribute('aria-invalid','true');
+  var e=document.createElement('span');e.className='err-msg';e.textContent=msg;errHost(el).insertAdjacentElement('afterend',e);
+}
+// Clear a field's error as soon as the student changes it.
+function unmark(e){
+  var el=e.target,first=el.type==='radio'?f.elements.adult[0]:el;
+  if(!first.hasAttribute||!first.hasAttribute('aria-invalid'))return;
+  first.removeAttribute('aria-invalid');
+  var next=errHost(first).nextElementSibling;if(next&&next.className==='err-msg')next.remove();
+  if(!f.querySelector('[aria-invalid]')){st.className='status';st.textContent='';}
+}
+f.addEventListener('input',unmark);f.addEventListener('change',unmark);
+function check(){
+  Array.prototype.forEach.call(f.querySelectorAll('.err-msg'),function(e){e.remove();});
+  Array.prototype.forEach.call(f.querySelectorAll('[aria-invalid]'),function(e){e.removeAttribute('aria-invalid');});
+  var bad=[];
+  function need(n,ok,msg){var el=f.elements[n];el=el.length&&!el.tagName?el[0]:el;if(!ok){mark(el,msg);bad.push(el);}}
+  need('name',val('name'),'Please enter your full name.');
+  need('email',EMAIL_RE.test(val('email')),'Please enter a valid email address.');
+  need('phone',digits(val('phone')).length===10,'Please enter a 10-digit U.S. phone number.');
+  need('adult',val('adult'),'Please choose one.');
+  if(minor())need('guardian',val('guardian'),'Please enter your parent or guardian’s full name.');
+  need('street',val('street'),'Please enter your street address.');
+  need('city',val('city'),'Please enter your city.');
+  need('state',val('state'),'Please choose your state.');
+  need('zip',ZIP_RE.test(val('zip')),'Please enter a 5-digit ZIP code.');
+  need('confirm',f.elements.confirm.checked,'Please check this box to confirm.');
+  if(bad.length)bad[0].focus();
+  return !bad.length;
+}
+
+f.addEventListener('submit',function(e){
+  e.preventDefault();
+  if(val('website'))return;
+  st.className='status';st.textContent='';
+  if(!check()){st.className='status err';st.textContent='Please fix the highlighted fields.';return;}
+  var data={};new FormData(f).forEach(function(v,k){data[k]=typeof v==='string'?v.trim():v;});
+  data.page=location.pathname;
+  var btn=f.querySelector('button');btn.disabled=true;btn.textContent='Sending…';
+  fetch('/api/prize',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data)})
+    .then(function(r){return r.json().catch(function(){return {};});})
+    .then(function(r){
+      if(r.ok!==true)throw new Error(r.error||'failed');
+      st.className='status ok';
+      st.textContent='🎉 Got it! Your prize will ship to the address above. We’ll email '+data.email+' if we have any questions.';
+      f.reset();syncAge();
+    })
+    .catch(function(){
+      st.className='status err';
+      st.innerHTML='We couldn’t send your form just now. Please try again in a few minutes, or email <a href="mailto:admin@wiseceo.org">admin@wiseceo.org</a>.';
+    })
+    .then(function(){btn.disabled=false;btn.textContent='Send my shipping info';});
+});
+syncAge();
+})();
+</script>
+</body>
+</html>

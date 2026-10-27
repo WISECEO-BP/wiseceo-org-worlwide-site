@@ -1,5 +1,6 @@
 {
   "redirects": [
+    { "source": "/ELLStudentRegistration", "destination": "/ellstudentregistration.html", "permanent": false },
     { "source": "/:page([a-z0-9-]+)", "destination": "/:page.html", "permanent": true },
     { "source": "/:page([a-z0-9-]+)/", "destination": "/:page.html", "permanent": true },
     { "source": "/articles/:page([a-z0-9-]+)", "destination": "/articles/:page.html", "permanent": true },
@@ -11,6 +12,12 @@
       { "key": "Referrer-Policy", "value": "no-referrer" },
       { "key": "X-Robots-Tag", "value": "noindex" },
       { "key": "Content-Security-Policy", "value": "default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src 'self' data:; base-uri 'none'; form-action 'none'" }
+    ]},
+    { "source": "/ellstudentregistration.html", "headers": [
+      { "key": "Cache-Control", "value": "no-store" },
+      { "key": "Referrer-Policy", "value": "no-referrer" },
+      { "key": "X-Robots-Tag", "value": "noindex" },
+      { "key": "Content-Security-Policy", "value": "default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; connect-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'; frame-ancestors 'none'" }
     ]}
   ]
 }
