@@ -1,7 +1,7 @@
 /* Contact + newsletter forms: save to Airtable via /api, with email fallbacks. */
 (function(){
 var WEB3FORMS_KEY='d066dff7-b541-4154-922e-143075b3f688';
-var BEEHIIV_URL='https://wiseceo.beehiiv.com/subscribe';
+var BEEHIIV_URL='https://wiseceonewsletter.wiseceo.org/subscribe';
 var LANGS={es:'Spanish',ar:'Arabic',fr:'French',ht:'Haitian Creole',ps:'Pashto',fa:'Dari / Persian',uk:'Ukrainian',
   sw:'Swahili',so:'Somali',ne:'Nepali',vi:'Vietnamese',pt:'Portuguese','zh-CN':'Chinese (Simplified)'};
 
