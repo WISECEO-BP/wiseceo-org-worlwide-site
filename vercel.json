@@ -1,9 +1,6 @@
 {
   "redirects": [
     { "source": "/StudentRegistration", "destination": "/studentregistration.html", "permanent": false },
-    { "source": "/ELLStudentRegistration", "destination": "/studentregistration.html", "permanent": false },
-    { "source": "/ellstudentregistration", "destination": "/studentregistration.html", "permanent": false },
-    { "source": "/ellstudentregistration.html", "destination": "/studentregistration.html", "permanent": false },
     { "source": "/:page([a-z0-9-]+)", "destination": "/:page.html", "permanent": true },
     { "source": "/:page([a-z0-9-]+)/", "destination": "/:page.html", "permanent": true },
     { "source": "/articles/:page([a-z0-9-]+)", "destination": "/articles/:page.html", "permanent": true },
