@@ -5,7 +5,7 @@
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noindex">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Prize Drawing: Claim Your Prize | W.I.S.E.C.E.O.</title>
+<title>Prize Drawing: Student Registration | W.I.S.E.C.E.O.</title>
 <style>
 :root{
   color-scheme: light;
@@ -92,12 +92,21 @@ footer{text-align:center;color:var(--muted);font-size:13px;margin-top:8px}
 <body>
 <div class="wrap">
   <header class="hero">
-    <span class="tag">🏆 Prize Drawing Winner</span>
-    <h1>Claim Your Prize</h1>
-    <p>Congratulations! Tell us where to mail your prize. It takes about two minutes. We’ll mail your prize once your address is confirmed.</p>
+    <span class="tag">🏆 Prize Drawing</span>
+    <h1>Student Registration</h1>
+    <p>Won a prize? Tell us where to mail it. Didn’t win this time? Sign up anyway so you’re ready next time. It takes about two minutes.</p>
   </header>
 
   <form class="card" id="prizeForm" novalidate>
+    <fieldset>
+      <legend class="legend">Did you win a prize in this drawing?</legend>
+      <div class="choices" id="wonChoices">
+        <label class="choice"><input type="radio" name="won" value="yes"> Yes, I won! 🎉</label>
+        <label class="choice"><input type="radio" name="won" value="no"> No, not this time</label>
+      </div>
+      <p class="hint" style="margin-top:8px"><strong>Didn’t win this time? You can win next time!</strong> Fill out the form anyway and choose <strong>No</strong> (or leave it blank), so you’re all set when you win.</p>
+    </fieldset>
+
     <p class="note">📦 <strong>U.S. addresses only.</strong> We can ship to any of the 50 states and Washington, D.C. We can’t ship internationally at this time.</p>
 
     <h2>About you</h2>
@@ -189,7 +198,7 @@ footer{text-align:center;color:var(--muted);font-size:13px;margin-top:8px}
     </div>
 
     <div class="field">
-      <span class="legend">Your package will be addressed like this:</span>
+      <span class="legend">Prizes will be addressed like this:</span>
       <div class="label-preview" id="labelPreview" aria-live="polite">Fill in the form to see your shipping label.</div>
     </div>
 
@@ -289,7 +298,8 @@ f.addEventListener('submit',function(e){
     .then(function(r){
       if(r.ok!==true)throw new Error(r.error||'failed');
       st.className='status ok';
-      st.textContent='🎉 Got it! Your prize will ship to the address above. We’ll '+(data.contact==='text'?'text '+data.phone:'email '+data.email)+' if we have any questions.';
+      var how=data.contact==='text'?'text '+data.phone:'email '+data.email;
+      st.textContent=data.won==='yes'?'🎉 Got it! Your prize will ship to the address above. We’ll '+how+' if we have any questions.':'✅ You’re all set! If you win a future drawing, we’ll '+how+' and mail your prize to the address above.';
       f.reset();syncAge();syncContact();
     })
     .catch(function(){
