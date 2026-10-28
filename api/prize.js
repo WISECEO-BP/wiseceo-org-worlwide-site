@@ -18,11 +18,14 @@ module.exports = async function handler(req, res) {
 
   const first = clean(body.first, 60);
   const last = clean(body.last, 60);
-  const email = clean(body.email, 254).toLowerCase();
-  const email2 = clean(body.email2, 254).toLowerCase();
+  const byText = body.contact === 'text';
+  const email = byText ? '' : clean(body.email, 254).toLowerCase();
+  const email2 = byText ? '' : clean(body.email2, 254).toLowerCase();
   const digits = clean(body.phone, 20).replace(/\D/g, '').replace(/^1(?=\d{10}$)/, '');
   const adult = body.adult === 'yes' ? true : body.adult === 'no' ? false : null;
   const guardian = adult === false ? clean(body.guardian, 120) : '';
+  const guardianEmail = adult === false ? clean(body.guardianEmail, 254).toLowerCase() : '';
+  const guardianDigits = adult === false ? clean(body.guardianPhone, 20).replace(/\D/g, '').replace(/^1(?=\d{10}$)/, '') : '';
   const street = clean(body.street, 150);
   const street2 = clean(body.street2, 80);
   const city = clean(body.city, 80);
@@ -30,19 +33,22 @@ module.exports = async function handler(req, res) {
   const zip = clean(body.zip, 10);
 
   const invalid = {
-    first: !first, last: !last, email: !EMAIL_RE.test(email), email2: email2 !== email,
+    first: !first, last: !last, email: !byText && !EMAIL_RE.test(email), email2: email2 !== email,
     phone: digits.length !== 10, adult: adult === null, guardian: adult === false && !guardian,
+    guardianEmail: Boolean(guardianEmail) && !EMAIL_RE.test(guardianEmail),
+    guardianPhone: Boolean(guardianDigits) && guardianDigits.length !== 10,
+    permission: adult === false && body.permission !== 'yes',
     street: !street, city: !city, state: !STATES.has(state), zip: !ZIP_RE.test(zip), confirm: body.confirm !== 'yes',
   };
   if (Object.values(invalid).some(Boolean)) return send(res, 400, { ok: false, error: 'invalid', fields: invalid });
 
   const area = digits.slice(0, 3), prefix = digits.slice(3, 6), line = digits.slice(6);
+  const usPhone = (d) => `(${d.slice(0, 3)}) ${d.slice(3, 6)}-${d.slice(6)}`;
   const fields = {
     'First Name': first,
     'Last Name': last,
-    'Email Address': email,
-    'Confirm Email Address': email2,
-    'Phone Number': `(${area}) ${prefix}-${line}`,
+    'Preferred Contact': byText ? 'Text message' : 'Email',
+    'Phone Number': usPhone(digits),
     'Phone Area Code': area,
     'Phone Prefix': prefix,
     'Phone Line Number': line,
@@ -53,11 +59,18 @@ module.exports = async function handler(req, res) {
     'Prize Drawing Entry': true,
     'Collecting Prize': 'Yes',
   };
+  if (email) {
+    // Student's own email or a parent's; checked against the retyped copy above.
+    fields['Email Address'] = email;
+    fields['Confirm Email Address'] = email2;
+  }
   if (street2) fields['Apt/Unit'] = street2;
   if (guardian) {
-    // Under 18: ship as "Student c/o Parent". The student confirmed their parent knows.
+    // Under 18: ship as "Student c/o Parent". The student ticked the permission box.
     fields['Parent/Guardian Name'] = guardian;
     fields['Parent/Guardian Permission'] = true;
+    if (guardianDigits) fields['Parent/Guardian Phone'] = usPhone(guardianDigits);
+    if (guardianEmail) fields['Parent/Guardian Email'] = guardianEmail;
   }
 
   try {

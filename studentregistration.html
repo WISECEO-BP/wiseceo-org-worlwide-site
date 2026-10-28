@@ -69,8 +69,9 @@ fieldset{border:0;margin:0 0 14px;padding:0}
 .choices{display:flex;gap:10px;flex-wrap:wrap}
 .choice{display:flex;align-items:center;gap:8px;background:var(--card-soft);border:2px solid var(--line);border-radius:999px;padding:8px 14px;font-weight:700;cursor:pointer}
 .choice input{width:18px;height:18px;margin:0}
-.check{display:flex;gap:10px;align-items:flex-start;font-weight:400}
-.check input{width:20px;height:20px;margin-top:2px;flex:none}
+.check{display:flex;gap:12px;align-items:flex-start;font-weight:600;background:var(--card-soft);border:2px solid var(--line);border-radius:10px;padding:12px 14px;cursor:pointer}
+.check input{width:24px;height:24px;margin:0;flex:none;accent-color:var(--blue);cursor:pointer}
+.subcard{border-left:4px solid var(--yellow);padding:4px 0 2px 14px;margin:0 0 14px}
 .label-preview{background:var(--card-soft);border:2px solid var(--line);border-radius:10px;padding:12px 14px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:15px;white-space:pre-line;min-height:3em}
 .err-msg{display:block;color:var(--err);font-size:13px;font-weight:700;margin-top:4px}
 [aria-invalid=true]{border-color:var(--err)!important}
@@ -110,17 +111,27 @@ footer{text-align:center;color:var(--muted);font-size:13px;margin-top:8px}
         <input type="text" id="last" name="last" autocomplete="family-name" maxlength="60" required>
       </div>
     </div>
-    <div class="field">
-      <label for="email">Personal email <span class="req">*</span>
-        <span class="hint">Please use an email you’ll still check after the school year, not a school account.</span></label>
-      <input type="email" id="email" name="email" autocomplete="email" inputmode="email" maxlength="254" required>
+    <fieldset>
+      <legend class="legend">How should we contact you about your prize? <span class="req">*</span></legend>
+      <div class="choices" id="contactChoices">
+        <label class="choice"><input type="radio" name="contact" value="email" checked> By email</label>
+        <label class="choice"><input type="radio" name="contact" value="text"> By text message (no email)</label>
+      </div>
+    </fieldset>
+    <div id="emailWrap">
+      <div class="field">
+        <label for="email">Email address <span class="req">*</span>
+          <span class="hint">This can be your own email or your parent or guardian’s email. Please don’t use a school account.</span></label>
+        <input type="email" id="email" name="email" autocomplete="email" inputmode="email" maxlength="254">
+      </div>
+      <div class="field">
+        <label for="email2">Type the email again <span class="req">*</span></label>
+        <input type="email" id="email2" name="email2" autocomplete="email" inputmode="email" maxlength="254">
+      </div>
     </div>
     <div class="field">
-      <label for="email2">Type your email again <span class="req">*</span></label>
-      <input type="email" id="email2" name="email2" autocomplete="email" inputmode="email" maxlength="254" required>
-    </div>
-    <div class="field">
-      <label for="phone">Phone number <span class="req">*</span></label>
+      <label for="phone"><span id="phoneLabel">Phone number</span> <span class="req">*</span>
+        <span class="hint" id="phoneHint" hidden>We’ll text you at this number about your prize. Message and data rates may apply.</span></label>
       <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="(555) 555-5555" maxlength="20" required>
     </div>
 
@@ -131,10 +142,26 @@ footer{text-align:center;color:var(--muted);font-size:13px;margin-top:8px}
         <label class="choice"><input type="radio" name="adult" value="no"> No, I’m under 18</label>
       </div>
     </fieldset>
-    <div class="field" id="guardianWrap" hidden>
-      <label for="guardian">Parent or guardian’s full name <span class="req">*</span>
-        <span class="hint">Because you’re under 18, your prize will be shipped in your name, care of (c/o) your parent or guardian, so it reaches the right person at your address.</span></label>
-      <input type="text" id="guardian" name="guardian" autocomplete="off" maxlength="120">
+    <div class="subcard" id="guardianWrap" hidden>
+      <div class="field">
+        <label for="guardian">Parent or guardian’s full name <span class="req">*</span>
+          <span class="hint">Because you’re under 18, your prize will be shipped in your name, care of (c/o) your parent or guardian, so it reaches the right person at your address.</span></label>
+        <input type="text" id="guardian" name="guardian" autocomplete="off" maxlength="120">
+      </div>
+      <div class="row2">
+        <div class="field">
+          <label for="guardianPhone">Parent/guardian phone <span class="hint" style="display:inline">(optional)</span></label>
+          <input type="tel" id="guardianPhone" name="guardianPhone" autocomplete="off" inputmode="tel" maxlength="20">
+        </div>
+        <div class="field">
+          <label for="guardianEmail">Parent/guardian email <span class="hint" style="display:inline">(optional)</span></label>
+          <input type="email" id="guardianEmail" name="guardianEmail" autocomplete="off" inputmode="email" maxlength="254">
+        </div>
+      </div>
+      <div class="field">
+        <label class="check"><input type="checkbox" id="permission" name="permission" value="yes">
+          <span>My parent or guardian knows about this and gives permission for my prize to be mailed to this address. <span class="req">*</span></span></label>
+      </div>
     </div>
 
     <h2>Shipping address</h2>
@@ -168,7 +195,7 @@ footer{text-align:center;color:var(--muted);font-size:13px;margin-top:8px}
 
     <div class="field">
       <label class="check"><input type="checkbox" id="confirm" name="confirm" value="yes" required>
-        <span>The information above is correct.<span id="minorConfirm" hidden> My parent or guardian knows I’m sharing this address to receive my prize.</span> <span class="req">*</span></span></label>
+        <span>The information above is correct. <span class="req">*</span></span></label>
     </div>
 
     <div class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
@@ -188,12 +215,14 @@ var f=document.getElementById('prizeForm'),st=document.getElementById('status'),
 STATES.forEach(function(s){var o=document.createElement('option');o.value=s[0];o.textContent=s[1];sel.appendChild(o);});
 
 var EMAIL_RE=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/,ZIP_RE=/^\d{5}(-\d{4})?$/;
-var gWrap=document.getElementById('guardianWrap'),g=document.getElementById('guardian'),minorConfirm=document.getElementById('minorConfirm');
+var gWrap=document.getElementById('guardianWrap'),g=document.getElementById('guardian'),eWrap=document.getElementById('emailWrap');
 function val(n){var el=f.elements[n];return el&&el.value?el.value.trim():'';}
 function minor(){return val('adult')==='no';}
+function byText(){return val('contact')==='text';}
 function digits(s){return s.replace(/\D/g,'').replace(/^1(?=\d{10}$)/,'');}
 
-function syncAge(){var m=minor();gWrap.hidden=!m;g.required=m;minorConfirm.hidden=!m;preview();}
+function syncAge(){var m=minor();gWrap.hidden=!m;g.required=m;preview();}
+function syncContact(){var t=byText();eWrap.hidden=t;document.getElementById('phoneLabel').textContent=t?'Mobile phone number':'Phone number';document.getElementById('phoneHint').hidden=!t;}
 function preview(){
   var name=(val('first')+' '+val('last')).trim(),line1=val('street'),line2=val('street2'),city=val('city'),state=val('state'),zip=val('zip');
   if(!name&&!line1){document.getElementById('labelPreview').textContent='Fill in the form to see your shipping label.';return;}
@@ -202,6 +231,7 @@ function preview(){
   document.getElementById('labelPreview').textContent=lines.join('\n');
 }
 Array.prototype.forEach.call(f.querySelectorAll('[name=adult]'),function(r){r.addEventListener('change',syncAge);});
+Array.prototype.forEach.call(f.querySelectorAll('[name=contact]'),function(r){r.addEventListener('change',syncContact);});
 f.addEventListener('input',preview);
 
 function errHost(el){return el.type==='radio'?document.getElementById('ageChoices'):el.type==='checkbox'?el.closest('.field'):el;}
@@ -211,7 +241,7 @@ function mark(el,msg){
 }
 // Clear a field's error as soon as the student changes it.
 function unmark(e){
-  var el=e.target,first=el.type==='radio'?f.elements.adult[0]:el;
+  var el=e.target,first=el.type==='radio'?f.elements[el.name][0]:el;
   if(!first.hasAttribute||!first.hasAttribute('aria-invalid'))return;
   first.removeAttribute('aria-invalid');
   var next=errHost(first).nextElementSibling;if(next&&next.className==='err-msg')next.remove();
@@ -225,11 +255,18 @@ function check(){
   function need(n,ok,msg){var el=f.elements[n];el=el.length&&!el.tagName?el[0]:el;if(!ok){mark(el,msg);bad.push(el);}}
   need('first',val('first'),'Please enter your first name.');
   need('last',val('last'),'Please enter your last name.');
-  need('email',EMAIL_RE.test(val('email')),'Please enter a valid email address.');
-  need('email2',val('email2')&&val('email2').toLowerCase()===val('email').toLowerCase(),'The two emails don’t match.');
+  if(!byText()){
+    need('email',EMAIL_RE.test(val('email')),'Please enter a valid email address.');
+    need('email2',val('email2')&&val('email2').toLowerCase()===val('email').toLowerCase(),'The two emails don’t match.');
+  }
   need('phone',digits(val('phone')).length===10,'Please enter a 10-digit U.S. phone number.');
   need('adult',val('adult'),'Please choose one.');
-  if(minor())need('guardian',val('guardian'),'Please enter your parent or guardian’s full name.');
+  if(minor()){
+    need('guardian',val('guardian'),'Please enter your parent or guardian’s full name.');
+    need('guardianPhone',!val('guardianPhone')||digits(val('guardianPhone')).length===10,'Please enter a 10-digit U.S. phone number, or leave it blank.');
+    need('guardianEmail',!val('guardianEmail')||EMAIL_RE.test(val('guardianEmail')),'Please enter a valid email, or leave it blank.');
+    need('permission',f.elements.permission.checked,'Please check this box. Your parent or guardian needs to know.');
+  }
   need('street',val('street'),'Please enter your street address.');
   need('city',val('city'),'Please enter your city.');
   need('state',val('state'),'Please choose your state.');
@@ -252,8 +289,8 @@ f.addEventListener('submit',function(e){
     .then(function(r){
       if(r.ok!==true)throw new Error(r.error||'failed');
       st.className='status ok';
-      st.textContent='🎉 Got it! Your prize will ship to the address above. We’ll email '+data.email+' if we have any questions.';
-      f.reset();syncAge();
+      st.textContent='🎉 Got it! Your prize will ship to the address above. We’ll '+(data.contact==='text'?'text '+data.phone:'email '+data.email)+' if we have any questions.';
+      f.reset();syncAge();syncContact();
     })
     .catch(function(){
       st.className='status err';
@@ -261,7 +298,7 @@ f.addEventListener('submit',function(e){
     })
     .then(function(){btn.disabled=false;btn.textContent='Send my shipping info';});
 });
-syncAge();
+syncAge();syncContact();
 })();
 </script>
 </body>
