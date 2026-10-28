@@ -1,6 +1,7 @@
-// POST /api/prize — prize-drawing winner shipping details from /studentregistration.html.
+// POST /api/prize — prize-drawing registration (winners and future entrants) from /studentregistration.html.
 // Adds a row to the "Students" table in the Student Job Search base (the same table the
-// HSS Registration form fills), with Collecting Prize = Yes and the mailing address.
+// HSS Registration form fills), with the mailing address and Collecting Prize = Yes/No
+// (left empty if the student skipped the question).
 // Winners may be minors, so they are not added to "Website Contacts" (the supporter list).
 const { createRecord, clean, guard, send, EMAIL_RE } = require('./_lib/airtable');
 
@@ -57,8 +58,10 @@ module.exports = async function handler(req, res) {
     'State': state,
     'ZIP Code': zip,
     'Prize Drawing Entry': true,
-    'Collecting Prize': 'Yes',
   };
+  // Winners answer Yes; everyone else registers for future drawings (No, or left blank).
+  if (body.won === 'yes') fields['Collecting Prize'] = 'Yes';
+  else if (body.won === 'no') fields['Collecting Prize'] = 'No';
   if (email) {
     // Student's own email or a parent's; checked against the retyped copy above.
     fields['Email Address'] = email;
