@@ -443,3 +443,5 @@ html.hc .yt-lite{border:2px solid #fff!important}
 .honors-list li{display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding-left:18px;position:relative;font-size:.95rem;color:var(--dark)}
 .honors-list li::before{content:"";position:absolute;left:0;top:.45em;width:8px;height:8px;border-radius:50%;background:var(--gold)}
 .honors-list li span{color:var(--gray);font-size:.85rem;white-space:nowrap}
+.founder-links{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}
+.founder-links a{text-decoration:none}
