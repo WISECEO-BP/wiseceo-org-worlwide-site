@@ -484,3 +484,26 @@ html.hc .yt-lite{border:2px solid #fff!important}
 .state-hq .state-card.hq{justify-content:center}
 .state-scroller:hover .state-track,.state-scroller:focus-within .state-track{animation-play-state:paused}
 @media (prefers-reduced-motion: reduce){.state-lane{overflow-x:auto}}
+/* Bigger, bolder state cards packed close together, no edge fade; still moving right out of Ohio */
+.state-rail{gap:14px}
+.state-scroller,.state-lane{-webkit-mask-image:none;mask-image:none}
+.state-scroller{gap:14px}
+.state-lane,.state-track{gap:14px}
+.state-rail .state-card{padding:22px 20px;border-radius:20px;gap:6px}
+.state-track .state-card{width:clamp(150px,19vw,250px)}
+.state-rail .state-abbr{font-size:clamp(2rem,3.4vw,2.9rem)}
+.state-rail .state-name{font-size:clamp(1rem,1.7vw,1.35rem);margin-top:8px}
+.state-rail .state-role{font-size:clamp(.8rem,1.1vw,.95rem)}
+.state-hq{flex-basis:clamp(150px,22vw,280px);position:relative;z-index:1}
+.state-hq .state-abbr{font-size:clamp(2.6rem,4.6vw,3.8rem)}
+.state-hq .state-card.hq{padding:24px 22px;border-width:2px}
+@keyframes stateScroll{to{transform:translateX(calc(-100% - 14px))}}
+/* Size the moving state cards like the mock-up: about six per row on desktop */
+.state-rail .state-card{padding:16px 16px;border-radius:16px;gap:4px}
+.state-track .state-card{width:clamp(128px,13vw,168px)}
+.state-rail .state-abbr{font-size:clamp(1.8rem,2.6vw,2.4rem)}
+.state-rail .state-name{font-size:clamp(.95rem,1.3vw,1.1rem);margin-top:6px}
+.state-rail .state-role{font-size:.85rem}
+.state-hq{flex-basis:clamp(140px,16vw,190px)}
+.state-hq .state-abbr{font-size:clamp(2.4rem,3.6vw,3.2rem)}
+.state-hq .state-card.hq{padding:20px 18px}
