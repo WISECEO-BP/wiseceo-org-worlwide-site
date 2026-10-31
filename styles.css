@@ -435,3 +435,11 @@ html.hc .yt-lite{border:2px solid #fff!important}
 #donate .donate-note{color:var(--gray)}
 #donate .donate-note a{color:var(--blue)}
 .fs-say{max-width:92%}
+
+/* Founder honors and awards (About page) */
+.honors{margin-top:24px;padding:18px 20px;border-radius:16px;background:var(--white);border:1px solid var(--light-border)}
+.honors-title{font-size:1rem;font-weight:700;color:var(--dark);margin:0 0 10px;letter-spacing:-.01em}
+.honors-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.honors-list li{display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding-left:18px;position:relative;font-size:.95rem;color:var(--dark)}
+.honors-list li::before{content:"";position:absolute;left:0;top:.45em;width:8px;height:8px;border-radius:50%;background:var(--gold)}
+.honors-list li span{color:var(--gray);font-size:.85rem;white-space:nowrap}
