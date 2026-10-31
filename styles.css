@@ -359,7 +359,7 @@ html.hc .yt-lite{border:2px solid #fff!important}
 .prog-photo{margin:-32px -28px 20px;height:160px;display:grid;place-items:center;font-size:3rem;background:linear-gradient(135deg,#1e3a8a,#0052cc)}
 .prog-photo.has-photo span,#digital-literacy .prog-photo span,#education-access .prog-photo span{display:none}
 #digital-literacy .prog-photo{background:url("/images/programs/program-digital-literacy.webp") center 35%/cover no-repeat,linear-gradient(135deg,#1e3a8a,#0052cc)}
-#education-access .prog-photo{background:url("/images/programs/program-education-access.webp") center 30%/cover no-repeat,linear-gradient(135deg,#1e3a8a,#0052cc)}
+#education-access .prog-photo{background:url("/images/programs/program-education-access.webp") center 32%/cover no-repeat,linear-gradient(135deg,#1e3a8a,#0052cc)}
 #all-programs .prog-card .prog-cta{margin-top:auto;align-self:flex-start}
 #all-programs .prog-badge{align-self:flex-start;margin-bottom:18px}
 
