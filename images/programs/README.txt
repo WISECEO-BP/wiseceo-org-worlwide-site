@@ -7,4 +7,4 @@ Use only photos you have permission to use. For students under 18, get signed pa
 Program card photos (programs page, the six cards):
 - program-digital-literacy.webp (added)
 - program-education-access.webp (added)
-- program-workforce.webp, program-entrepreneurship.webp, program-youth-leadership.webp, program-community-resilience.webp (still needed)
+- program-workforce.webp, program-entrepreneurship.webp, program-youth-leadership.webp, program-community-resilience.webp (added)

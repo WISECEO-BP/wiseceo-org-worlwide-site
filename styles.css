@@ -362,3 +362,12 @@ html.hc .yt-lite{border:2px solid #fff!important}
 #education-access .prog-photo{background:url("/images/programs/program-education-access.webp") center 30%/cover no-repeat,linear-gradient(135deg,#1e3a8a,#0052cc)}
 #all-programs .prog-card .prog-cta{margin-top:auto;align-self:flex-start}
 #all-programs .prog-badge{align-self:flex-start;margin-bottom:18px}
+
+#workforce .prog-photo{background:url("/images/programs/program-workforce.webp") 60% 30%/cover no-repeat,linear-gradient(135deg,#1e3a8a,#0052cc)}
+#workforce .prog-photo span{display:none}
+#entrepreneurship .prog-photo{background:url("/images/programs/program-entrepreneurship.webp") center 55%/cover no-repeat,linear-gradient(135deg,#1e3a8a,#0052cc)}
+#entrepreneurship .prog-photo span{display:none}
+#youth-leadership .prog-photo{background:url("/images/programs/program-youth-leadership.webp") 72% 35%/cover no-repeat,linear-gradient(135deg,#1e3a8a,#0052cc)}
+#youth-leadership .prog-photo span{display:none}
+#community-resilience .prog-photo{background:url("/images/programs/program-community-resilience.webp") center 30%/cover no-repeat,linear-gradient(135deg,#1e3a8a,#0052cc)}
+#community-resilience .prog-photo span{display:none}
