@@ -457,53 +457,18 @@ html.hc .yt-lite{border:2px solid #fff!important}
 .honors-grid .honors-list li b{font-weight:600}
 .tm{font-size:.6em;vertical-align:super;line-height:0;margin-left:1px}
 
-/* Where we serve: Ohio headquarters stays put; the other states scroll beside it */
-.state-rail{display:flex;gap:12px;align-items:stretch}
-.state-hq{list-style:none;margin:0;padding:0;flex:0 0 clamp(128px,18vw,170px);display:flex}
-.state-hq .state-card{flex:1}
-.state-scroller{flex:1;min-width:0;display:flex;gap:12px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
-.state-track{list-style:none;margin:0;padding:0;display:flex;gap:12px;flex:none;animation:stateScroll 38s linear infinite}
-.state-track .state-card{flex:none;width:150px}
-.state-scroller:hover .state-track,.state-scroller:focus-within .state-track{animation-play-state:paused}
-@keyframes stateScroll{to{transform:translateX(calc(-100% - 12px))}}
-@media (prefers-reduced-motion: reduce){
-  .state-track{animation:none}
-  .state-track-dup{display:none}
-  .state-scroller{overflow-x:auto;-webkit-mask-image:none;mask-image:none}
-}
-@media (max-width:560px){.state-track .state-card{width:128px}}
-/* Cards travel to the right, emerging from the Ohio card */
-.state-track{animation-direction:reverse}
-.state-scroller{-webkit-mask-image:linear-gradient(90deg,transparent,#000 9%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 9%,#000 94%,transparent)}
-@media (prefers-reduced-motion: reduce){.state-scroller{-webkit-mask-image:none;mask-image:none}}
-
-/* Two lanes of states flowing right out of the Ohio card, which spans both lanes */
-.state-scroller{flex-direction:column;gap:12px}
-.state-lane{display:flex;gap:12px;overflow:hidden}
-.lane-2 .state-track{animation-duration:46s}
-.state-hq .state-card.hq{justify-content:center}
-.state-scroller:hover .state-track,.state-scroller:focus-within .state-track{animation-play-state:paused}
-@media (prefers-reduced-motion: reduce){.state-lane{overflow-x:auto}}
-/* Bigger, bolder state cards packed close together, no edge fade; still moving right out of Ohio */
-.state-rail{gap:14px}
-.state-scroller,.state-lane{-webkit-mask-image:none;mask-image:none}
-.state-scroller{gap:14px}
-.state-lane,.state-track{gap:14px}
-.state-rail .state-card{padding:22px 20px;border-radius:20px;gap:6px}
-.state-track .state-card{width:clamp(150px,19vw,250px)}
-.state-rail .state-abbr{font-size:clamp(2rem,3.4vw,2.9rem)}
-.state-rail .state-name{font-size:clamp(1rem,1.7vw,1.35rem);margin-top:8px}
-.state-rail .state-role{font-size:clamp(.8rem,1.1vw,.95rem)}
-.state-hq{flex-basis:clamp(150px,22vw,280px);position:relative;z-index:1}
-.state-hq .state-abbr{font-size:clamp(2.6rem,4.6vw,3.8rem)}
-.state-hq .state-card.hq{padding:24px 22px;border-width:2px}
-@keyframes stateScroll{to{transform:translateX(calc(-100% - 14px))}}
-/* Size the moving state cards like the mock-up: about six per row on desktop */
-.state-rail .state-card{padding:16px 16px;border-radius:16px;gap:4px}
-.state-track .state-card{width:clamp(128px,13vw,168px)}
-.state-rail .state-abbr{font-size:clamp(1.8rem,2.6vw,2.4rem)}
-.state-rail .state-name{font-size:clamp(.95rem,1.3vw,1.1rem);margin-top:6px}
-.state-rail .state-role{font-size:.85rem}
-.state-hq{flex-basis:clamp(140px,16vw,190px)}
-.state-hq .state-abbr{font-size:clamp(2.4rem,3.6vw,3.2rem)}
-.state-hq .state-card.hq{padding:20px 18px}
+/* Where we serve: Ohio anchors the left across both rows; ten states in two even rows.
+   When the section scrolls into view, the cards slide out from Ohio one after another. */
+.state-board{list-style:none;margin:0;padding:0;display:grid;gap:14px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.state-board .hq{grid-column:1/-1}
+@media (min-width:600px){.state-board{grid-template-columns:repeat(5,minmax(0,1fr))}}
+@media (min-width:900px){.state-board{grid-template-columns:minmax(150px,1.25fr) repeat(5,minmax(0,1fr))}.state-board .hq{grid-column:auto;grid-row:span 2}}
+.state-board .state-card{padding:16px;border-radius:16px;gap:4px;min-width:0}
+.state-board .state-abbr{font-size:clamp(1.7rem,2.4vw,2.3rem)}
+.state-board .state-name{font-size:clamp(.95rem,1.2vw,1.05rem);margin-top:6px;overflow-wrap:anywhere}
+.state-board .state-role{font-size:.82rem}
+.state-board .hq{justify-content:center;padding:22px 18px}
+.state-board .hq .state-abbr{font-size:clamp(2.4rem,3.4vw,3.2rem)}
+.fade-in.visible .state-board .state-card:not(.hq){animation:stateEmerge .55s cubic-bezier(.2,.7,.3,1) both;animation-delay:calc(var(--i) * 70ms + .15s)}
+@keyframes stateEmerge{from{opacity:0;transform:translateX(-36px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){.fade-in.visible .state-board .state-card:not(.hq){animation:none}}
