@@ -338,7 +338,7 @@ html.hc .yt-lite{border:2px solid #fff!important}
 .fs-card:hover{box-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1)}
 .fs-banner{height:170px;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;font-weight:600;color:#fff;background:linear-gradient(90deg,#1e3a8a,#1d4ed8)}
 .fs-banner-split{padding:0;background:#e5e7eb;align-items:stretch}
-.fs-photo{width:50%;background:url("/images/programs/students-team.webp") center/cover no-repeat,url("/images/programs/students-team.svg") center/cover no-repeat,linear-gradient(135deg,#1e3a8a,#0052cc)}
+.fs-photo{width:50%;background:url("/images/programs/students-team.webp") 68% 40%/cover no-repeat,url("/images/programs/students-team.svg") center/cover no-repeat,linear-gradient(135deg,#1e3a8a,#0052cc)}
 .fs-gold{width:50%;background:#f59e0b;color:#111827;padding:16px;display:flex;flex-direction:column;justify-content:center;text-align:left;font-weight:500}
 .fs-gold p{margin:0;font-size:.75rem;line-height:1.4}
 .fs-gold .fs-gold-label{font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#451a03;margin-bottom:4px}
@@ -351,4 +351,4 @@ html.hc .yt-lite{border:2px solid #fff!important}
 .fs-wrap a:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
 /* Photo slots: upload images/programs/students-coding.webp and images/programs/students-team.webp.
    Until a file exists, the colored panel underneath shows instead. */
-.fs-banner-students{background:url("/images/programs/students-coding.webp") center/cover no-repeat,url("/images/programs/students-coding.svg") center/cover no-repeat,linear-gradient(90deg,#1e3a8a,#1d4ed8)}
+.fs-banner-students{background:url("/images/programs/students-coding.webp") center 32%/cover no-repeat,url("/images/programs/students-coding.svg") center/cover no-repeat,linear-gradient(90deg,#1e3a8a,#1d4ed8)}
