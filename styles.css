@@ -397,3 +397,41 @@ html.hc .yt-lite{border:2px solid #fff!important}
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 @media (prefers-reduced-motion: reduce){.fs-art .owl *,.fs-say *{animation:none!important}}
 @media (min-width:860px){.fs-art .owl{width:220px}.fs-art{min-height:340px}}
+
+/* Give page: light theme to match the rest of wiseceo.org (white, site blue, gold Donate button) */
+#donate{background:var(--off-white)}
+#donate .section-label{color:var(--blue)}
+#donate .section-title{color:var(--dark)}
+#donate p.lead{color:var(--gray)}
+#donate .give-form{background:var(--white);border:1px solid var(--light-border);box-shadow:0 4px 24px rgba(0,0,0,.06)}
+#donate .gp-banner{background:rgba(0,102,204,.06);border-color:rgba(0,102,204,.22);color:var(--dark)}
+#donate .gp-banner b{color:var(--blue)}
+#donate .gp-freq{background:var(--off-white)}
+#donate .gp-tab span{color:var(--gray)}
+#donate .gp-tab input:checked+span{background:var(--blue);color:var(--white)}
+#donate .gp-tab span em{background:rgba(0,102,204,.1);color:var(--blue)}
+#donate .gp-tab input:checked+span em{background:rgba(255,255,255,.2);color:var(--white)}
+#donate .gp-amt span{border-color:var(--light-border);color:var(--dark)}
+#donate .gp-amt:hover span{border-color:var(--blue)}
+#donate .gp-amt input:checked+span{border-color:var(--blue);background:rgba(0,102,204,.08);color:var(--blue)}
+#donate .gp-tab input:focus-visible+span,#donate .gp-amt input:focus-visible+span{outline-color:var(--blue)}
+#donate .gp-other{border-color:var(--light-border)}
+#donate .gp-other:focus-within{border-color:var(--blue)}
+#donate .gp-cur,#donate .gp-suffix{color:var(--gray)}
+#donate .gp-usd{border-left-color:var(--light-border)}
+#donate .gp-other input{color:var(--dark)}
+#donate .gp-other input::placeholder{color:#8e8e93}
+#donate .gp-error{color:#c62828}
+#donate .gp-impact,#donate .mc-copy{color:var(--gray)}
+#donate .gp-total{color:var(--dark)}
+#donate .gp-total b{color:var(--blue)}
+#donate .gp-fine{color:var(--gray)}
+#donate .gp-alt{color:var(--gray)}
+#donate .gp-alt a,#donate .gp-confidence a{color:var(--blue)}
+#donate .gp-conf-title{color:var(--dark)}
+#donate .gp-confidence li{color:var(--gray)}
+#donate .gp-confidence li::before{color:var(--blue)}
+#donate .gp-confidence b{color:var(--dark)}
+#donate .donate-note{color:var(--gray)}
+#donate .donate-note a{color:var(--blue)}
+.fs-say{max-width:92%}
