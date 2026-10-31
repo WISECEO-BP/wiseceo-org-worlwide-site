@@ -486,3 +486,4 @@ html.hc .state-board .hq::before{display:none}
 }
 @media (max-width:899px){.state-board .hq{padding-right:36%}.state-board .hq::before{width:30%}}
 @media (min-width:900px){.state-board .hq::before{height:36%;inset:12px 12px auto 12px}}
+.honors-grid h4.honors-sub{margin-top:18px}
