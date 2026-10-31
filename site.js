@@ -78,7 +78,7 @@ $$('[data-yt]').forEach(function(a){
   a.addEventListener('click',function(e){
     e.preventDefault();
     var f=document.createElement('iframe');
-    f.src='https://www.youtube-nocookie.com/embed/'+a.getAttribute('data-yt')+'?autoplay=1&rel=0';
+    var id=a.getAttribute('data-yt');f.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0&loop=1&playlist='+id;
     f.title=a.getAttribute('aria-label').replace(/^Play video: /,'');
     f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
     f.allowFullscreen=true;
