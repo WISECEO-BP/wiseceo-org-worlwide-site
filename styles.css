@@ -445,3 +445,4 @@ html.hc .yt-lite{border:2px solid #fff!important}
 .honors-list li span{color:var(--gray);font-size:.85rem;white-space:nowrap}
 .founder-links{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}
 .founder-links a{text-decoration:none}
+@media (max-width:520px){.founder-links a{width:100%;text-align:center;border-radius:24px}}
