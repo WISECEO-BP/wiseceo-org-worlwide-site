@@ -313,3 +313,43 @@ html.hc .gp-tab input:checked+span,html.hc .gp-amt input:checked+span{background
 .video-note a{color:var(--blue);font-weight:600}
 .org-video{margin-top:28px}
 html.hc .yt-lite{border:2px solid #fff!important}
+
+/* Flagship program feature (Programs page) */
+.fs-wrap{display:grid;gap:32px;margin-top:40px}
+.fs-hero{position:relative;overflow:hidden;color:#fff;border-radius:16px;border:1px solid rgba(99,102,241,.3);background:linear-gradient(90deg,#0f172a,#1e1b4b,#0f172a);box-shadow:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1)}
+.fs-flag{position:absolute;top:0;right:0;background:#f59e0b;color:#020617;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:6px 16px;border-bottom-left-radius:12px}
+.fs-grid{display:grid;gap:32px;padding:44px 28px 32px;align-items:center}
+@media (min-width:1024px){.fs-grid{grid-template-columns:7fr 5fr;padding:48px}}
+.fs-copy{display:grid;gap:16px}
+.fs-eyebrow{margin:0;display:flex;flex-wrap:wrap;gap:8px;font-size:.75rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#a5b4fc}
+.fs-title{margin:0;font-size:clamp(1.875rem,4vw,2.25rem);font-weight:800;line-height:1.2;letter-spacing:-.025em;color:#fff}
+.fs-grad{background:linear-gradient(90deg,#22d3ee,#5eead4,#f472b6);-webkit-background-clip:text;background-clip:text;color:transparent}
+.fs-text{margin:0;color:#d1d5db;font-size:1rem;line-height:1.65}
+.fs-ctas{display:flex;flex-wrap:wrap;gap:16px;padding-top:8px}
+.fs-btn{display:inline-block;padding:12px 24px;border-radius:8px;text-decoration:none;transition:opacity .2s,background-color .2s}
+.fs-btn-grad{background:linear-gradient(90deg,#22d3ee,#f472b6);color:#020617;font-weight:700;box-shadow:0 4px 6px -1px rgba(0,0,0,.1)}
+.fs-btn-grad:hover{opacity:.9}
+.fs-btn-line{border:1px solid rgba(129,140,248,.4);color:#fff;font-weight:500}
+.fs-btn-line:hover{background:rgba(49,46,129,.4)}
+.fs-side{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;background:rgba(30,27,75,.4);border:1px solid rgba(99,102,241,.2);border-radius:12px;padding:24px}
+.fs-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(15,23,42,.9);color:#c7d2fe;font-size:.75rem;padding:6px 12px;border-radius:999px;border:1px solid rgba(99,102,241,.3)}
+.fs-owl{width:150px;height:auto;filter:drop-shadow(0 16px 24px rgba(0,0,0,.4))}
+.fs-quote{margin:0;color:#d1d5db;font-size:.875rem;font-style:italic}
+.fs-cards{display:grid;gap:32px;padding-top:16px}
+@media (min-width:768px){.fs-cards{grid-template-columns:1fr 1fr}}
+.fs-card{display:flex;flex-direction:column;justify-content:space-between;background:#f8f9fa;border:1px solid #f3f4f6;border-radius:12px;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,.05);transition:box-shadow .2s}
+.fs-card:hover{box-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1)}
+.fs-banner{height:192px;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;font-weight:600;color:#fff;background:linear-gradient(90deg,#1e3a8a,#1d4ed8)}
+.fs-banner-split{padding:0;background:#e5e7eb;align-items:stretch}
+.fs-photo{width:50%;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='9' cy='8' r='3.2'/%3E%3Cpath d='M3.5 19c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5'/%3E%3Ccircle cx='17' cy='9' r='2.6'/%3E%3Cpath d='M15.6 14.2c2.4-.3 4.4 1.2 4.9 4.3'/%3E%3C/svg%3E") center/72px no-repeat,linear-gradient(135deg,#1e3a8a,#0052cc)}
+/* To use a real team photo instead: .fs-photo{background:url("/images/team.webp") center/cover no-repeat} */
+.fs-gold{width:50%;background:#f59e0b;color:#111827;padding:16px;display:flex;flex-direction:column;justify-content:center;text-align:left;font-weight:500}
+.fs-gold p{margin:0;font-size:.75rem;line-height:1.4}
+.fs-gold .fs-gold-label{font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#451a03;margin-bottom:4px}
+.fs-card-body{padding:24px}
+.fs-card-body h3{margin:0 0 8px;font-size:1.25rem;font-weight:700;color:#111827}
+.fs-card-body p{margin:0;color:#4b5563;font-size:.875rem;line-height:1.65}
+.fs-card-foot{padding:0 24px 24px}
+.fs-cta{display:block;text-align:center;background:#0052cc;color:#fff;font-weight:500;padding:10px 16px;border-radius:8px;text-decoration:none;transition:background-color .15s}
+.fs-cta:hover{background:#0041a3}
+.fs-wrap a:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
