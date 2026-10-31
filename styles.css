@@ -489,3 +489,5 @@ html.hc .state-board .hq::before{display:none}
 .honors-grid h4.honors-sub{margin-top:18px}
 @media (min-width:800px){.honors-grid.honors-grid-2{grid-template-columns:1fr 1fr}}
 .honors-more{margin:12px 0 0;font-size:.85rem;color:var(--gray);line-height:1.5}
+.honors-btn{margin:14px 0 0}
+.honors-btn a{display:inline-block;text-decoration:none}
