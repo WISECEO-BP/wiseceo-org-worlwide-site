@@ -336,10 +336,9 @@ html.hc .yt-lite{border:2px solid #fff!important}
 @media (min-width:768px){.fs-cards{grid-template-columns:1fr 1fr}}
 .fs-card{display:flex;flex-direction:column;justify-content:space-between;background:#f8f9fa;border:1px solid #f3f4f6;border-radius:12px;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,.05);transition:box-shadow .2s}
 .fs-card:hover{box-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1)}
-.fs-banner{height:120px;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;font-weight:600;color:#fff;background:linear-gradient(90deg,#1e3a8a,#1d4ed8)}
+.fs-banner{height:170px;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;font-weight:600;color:#fff;background:linear-gradient(90deg,#1e3a8a,#1d4ed8)}
 .fs-banner-split{padding:0;background:#e5e7eb;align-items:stretch}
-.fs-photo{width:50%;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='9' cy='8' r='3.2'/%3E%3Cpath d='M3.5 19c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5'/%3E%3Ccircle cx='17' cy='9' r='2.6'/%3E%3Cpath d='M15.6 14.2c2.4-.3 4.4 1.2 4.9 4.3'/%3E%3C/svg%3E") center/72px no-repeat,linear-gradient(135deg,#1e3a8a,#0052cc)}
-/* To use a real team photo instead: .fs-photo{background:url("/images/team.webp") center/cover no-repeat} */
+.fs-photo{width:50%;background:url("/images/programs/students-team.webp") center/cover no-repeat,url("/images/programs/students-team.svg") center/cover no-repeat,linear-gradient(135deg,#1e3a8a,#0052cc)}
 .fs-gold{width:50%;background:#f59e0b;color:#111827;padding:16px;display:flex;flex-direction:column;justify-content:center;text-align:left;font-weight:500}
 .fs-gold p{margin:0;font-size:.75rem;line-height:1.4}
 .fs-gold .fs-gold-label{font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#451a03;margin-bottom:4px}
@@ -350,3 +349,6 @@ html.hc .yt-lite{border:2px solid #fff!important}
 .fs-cta{display:block;text-align:center;background:#0052cc;color:#fff;font-weight:500;padding:10px 16px;border-radius:8px;text-decoration:none;transition:background-color .15s}
 .fs-cta:hover{background:#0041a3}
 .fs-wrap a:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+/* Photo slots: upload images/programs/students-coding.webp and images/programs/students-team.webp.
+   Until a file exists, the colored panel underneath shows instead. */
+.fs-banner-students{background:url("/images/programs/students-coding.webp") center/cover no-repeat,url("/images/programs/students-coding.svg") center/cover no-repeat,linear-gradient(90deg,#1e3a8a,#1d4ed8)}
