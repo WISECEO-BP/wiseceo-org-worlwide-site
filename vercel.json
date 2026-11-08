@@ -1,5 +1,6 @@
 {
   "redirects": [
+    { "source": "/disclaimer", "destination": "/legal.html", "permanent": false },
     { "source": "/StudentRegistration", "destination": "/studentregistration.html", "permanent": false },
     { "source": "/:page([a-z0-9-]+)", "destination": "/:page.html", "permanent": true },
     { "source": "/:page([a-z0-9-]+)/", "destination": "/:page.html", "permanent": true },
