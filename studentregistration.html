@@ -1,103 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="referrer" content="no-referrer">
-<meta name="robots" content="noindex">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Prize Drawing: Student Registration | W.I.S.E.C.E.O.</title>
-<style>
-:root{
-  color-scheme: light;
-  --bg-a:#d6ecff; --bg-b:#ffdede; --dots:rgba(30,91,184,.17);
-  --card:#ffffff; --card-soft:#eef5ff; --ink:#14213d; --muted:#55617c; --line:#14213d;
-  --hero-a:#1E5BB8; --hero-b:#13A27C;
-  --red:#E53935; --yellow:#FFD23F; --yellow-ink:#14213d; --blue:#1E5BB8; --green:#13A27C;
-  --err:#b3261e; --ok-bg:#e3f7ee; --err-bg:#fdecea;
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    color-scheme: dark;
-    --bg-a:#0b1530; --bg-b:#2a0d18; --dots:rgba(120,170,255,.12);
-    --card:#141e38; --card-soft:#1b2849; --ink:#eef2ff; --muted:#a6b1cf; --line:#02040b;
-    --hero-a:#1a4fa3; --hero-b:#0f8a69;
-    --red:#ff5a52; --blue:#6b9ef0; --green:#3ccf9e;
-    --err:#ff8a80; --ok-bg:#12352a; --err-bg:#3a1416;
-  }
-}
-:root[data-theme="dark"]{
-  color-scheme: dark;
-  --bg-a:#0b1530; --bg-b:#2a0d18; --dots:rgba(120,170,255,.12);
-  --card:#141e38; --card-soft:#1b2849; --ink:#eef2ff; --muted:#a6b1cf; --line:#02040b;
-  --hero-a:#1a4fa3; --hero-b:#0f8a69;
-  --red:#ff5a52; --blue:#6b9ef0; --green:#3ccf9e;
-  --err:#ff8a80; --ok-bg:#12352a; --err-bg:#3a1416;
-}
-*,*::before,*::after{box-sizing:border-box}
-body{
-  margin:0; font-family:system-ui,-apple-system,'Segoe UI',sans-serif; color:var(--ink); line-height:1.45;
-  background-color:var(--bg-a);
-  background-image:radial-gradient(var(--dots) 1.3px,transparent 1.7px),linear-gradient(135deg,var(--bg-a) 0%,var(--bg-b) 100%);
-  background-size:14px 14px,100% 100%; background-attachment:fixed;
-}
-.wrap{max-width:720px;margin:0 auto;padding:24px 16px 56px}
-.hero{
-  text-align:center; color:#fff; border:3px solid var(--line); border-radius:18px; box-shadow:6px 6px 0 var(--line);
-  padding:26px 18px 22px; margin-bottom:24px;
-  background:repeating-conic-gradient(from 0deg at 50% 118%, rgba(255,255,255,.11) 0deg 5deg, transparent 5deg 10deg),
-    linear-gradient(135deg,var(--hero-a) 0%,var(--hero-b) 100%);
-}
-.tag{display:inline-block;background:var(--red);color:#fff;border:2px solid var(--line);padding:5px 14px;border-radius:999px;font-weight:900;font-size:14px;transform:rotate(-2deg)}
-h1{font-family:'Impact','Arial Black',sans-serif;font-weight:400;letter-spacing:.04em;font-size:clamp(28px,6vw,42px);margin:12px 0 6px;line-height:1.1;text-shadow:3px 3px 0 var(--line)}
-.hero p{margin:0 auto;max-width:520px}
-.card{background:var(--card);border:3px solid var(--line);border-radius:14px;box-shadow:5px 5px 0 var(--line);padding:20px 18px 22px;margin-bottom:22px}
-h2{font-size:19px;margin:0 0 12px}
-.note{background:rgba(255,210,63,.2);border:2px dashed var(--yellow);padding:10px 14px;border-radius:10px;font-size:15px;margin:0 0 16px}
-.field{margin-bottom:14px}
-label,.legend{display:block;font-weight:800;margin-bottom:5px}
-.req{color:var(--red)}
-.hint{display:block;font-size:13px;color:var(--muted);font-weight:400;margin-top:2px}
-input[type=text],input[type=email],input[type=tel],select{
-  width:100%;font:inherit;font-size:16px;color:var(--ink);background:var(--card-soft);
-  border:2px solid var(--line);border-radius:10px;padding:10px 12px;
-}
-input:focus-visible,select:focus-visible,button:focus-visible,.choice input:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
-.row{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px}
-.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-@media (max-width:560px){.row{grid-template-columns:1fr 1fr}.row .city{grid-column:1 / -1}}
-fieldset{border:0;margin:0 0 14px;padding:0}
-.choices{display:flex;gap:10px;flex-wrap:wrap}
-.choice{display:flex;align-items:center;gap:8px;background:var(--card-soft);border:2px solid var(--line);border-radius:999px;padding:8px 14px;font-weight:700;cursor:pointer}
-.choice input{width:18px;height:18px;margin:0}
-.check{display:flex;gap:12px;align-items:flex-start;font-weight:600;background:var(--card-soft);border:2px solid var(--line);border-radius:10px;padding:12px 14px;cursor:pointer}
-.check input{width:24px;height:24px;margin:0;flex:none;accent-color:var(--blue);cursor:pointer}
-.subcard{border-left:4px solid var(--yellow);padding:4px 0 2px 14px;margin:0 0 14px}
-.label-preview{background:var(--card-soft);border:2px solid var(--line);border-radius:10px;padding:12px 14px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:15px;white-space:pre-line;min-height:3em}
-.err-msg{display:block;color:var(--err);font-size:13px;font-weight:700;margin-top:4px}
-[aria-invalid=true]{border-color:var(--err)!important}
-button{font:inherit;font-weight:900;font-size:17px;background:var(--yellow);color:var(--yellow-ink);border:3px solid var(--line);border-radius:999px;padding:12px 26px;box-shadow:3px 3px 0 var(--line);cursor:pointer}
-button:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--line)}
-button[disabled]{opacity:.6;cursor:wait}
-.status{margin-top:14px;padding:12px 14px;border-radius:10px;font-weight:700}
-.status:empty{display:none}
-.status.ok{background:var(--ok-bg);border:2px solid var(--green)}
-.status.err{background:var(--err-bg);border:2px solid var(--err)}
-.status a{color:inherit}
-.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
-.privacy{font-size:14px;color:var(--muted)}
-.privacy a{color:var(--blue)}
-footer{text-align:center;color:var(--muted);font-size:13px;margin-top:8px}
+<!DOCTYPE html><html lang="en"><head><script>document.documentElement.className+=" js";try{var h=localStorage.getItem("wise-hc");if(h==="1"||(h===null&&matchMedia("(prefers-contrast: more)").matches))document.documentElement.className+=" hc"}catch(e){}setTimeout(function(){var e=document.querySelectorAll(".fade-in");for(var i=0;i<e.length;i++)e[i].classList.add("visible");},3000);</script><meta charset="UTF-8"/><meta name="robots" content="noindex"/><meta name="referrer" content="no-referrer"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Prize Drawing: Student Registration — W.I.S.E.C.E.O.</title><meta name="description" content="Register for the W.I.S.E.C.E.O. prize drawing and tell us where to mail your prize."/><link rel="icon" type="image/webp" href="/logo.webp"/><link rel="stylesheet" href="/styles.css"/><style>
+#prizeForm fieldset{border:0;margin:0 0 16px;padding:0}
+#prizeForm .legend{display:block;font-size:.82rem;font-weight:600;color:var(--dark);margin-bottom:9px}
+#prizeForm .hint{display:block;font-size:.8rem;font-weight:400;color:var(--gray);margin-top:3px;line-height:1.45}
+#prizeForm .choices{display:flex;gap:10px;flex-wrap:wrap}
+#prizeForm .choice{display:flex;align-items:center;gap:9px;background:var(--off-white);border:1.5px solid var(--light-border);border-radius:980px;padding:10px 16px;font-size:.92rem;font-weight:500;color:var(--dark);cursor:pointer;margin:0}
+#prizeForm .choice:has(input:checked){border-color:var(--blue);background:#e8f0fb}
+#prizeForm .choice input{width:18px;height:18px;margin:0;accent-color:var(--blue)}
+#prizeForm .check{display:flex;gap:12px;align-items:flex-start;background:var(--off-white);border:1.5px solid var(--light-border);border-radius:12px;padding:14px 16px;font-size:.92rem;font-weight:500;line-height:1.5;color:var(--dark);cursor:pointer}
+#prizeForm .check input{width:22px;height:22px;margin:0;flex:none;accent-color:var(--blue)}
+#prizeForm .pf-h{font-size:1.15rem;font-weight:700;color:var(--dark);margin:26px 0 14px;letter-spacing:-.01em}
+#prizeForm .pf-note{background:#fff8e6;border:1px solid rgba(245,166,35,.45);border-radius:12px;padding:12px 16px;font-size:.92rem;line-height:1.5;color:#3a3a3c;margin:4px 0 6px}
+#prizeForm .subcard{border-left:4px solid var(--gold);padding:4px 0 2px 16px;margin:0 0 16px}
+#prizeForm .pf-addr{display:grid;grid-template-columns:2fr 1fr 1fr;gap:14px}
+@media (max-width:620px){#prizeForm .pf-addr{grid-template-columns:1fr 1fr}#prizeForm .pf-addr .city{grid-column:1 / -1}}
+#prizeForm .label-preview{background:var(--off-white);border:1.5px dashed var(--light-border);border-radius:12px;padding:14px 16px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.92rem;white-space:pre-line;color:var(--dark)}
+#prizeForm .err-msg{display:block;color:#c62828;font-size:.8rem;font-weight:600;margin-top:5px}
+#prizeForm [aria-invalid=true]{border-color:#c62828!important}
+#prizeForm .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+#prizeForm .form-status:empty{display:none}
+#prizeForm [hidden]{display:none!important}
+html.hc #prizeForm .choice,html.hc #prizeForm .check,html.hc #prizeForm .label-preview,html.hc #prizeForm .pf-note{background:#000;color:#fff;border-color:#fff}
 </style>
-</head>
-<body>
-<div class="wrap">
-  <header class="hero">
-    <span class="tag">🏆 Prize Drawing</span>
-    <h1>Student Registration</h1>
-    <p>Won a prize? Tell us where to mail it. Didn’t win this time? Sign up anyway so you’re ready next time. It takes about two minutes.</p>
-  </header>
-
-  <form class="card" id="prizeForm" novalidate>
+</head><body><a class="skip-link" href="#main">Skip to main content</a><div class="utility-bar"><div class="ub-inner"><span class="ub-note">501(c)(3) Nonprofit &nbsp;·&nbsp; Creating Equity &amp; Opportunity</span><div class="ub-controls"><label class="lang-select notranslate" translate="no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg><span class="sr-only">Choose a language</span><select data-lang-select><option value="en" lang="en">English</option><option value="es" lang="es">Español</option><option value="ar" lang="ar">العربية</option><option value="fr" lang="fr">Français</option><option value="ht" lang="ht">Kreyòl ayisyen</option><option value="ps" lang="ps">پښتو</option><option value="fa" lang="fa">دری / فارسی</option><option value="uk" lang="uk">Українська</option><option value="sw" lang="sw">Kiswahili</option><option value="so" lang="so">Soomaali</option><option value="ne" lang="ne">नेपाली</option><option value="vi" lang="vi">Tiếng Việt</option><option value="pt" lang="pt">Português</option><option value="zh-CN" lang="zh-CN">中文 (简体)</option></select></label><button type="button" class="hc-toggle" role="switch" aria-checked="false" data-hc-toggle><svg class="hc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18a9 9 0 0 0 0-18Z" fill="currentColor"/></svg><span class="hc-track" aria-hidden="true"><span class="hc-thumb"></span></span><span class="hc-label">High contrast</span></button></div></div></div><nav aria-label="Main"><a href="/" class="nav-logo"><img src="/logo.webp" alt="W.I.S.E.C.E.O. logo"/><span>W.I.S.E.C.E.O.</span></a><div class="nav-links"><a href="/about.html">About</a><a href="/programs.html">Programs</a><a href="/literacy.html">Literacy</a><a href="/newsletter.html">News</a><a href="/#impact">Impact</a><a href="/give.html">Give</a><a href="/contact.html">Contact</a></div><div class="nav-actions"><button type="button" class="nav-icon-btn" data-search-open aria-label="Search the site"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button><div class="give-menu"><button type="button" class="nav-cta give-toggle" aria-expanded="false" aria-controls="give-panel" data-give-toggle>Give<svg class="give-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button><div class="give-panel" id="give-panel" hidden><a class="give-opt give-opt-member" href="/give.html#membership" data-membership-link><span class="go-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.7 4.5c2.1 0 3.6 1.1 4.3 2.4h2c.7-1.3 2.2-2.4 4.3-2.4 3.7 0 5.8 3.9 4.3 7.3C19.5 16.4 12 21 12 21z"/></svg></span><span class="go-text"><span class="go-title">Become a Member <span class="go-price">$4.99/mo</span></span><span class="go-desc">Keep programs running all year. Cancel anytime.</span></span></a><a class="give-opt" href="/give.html#give-once"><span class="go-text"><span class="go-title">Give once</span><span class="go-desc">Any amount, any time.</span></span></a><a class="give-opt" href="/contact.html"><span class="go-text"><span class="go-title">Volunteer</span><span class="go-desc">Share your time and talent.</span></span></a><p class="give-note">501(c)(3) · Tax-deductible</p></div></div><button type="button" class="nav-icon-btn nav-burger" data-menu-open aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></div></nav><div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Site menu" hidden><div class="mm-top"><a href="/" class="nav-logo"><img src="/logo.webp" alt="W.I.S.E.C.E.O. home"/><span>W.I.S.E.C.E.O.</span></a><button type="button" class="nav-icon-btn" data-menu-close aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div><button type="button" class="mm-search" data-search-open><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Search the site</button><div role="navigation" aria-label="Mobile"><ul class="mm-links"><li><a href="/about.html">About</a></li><li><a href="/programs.html">Programs</a></li><li><a href="/literacy.html">Literacy</a></li><li><a href="/newsletter.html">News</a></li><li><a href="/#impact">Impact</a></li><li><a href="/give.html">Give</a></li><li><a href="/contact.html">Contact</a></li></ul></div><a href="/give.html#membership" class="btn-gold mm-give" data-membership-link>Become a Member · $4.99/mo</a><a href="/give.html#give-once" class="mm-give-once">or give once</a><div class="mm-settings"><label class="lang-select notranslate" translate="no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg><span class="sr-only">Choose a language</span><select data-lang-select><option value="en" lang="en">English</option><option value="es" lang="es">Español</option><option value="ar" lang="ar">العربية</option><option value="fr" lang="fr">Français</option><option value="ht" lang="ht">Kreyòl ayisyen</option><option value="ps" lang="ps">پښتو</option><option value="fa" lang="fa">دری / فارسی</option><option value="uk" lang="uk">Українська</option><option value="sw" lang="sw">Kiswahili</option><option value="so" lang="so">Soomaali</option><option value="ne" lang="ne">नेपाली</option><option value="vi" lang="vi">Tiếng Việt</option><option value="pt" lang="pt">Português</option><option value="zh-CN" lang="zh-CN">中文 (简体)</option></select></label><button type="button" class="hc-toggle" role="switch" aria-checked="false" data-hc-toggle><svg class="hc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18a9 9 0 0 0 0-18Z" fill="currentColor"/></svg><span class="hc-track" aria-hidden="true"><span class="hc-thumb"></span></span><span class="hc-label">High contrast</span></button></div><p class="mm-help">Need help in your language? <a href="/contact.html">Contact us</a> and we will connect you with someone who can help.</p></div><div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-labelledby="search-title" hidden><div class="sm-backdrop" data-search-close></div><div class="sm-panel"><h2 id="search-title" class="sr-only">Search wiseceo.org</h2><form class="sm-form" role="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><label for="search-input" class="sr-only">Search</label><input id="search-input" type="search" placeholder="Search programs, articles, resources…" autocomplete="off" enterkeyhint="search"/><button type="button" class="sm-close" data-search-close aria-label="Close search">Esc</button></form><p class="sm-status" id="search-status" aria-live="polite"></p><ul class="sm-results" id="search-results"></ul></div></div><main id="main"><section id="programs"><div class="programs-inner apply-wrap fade-in"><p class="section-label">Prize Drawing</p><h1 class="section-title">Student Registration.</h1><p class="article-sub">Won a prize? Tell us where to mail it. Didn’t win this time? Sign up anyway so you’re ready next time. It takes about two minutes.</p><div class="apply-note"><b>Your information stays private.</b> We use it only to mail your prize and to contact you about it. We don’t sell or share it, and this page has no ads. See our <a href="/privacy.html">Privacy Policy</a>. Questions? Email <a href="mailto:admin@wiseceo.org">admin@wiseceo.org</a>.</div><form class="apply-form" id="prizeForm" novalidate>
     <fieldset>
       <legend class="legend">Did you win a prize in this drawing?</legend>
       <div class="choices" id="wonChoices">
@@ -107,10 +31,10 @@ footer{text-align:center;color:var(--muted);font-size:13px;margin-top:8px}
       <p class="hint" style="margin-top:8px"><strong>Didn’t win this time? You can win next time!</strong> Fill out the form anyway and choose <strong>No</strong> (or leave it blank), so you’re all set when you win.</p>
     </fieldset>
 
-    <p class="note">📦 <strong>U.S. addresses only.</strong> We can ship to any of the 50 states and Washington, D.C. We can’t ship internationally at this time.</p>
+    <p class="pf-note">📦 <strong>U.S. addresses only.</strong> We can ship to any of the 50 states and Washington, D.C. We can’t ship internationally at this time.</p>
 
-    <h2>About you</h2>
-    <div class="row2">
+    <h2 class="pf-h">About you</h2>
+    <div class="field-row">
       <div class="field">
         <label for="first">First name <span class="req">*</span></label>
         <input type="text" id="first" name="first" autocomplete="given-name" maxlength="60" required>
@@ -157,13 +81,13 @@ footer{text-align:center;color:var(--muted);font-size:13px;margin-top:8px}
           <span class="hint">Because you’re under 18, your prize will be shipped in your name, care of (c/o) your parent or guardian, so it reaches the right person at your address.</span></label>
         <input type="text" id="guardian" name="guardian" autocomplete="off" maxlength="120">
       </div>
-      <div class="row2">
+      <div class="field-row">
         <div class="field">
-          <label for="guardianPhone">Parent/guardian phone <span class="hint" style="display:inline">(optional)</span></label>
+          <label for="guardianPhone">Parent/guardian phone <span class="opt">(optional)</span></label>
           <input type="tel" id="guardianPhone" name="guardianPhone" autocomplete="off" inputmode="tel" maxlength="20">
         </div>
         <div class="field">
-          <label for="guardianEmail">Parent/guardian email <span class="hint" style="display:inline">(optional)</span></label>
+          <label for="guardianEmail">Parent/guardian email <span class="opt">(optional)</span></label>
           <input type="email" id="guardianEmail" name="guardianEmail" autocomplete="off" inputmode="email" maxlength="254">
         </div>
       </div>
@@ -173,16 +97,16 @@ footer{text-align:center;color:var(--muted);font-size:13px;margin-top:8px}
       </div>
     </div>
 
-    <h2>Shipping address</h2>
+    <h2 class="pf-h">Shipping address</h2>
     <div class="field">
       <label for="street">Street address <span class="req">*</span></label>
       <input type="text" id="street" name="street" autocomplete="address-line1" maxlength="150" required>
     </div>
     <div class="field">
-      <label for="street2">Apartment, suite, unit <span class="hint" style="display:inline">(optional)</span></label>
+      <label for="street2">Apartment, suite, unit <span class="opt">(optional)</span></label>
       <input type="text" id="street2" name="street2" autocomplete="address-line2" maxlength="80">
     </div>
-    <div class="row">
+    <div class="pf-addr">
       <div class="field city">
         <label for="city">City <span class="req">*</span></label>
         <input type="text" id="city" name="city" autocomplete="address-level2" maxlength="80" required>
@@ -209,15 +133,9 @@ footer{text-align:center;color:var(--muted);font-size:13px;margin-top:8px}
 
     <div class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
 
-    <button type="submit">Send my shipping info</button>
-    <div class="status" id="status" role="status" aria-live="polite"></div>
-  </form>
-
-  <p class="privacy">🔒 <strong>Your privacy:</strong> we use this information only to ship your prize and to contact you about it. We don’t sell or share it, and this page has no ads, trackers or cookies. See our <a href="/privacy">privacy policy</a>. Questions? Email <a href="mailto:admin@wiseceo.org">admin@wiseceo.org</a>.</p>
-  <footer>W.I.S.E.C.E.O. · wiseceo.org</footer>
-</div>
-
-<script>
+    <div class="form-btns"><button type="submit" class="btn-primary">Send my shipping info</button></div>
+    <div class="form-status" id="status" role="status" aria-live="polite"></div>
+  </form></div></section></main><footer class="site-footer"><div class="footer-grid"><div class="footer-brand"><a href="/" class="footer-logo"><img class="footer-logo-img" src="/logo.webp" alt="W.I.S.E.C.E.O. logo"/><span>W.I.S.E.C.E.O.</span></a><p>Worldwide Institute for Success &amp; Excellence. Creating equity and opportunity through digital literacy, workforce development, language access, and economic mobility.</p><ul class="social-links"><li><a href="https://www.facebook.com/wiseceo" rel="me noopener" aria-label="W.I.S.E.C.E.O. on Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.3c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.3H7.4V14h2.7v8z"/></svg></a></li><li><a href="https://x.com/thewiseceo" rel="me noopener" aria-label="W.I.S.E.C.E.O. on X (Twitter)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.8 3h3.1l-6.8 7.8L22 21h-6.2l-4.9-6.4L5.3 21H2.2l7.3-8.3L2 3h6.4l4.4 5.8zm-1.1 16.2h1.7L7.4 4.7H5.6z"/></svg></a></li><li><a href="https://www.instagram.com/thewiseceo" rel="me noopener" aria-label="W.I.S.E.C.E.O. on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></li><li><a href="https://www.linkedin.com/company/thewiseceo" rel="me noopener" aria-label="W.I.S.E.C.E.O. on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4z"/></svg></a></li><li><a href="https://www.tiktok.com/@thewiseceo" rel="me noopener" aria-label="W.I.S.E.C.E.O. on TikTok"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 3c.4 2.3 1.9 3.8 4.4 4v3.3c-1.6 0-3-.5-4.3-1.3v6.2a6 6 0 1 1-6-6c.3 0 .6 0 .9.1v3.4a2.7 2.7 0 1 0 1.9 2.6V3z"/></svg></a></li><li><a href="https://www.youtube.com/@thewiseceo" rel="me noopener" aria-label="W.I.S.E.C.E.O. on YouTube"><svg viewBox="0 0 24 24" fill="currentColor" fill-rule="evenodd" aria-hidden="true"><path d="M21.6 7.2a2.6 2.6 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.6 2.6 0 0 0 2.4 7.2 27 27 0 0 0 2 12a27 27 0 0 0 .4 4.8 2.6 2.6 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.6 2.6 0 0 0 1.8-1.8A27 27 0 0 0 22 12a27 27 0 0 0-.4-4.8ZM10 15V9l5.2 3z"/></svg></a></li><li><a href="https://newsletter.wiseceo.org/" aria-label="Our newsletter on beehiiv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h13v14H6a2 2 0 0 1-2-2V5Z"/><path d="M17 9h3v8a2 2 0 0 1-2 2M8 9h5M8 13h5M8 17h3"/></svg></a></li><li><a href="mailto:admin@wiseceo.org" aria-label="Email W.I.S.E.C.E.O."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a></li></ul></div><div class="footer-cols-wrap" role="navigation" aria-label="Footer"><div class="footer-col"><h2 id="fc-programs">Programs</h2><ul aria-labelledby="fc-programs"><li><a href="/programs.html">All programs</a></li><li><a href="/programs.html#digital-literacy">Digital Literacy &amp; Coding</a></li><li><a href="/programs.html#workforce">Workforce Development</a></li><li><a href="/programs.html#youth-leadership">Youth Leadership Academy</a></li><li><a href="/literacy.html">Literacy &amp; Language</a></li><li><a href="/apply.html">Apply to a program</a></li></ul></div><div class="footer-col"><h2 id="fc-resources">Family Resources</h2><ul aria-labelledby="fc-resources"><li><a href="/newsletter.html">News &amp; Resources</a></li><li><a href="/articles/iep-family-guide.html">IEP Family Guide</a></li><li><a href="/articles/siop-moves-for-teachers.html">SIOP Moves for Teachers</a></li><li><a href="/articles/reading-is-the-first-job-skill.html">Reading Is the First Job Skill</a></li><li><a href="/articles/taxing-the-unbanked.html">Taxing the Unbanked</a></li></ul></div><div class="footer-col"><h2 id="fc-about">About Us</h2><ul aria-labelledby="fc-about"><li><a href="/about.html">Our Mission</a></li><li><a href="/about.html#where-we-serve">Where We Serve</a></li><li><a href="/about.html#founder">Our Founder</a></li><li><a href="/#impact">Our Impact</a></li><li><a href="/about.html#organization">Organization Information</a></li><li><a href="/contact.html">Contact</a></li></ul></div><div class="footer-col"><h2 id="fc-involved">Get Involved</h2><ul aria-labelledby="fc-involved"><li><a href="/give.html">Give</a></li><li><a href="https://newsletter.wiseceo.org/subscribe">Subscribe to the newsletter</a></li><li><a href="/contact.html">Volunteer</a></li><li><a href="/contact.html">Start a chapter</a></li></ul></div><div class="footer-col"><h2 id="fc-partners">Partners</h2><ul aria-labelledby="fc-partners"><li><a href="/about.html#partners">Partners &amp; Collaborations</a></li><li><a href="https://www.amazonfutureengineer.com/">Amazon Future Engineer</a></li><li><a href="https://techolympics.org/">TechOlympics</a></li><li><a href="/contact.html">Become a partner</a></li></ul></div></div></div><div class="footer-legal"><div><p>Worldwide Institute For Success And Excellence (W.I.S.E.C.E.O.) &nbsp;·&nbsp; 501(c)(3) Nonprofit Organization &nbsp;·&nbsp; EIN: 41-3404888</p><p>Mailing address: 7240 Towne Centre Blvd, Suite 78, West Chester, OH 45069</p><p>Donations are tax-deductible to the fullest extent allowed by law.</p></div><ul class="legal-links"><li>© 2026 W.I.S.E.C.E.O.</li><li><a href="/privacy.html">Privacy Policy</a></li><li><a href="/ip-policy.html">IP Policy</a></li><li><a href="/accessibility.html">Accessibility</a></li><li><a href="/contact.html">Language Assistance</a></li><li><a href="/sitemap.xml">Sitemap</a></li></ul></div></footer><script src="/site.js" defer></script><script src="/reveal.js" defer></script><script>
 (function(){
 var STATES=[["AL","Alabama"],["AK","Alaska"],["AZ","Arizona"],["AR","Arkansas"],["CA","California"],["CO","Colorado"],["CT","Connecticut"],["DE","Delaware"],["DC","District of Columbia"],["FL","Florida"],["GA","Georgia"],["HI","Hawaii"],["ID","Idaho"],["IL","Illinois"],["IN","Indiana"],["IA","Iowa"],["KS","Kansas"],["KY","Kentucky"],["LA","Louisiana"],["ME","Maine"],["MD","Maryland"],["MA","Massachusetts"],["MI","Michigan"],["MN","Minnesota"],["MS","Mississippi"],["MO","Missouri"],["MT","Montana"],["NE","Nebraska"],["NV","Nevada"],["NH","New Hampshire"],["NJ","New Jersey"],["NM","New Mexico"],["NY","New York"],["NC","North Carolina"],["ND","North Dakota"],["OH","Ohio"],["OK","Oklahoma"],["OR","Oregon"],["PA","Pennsylvania"],["RI","Rhode Island"],["SC","South Carolina"],["SD","South Dakota"],["TN","Tennessee"],["TX","Texas"],["UT","Utah"],["VT","Vermont"],["VA","Virginia"],["WA","Washington"],["WV","West Virginia"],["WI","Wisconsin"],["WY","Wyoming"]];
 var f=document.getElementById('prizeForm'),st=document.getElementById('status'),sel=document.getElementById('state');
@@ -254,7 +172,7 @@ function unmark(e){
   if(!first.hasAttribute||!first.hasAttribute('aria-invalid'))return;
   first.removeAttribute('aria-invalid');
   var next=errHost(first).nextElementSibling;if(next&&next.className==='err-msg')next.remove();
-  if(!f.querySelector('[aria-invalid]')){st.className='status';st.textContent='';}
+  if(!f.querySelector('[aria-invalid]')){st.className='form-status';st.textContent='';}
 }
 f.addEventListener('input',unmark);f.addEventListener('change',unmark);
 function check(){
@@ -288,8 +206,8 @@ function check(){
 f.addEventListener('submit',function(e){
   e.preventDefault();
   if(val('website'))return;
-  st.className='status';st.textContent='';
-  if(!check()){st.className='status err';st.textContent='Please fix the highlighted fields.';return;}
+  st.className='form-status';st.textContent='';
+  if(!check()){st.className='form-status err';st.textContent='Please fix the highlighted fields.';return;}
   var data={};new FormData(f).forEach(function(v,k){data[k]=typeof v==='string'?v.trim():v;});
   data.page=location.pathname;
   var btn=f.querySelector('button');btn.disabled=true;btn.textContent='Sending…';
@@ -297,19 +215,17 @@ f.addEventListener('submit',function(e){
     .then(function(r){return r.json().catch(function(){return {};});})
     .then(function(r){
       if(r.ok!==true)throw new Error(r.error||'failed');
-      st.className='status ok';
+      st.className='form-status ok';
       var how=data.contact==='text'?'text '+data.phone:'email '+data.email;
       st.textContent=data.won==='yes'?'🎉 Got it! Your prize will ship to the address above. We’ll '+how+' if we have any questions.':'✅ You’re all set! If you win a future drawing, we’ll '+how+' and mail your prize to the address above.';
       f.reset();syncAge();syncContact();
     })
     .catch(function(){
-      st.className='status err';
+      st.className='form-status err';
       st.innerHTML='We couldn’t send your form just now. Please try again in a few minutes, or email <a href="mailto:admin@wiseceo.org">admin@wiseceo.org</a>.';
     })
     .then(function(){btn.disabled=false;btn.textContent='Send my shipping info';});
 });
 syncAge();syncContact();
 })();
-</script>
-</body>
-</html>
+</script></body></html>
