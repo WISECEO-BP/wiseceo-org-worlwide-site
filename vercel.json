@@ -1,17 +1,84 @@
 {
   "redirects": [
-    { "source": "/disclaimer", "destination": "/legal.html", "statusCode": 301 },
-    { "source": "/StudentRegistration", "destination": "/studentregistration.html", "permanent": false },
-    { "source": "/:page([a-z0-9-]+)", "destination": "/:page.html", "permanent": true },
-    { "source": "/:page([a-z0-9-]+)/", "destination": "/:page.html", "permanent": true },
-    { "source": "/articles/:page([a-z0-9-]+)", "destination": "/articles/:page.html", "permanent": true },
-    { "source": "/articles/:page([a-z0-9-]+)/", "destination": "/articles/:page.html", "permanent": true }
+    {
+      "source": "/disclaimer",
+      "destination": "/legal.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/StudentRegistration",
+      "destination": "/studentregistration.html",
+      "permanent": false
+    },
+    {
+      "source": "/Register",
+      "destination": "/register.html",
+      "permanent": false
+    },
+    {
+      "source": "/:page([a-z0-9-]+)",
+      "destination": "/:page.html",
+      "permanent": true
+    },
+    {
+      "source": "/:page([a-z0-9-]+)/",
+      "destination": "/:page.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/:page([a-z0-9-]+)",
+      "destination": "/articles/:page.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/:page([a-z0-9-]+)/",
+      "destination": "/articles/:page.html",
+      "permanent": true
+    }
   ],
   "headers": [
-    { "source": "/studentregistration.html", "headers": [
-      { "key": "Cache-Control", "value": "no-store" },
-      { "key": "Referrer-Policy", "value": "no-referrer" },
-      { "key": "X-Robots-Tag", "value": "noindex" }
-    ]}
+    {
+      "source": "/studentregistration.html",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "no-referrer"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    },
+    {
+      "source": "/register.html",
+      "headers": [
+        {
+          "key": "Referrer-Policy",
+          "value": "no-referrer"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    },
+    {
+      "source": "/student-signup.html",
+      "headers": [
+        {
+          "key": "Referrer-Policy",
+          "value": "no-referrer"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    }
   ]
 }
