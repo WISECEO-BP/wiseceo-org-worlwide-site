@@ -37,6 +37,8 @@ def main_content(src):
 entries = []
 for path in sorted(list(ROOT.glob("*.html")) + list(ROOT.glob("articles/*.html"))):
     src = path.read_text(encoding="utf-8")
+    if re.search(r'<meta name="robots" content="[^"]*noindex', src):
+        continue  # e.g. 404.html and the student registration form
     title = text(re.search(r"<title>(.*?)</title>", src, re.S).group(1))
     title = re.sub(r"\s*[—–-]\s*W\.I\.S\.E\.C\.E\.O\..*$", "", title) or "Home"
     if path.name == "index.html":
