@@ -40,6 +40,7 @@ module.exports = async function handler(req, res) {
     guardianPhone: Boolean(guardianDigits) && guardianDigits.length !== 10,
     permission: adult === false && body.permission !== 'yes',
     street: !street, city: !city, state: !STATES.has(state), zip: !ZIP_RE.test(zip), confirm: body.confirm !== 'yes',
+    terms: body.terms !== 'yes',
   };
   if (Object.values(invalid).some(Boolean)) return send(res, 400, { ok: false, error: 'invalid', fields: invalid });
 
@@ -58,6 +59,7 @@ module.exports = async function handler(req, res) {
     'State': state,
     'ZIP Code': zip,
     'Prize Drawing Entry': true,
+    'Agreed to Terms': true,
   };
   // Winners answer Yes; everyone else registers for future drawings (No, or left blank).
   if (body.won === 'yes') fields['Collecting Prize'] = 'Yes';
