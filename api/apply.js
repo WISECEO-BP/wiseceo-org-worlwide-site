@@ -36,6 +36,7 @@ module.exports = async function handler(req, res) {
   const invalid = {
     program: !program, applicant: !applicant, name: !name, email: !EMAIL_RE.test(email), goals: !goals,
     guardian: body.applicant !== 'adult' && !guardian,
+    terms: body.terms !== 'yes',
   };
   if (Object.values(invalid).some(Boolean)) return send(res, 400, { ok: false, error: 'invalid', fields: invalid });
 
@@ -47,6 +48,7 @@ module.exports = async function handler(req, res) {
     phone ? `Phone: ${phone}` : null,
     location ? `City/state: ${location}` : null,
     `Preferred language: ${language}`,
+    'Agreed to the terms and policies at wiseceo.org/legal: Yes',
     '',
     goals,
   ].filter((line) => line !== null).join('\n');

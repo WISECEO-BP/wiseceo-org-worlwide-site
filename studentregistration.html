@@ -131,6 +131,11 @@ html.hc #prizeForm .choice,html.hc #prizeForm .check,html.hc #prizeForm .label-p
         <span>The information above is correct. <span class="req">*</span></span></label>
     </div>
 
+    <div class="field">
+      <label class="check"><input type="checkbox" id="terms" name="terms" value="yes" required>
+        <span>By registering, you agree to the terms and policies set forth at <a href="/legal.html" target="_blank" rel="noopener">wiseceo.org/legal</a>. <span class="req">*</span></span></label>
+    </div>
+
     <div class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
 
     <div class="form-btns"><button type="submit" class="btn-primary">Send my shipping info</button></div>
@@ -199,6 +204,7 @@ function check(){
   need('state',val('state'),'Please choose your state.');
   need('zip',ZIP_RE.test(val('zip')),'Please enter a 5-digit ZIP code.');
   need('confirm',f.elements.confirm.checked,'Please check this box to confirm.');
+  need('terms',f.elements.terms.checked,'Please check this box to agree to our terms and policies.');
   if(bad.length)bad[0].focus();
   return !bad.length;
 }

@@ -70,6 +70,8 @@ if(af){
     if(missing.length||!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test((d.email||'').trim())){
       setStatus(st,'err','Please fill in the required fields marked with *.');(missing[0]||af.querySelector('[name=email]')).focus();return;
     }
+    var terms=af.querySelector('[name=terms]');
+    if(terms&&!terms.checked){setStatus(st,'err','Please check the box to agree to our terms and policies.');terms.focus();return;}
     d.page=location.pathname;
     setStatus(st,'info','Sending your application…');busy(af,true);
     var label=prog.options[prog.selectedIndex].text;
