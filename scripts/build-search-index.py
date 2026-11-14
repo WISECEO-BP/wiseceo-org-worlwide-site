@@ -23,7 +23,9 @@ def text(fragment):
 
 def url_for(path):
     rel = path.relative_to(ROOT).as_posix()
-    return "/" if rel == "index.html" else "/" + rel
+    if rel == "index.html":
+        return "/"
+    return "/" + (rel[:-len("index.html")] if rel.endswith("/index.html") else rel)
 
 
 def main_content(src):
@@ -35,13 +37,13 @@ def main_content(src):
 
 
 entries = []
-for path in sorted(list(ROOT.glob("*.html")) + list(ROOT.glob("articles/*.html"))):
+for path in sorted(list(ROOT.glob("*.html")) + list(ROOT.glob("articles/*.html")) + list(ROOT.glob("about/**/*.html"))):
     src = path.read_text(encoding="utf-8")
     if re.search(r'<meta name="robots" content="[^"]*noindex', src):
         continue  # e.g. 404.html and the student registration form
     title = text(re.search(r"<title>(.*?)</title>", src, re.S).group(1))
     title = re.sub(r"\s*[—–-]\s*W\.I\.S\.E\.C\.E\.O\..*$", "", title) or "Home"
-    if path.name == "index.html":
+    if path == ROOT / "index.html":
         title = "Home"
     desc = re.search(r'<meta name="description" content="([^"]*)"', src)
     body = main_content(src)
@@ -58,6 +60,9 @@ for path in sorted(list(ROOT.glob("*.html")) + list(ROOT.glob("articles/*.html")
         h = re.search(r"<h[23][^>]*>(.*?)</h[23]>", window, re.S)
         if not h:
             continue
+        h1 = window.find("<h1")
+        if -1 < h1 < h.start():
+            continue  # the section holds the page's own <h1>; the page entry already covers it
         p = re.search(r"<p\b[^>]*>(.*?)</p>", window[h.end():], re.S)
         heading = text(h.group(1))
         url = f"{url_for(path)}#{sid}"
