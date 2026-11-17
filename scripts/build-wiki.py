@@ -31,6 +31,16 @@ WIKI = ROOT / "wiki"
 SITE = "https://www.wiseceo.org"
 ORG_ID = SITE + "/#organization"
 FOUNDER_ID = SITE + "/tiffanydavidson#person"
+# Languages the site's translator offers (same list as the site header), split around the logo.
+LANGUAGES = [
+    ("en", "English", "English"), ("es", "Español", "Spanish"), ("fr", "Français", "French"),
+    ("pt", "Português", "Portuguese"), ("ht", "Kreyòl ayisyen", "Haitian Creole"),
+    ("sw", "Kiswahili", "Swahili"), ("so", "Soomaali", "Somali"),
+    ("ar", "العربية", "Arabic"), ("fa", "دری / فارسی", "Dari / Persian"), ("ps", "پښتو", "Pashto"),
+    ("uk", "Українська", "Ukrainian"), ("ne", "नेपाली", "Nepali"), ("vi", "Tiếng Việt", "Vietnamese"),
+    ("zh-CN", "中文 (简体)", "Chinese (Simplified)"),
+]
+RTL = {"ar", "fa", "ps"}
 SECTIONS = [  # sidebar "Knowledge Hub" list, in order
     ("index.md", "Main page"),
     ("01-organization/index.md", "Organization"),
@@ -93,7 +103,7 @@ def split_frontmatter(text):
 
 
 def render(body):
-    """Return (title, lead paragraph text, html, [(h2 text, id)])."""
+    """Return (title, lead paragraph text, html, [(level, heading text, id)])."""
     lines = body.strip("\n").split("\n")
     out, toc, title, lead, i = [], [], "", "", 0
     while i < len(lines):
@@ -108,8 +118,7 @@ def render(body):
                 title = text
             else:
                 hid = slugify(text)
-                if level == 2:
-                    toc.append((text, hid))
+                toc.append((level, text, hid))
                 out.append(f'<h{level} id="{hid}">{inline(text)}</h{level}>')
             i += 1
             continue
@@ -164,6 +173,71 @@ def render(body):
 
 # ---------- page assembly ----------
 
+def lang_button(code, native, english):
+    d = ' dir="rtl"' if code in RTL else ""
+    return (f'<li><button type="button" class="lang" data-lang="{code}" lang="{code}"{d}>'
+            f'<span class="lang-native">{html.escape(native)}</span>'
+            f'<span class="lang-en" lang="en" dir="ltr">{html.escape(english)}</span></button></li>')
+
+
+GLOBE_IMAGE = ROOT / "images" / "globe-logo.png"  # drop the globe artwork here to replace the drawn globe
+
+
+def globe_html():
+    if GLOBE_IMAGE.exists():
+        return '<img class="globe-art" src="/images/globe-logo.png" alt="W.I.S.E.C.E.O. globe logo" width="220" height="220"/>'
+    svg = (
+        '<svg class="globe" viewBox="0 0 200 200" aria-hidden="true" focusable="false">'
+        '<defs><radialGradient id="gl" cx="50%" cy="45%" r="55%"><stop offset="0" stop-color="#2b6cb0" stop-opacity=".28"/>'
+        '<stop offset="1" stop-color="#2b6cb0" stop-opacity="0"/></radialGradient>'
+        '<linearGradient id="gr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4f8fe0"/><stop offset="1" stop-color="#c99a3c"/></linearGradient></defs>'
+        '<circle cx="100" cy="100" r="96" fill="url(#gl)"/>'
+        '<g fill="none" stroke="url(#gr)" stroke-width=".8" opacity=".85">'
+        '<circle cx="100" cy="100" r="96" stroke-width="1.5"/>'
+        '<ellipse cx="100" cy="100" rx="96" ry="30"/><ellipse cx="100" cy="100" rx="96" ry="62"/>'
+        '<path d="M4 100h192M100 4v192"/>'
+        '<ellipse cx="100" cy="100" rx="30" ry="96"/><ellipse cx="100" cy="100" rx="62" ry="96"/>'
+        '</g></svg>'
+    )
+    return svg + '<img src="/logo.webp" alt="W.I.S.E.C.E.O. logo" width="110" height="110"/>'
+
+
+def header_html(main_page):
+    """Wikipedia-style central header on every page; languages flank the globe on the main page."""
+    center = (
+        '<div class="wiki-header-center">'
+        '<p class="wiki-title">W.I.S.E.C.E.O.</p>'
+        '<p class="wiki-subtitle">Worldwide Institute for Success and Excellence</p>'
+        f'<div class="wiki-logo-wrapper">{globe_html()}</div>'
+        '</div>'
+    )
+    if not main_page:
+        return f'<header class="wiki-header-container">{center}</header><!--/wiki-header-->'
+    left, right = LANGUAGES[:7], LANGUAGES[7:]
+    return (
+        '<header class="wiki-header-container portal">'
+        '<div class="portal-grid">'
+        f'<ul class="portal-langs" aria-label="Read in another language">{"".join(lang_button(*l) for l in left)}</ul>'
+        f'{center}'
+        f'<ul class="portal-langs" aria-label="More languages">{"".join(lang_button(*l) for l in right)}</ul>'
+        '</div>'
+        '<form class="portal-search" role="search" data-wiki-search>'
+        '<label class="sr-only" for="portal-q">Search</label>'
+        '<input id="portal-q" type="search" name="q" autocomplete="off" placeholder="Search the Knowledge Hub"/>'
+        '<label class="sr-only" for="portal-scope">Search in</label>'
+        '<select id="portal-scope" name="scope"><option value="wiki">W.I.S.E.C.E.O.</option><option value="site">Whole website</option></select>'
+        '<button type="submit" aria-label="Search"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>'
+        '</form>'
+        '<div class="portal-results" role="status" aria-live="polite" data-wiki-results></div>'
+        '<div class="portal-read"><button type="button" class="portal-read-btn" aria-expanded="false" aria-controls="portal-all-langs">'
+        '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>'
+        'Read W.I.S.E.C.E.O. in your language</button></div>'
+        f'<div class="portal-all" id="portal-all-langs" hidden><ul>{"".join(lang_button(*l) for l in LANGUAGES)}</ul>'
+        '<p class="portal-note">Pages are translated automatically, so wording may not be perfect.</p></div>'
+        '</header><!--/wiki-header-->'
+    )
+
+
 def plain(md_text):
     return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", "", inline(md_text)))).strip()
 
@@ -193,7 +267,9 @@ def build_page(md_path, published):
     if rel != "index.md":
         crumbs.append(f"<span aria-current=\"page\">{inline(h1)}</span>")
 
-    side_toc = "".join(f'<li><a href="#{hid}">{inline(t)}</a></li>' for t, hid in toc)
+    side_toc = '<li><a href="#top">(Top)</a></li>' + "".join(
+        f'<li{" class=\"sub-item\"" if lvl == 3 else ""}><a href="#{hid}">{inline(t)}</a></li>'
+        for lvl, t, hid in toc)
     side_hub = "".join(
         f'<li><a href="{up}{p[:-3]}.html"{" aria-current=\"page\"" if p == rel else ""}>{html.escape(t)}</a></li>'
         for p, t in SECTIONS if p in published
@@ -248,22 +324,27 @@ def build_page(md_path, published):
         '</head>'
     )
     body = (
-        '<body><a class="skip-link" href="#content">Skip to content</a>'
-        '<aside aria-label="Wiki navigation"><div class="top-section">'
-        f'<a class="logo-area" href="{up}index.html">W.I.S.E.C.E.O. Wiki</a>'
-        f'<h3>Navigation</h3><ul>{side_hub}</ul>'
-        + (f'<h3>On this page</h3><ul class="page-toc">{side_toc}</ul>' if toc else "")
-        + '<h3>Quick Links</h3><ul>'
+        '<body><a class="skip-link" href="#top">Skip to content</a>'
+        '<aside aria-label="Wiki navigation"><div>'
+        f'<a class="logo-area" href="{up}index.html"><strong>W.I.S.E.C.E.O.</strong> Wiki</a>'
+        '<div class="toc-box" role="navigation" aria-label="Contents">'
+        '<div class="toc-title">Contents '
+        '<button type="button" class="toc-toggle" aria-expanded="true" aria-controls="toc-list">hide</button></div>'
+        f'<ul id="toc-list">{side_toc}</ul></div>'
+        f'<p class="side-h">Knowledge Hub</p><ul class="quick-links">{side_hub}</ul>'
+        '<p class="side-h">Quick Links</p><ul class="quick-links">'
         '<li><a href="/">Official Website</a></li>'
         '<li><a href="/llms.txt">llms.txt Index</a></li>'
         f'<li><a href="{md_path.name}">View as Markdown</a></li>'
         '<li><a href="/contact.html">Suggest a correction</a></li></ul>'
         '</div><div class="theme-toggle-container">'
-        '<button type="button" id="theme-toggle" aria-pressed="false">Toggle Dark Mode</button>'
+        '<button type="button" id="theme-toggle" aria-pressed="false">Dark Mode</button>'
         '</div></aside>'
-        '<main id="content">'
-        f'<div class="crumbs" role="navigation" aria-label="Breadcrumb">{" › ".join(crumbs)}</div>'
+        '<main id="top">'
+        + header_html(rel == "index.md")
+        + f'<div class="crumbs" role="navigation" aria-label="Breadcrumb">{" › ".join(crumbs)}</div><!--/crumbs-->'
         f"<h1>{inline(h1)}</h1>"
+        '<p class="wiki-from">From the W.I.S.E.C.E.O. Knowledge Hub</p>'
         f'<div class="wiki-body">{content}</div>'
         '<footer class="wiki-foot">'
         + (f"Last updated {html.escape(date)}. " if date else "")
