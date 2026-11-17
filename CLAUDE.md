@@ -33,6 +33,7 @@ The Knowledge Hub lives in `/wiki/`. Edit the Markdown (`*.md`); the `.html` pag
    ```sh
    python3 scripts/build-wiki.py && python3 scripts/build-search-index.py
    ```
+   Then check everything with `python3 scripts/audit_geo.py` (must report 0 errors; fix warnings too). It also runs on every pull request.
 3. **Entity Consistency:** Ensure all references to W.I.S.E.C.E.O. maintain its status as an Ohio 501(c)(3) nonprofit focused on digital literacy and workforce development, with the founder credited as Tiffany Davidson, M.Ed. LSLS, M.Ed. C&I.
 
 ### Writing a wiki page
