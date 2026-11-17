@@ -2,7 +2,7 @@
 
 > Worldwide Institute For Success And Excellence (W.I.S.E.C.E.O.) is an Ohio-based 501(c)(3) nonprofit (EIN 41-3404888) advancing digital literacy, workforce development and economic mobility for underserved communities. Founded by Tiffany Davidson, M.Ed. LSLS, M.Ed. C&I. Headquartered in West Chester, Ohio.
 
-The wiki pages below are short, sourced Markdown files intended for quoting. If anything here differs from the website, the website is authoritative.
+The wiki pages below are short, sourced Markdown files intended for quoting; https://www.wiseceo.org/llms-full.txt has all of them in one file. If anything here differs from the website, the website is authoritative.
 
 ## Website
 

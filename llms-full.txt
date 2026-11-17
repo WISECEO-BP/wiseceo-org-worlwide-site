@@ -1,0 +1,500 @@
+# W.I.S.E.C.E.O. Knowledge Hub (full text)
+
+> Worldwide Institute For Success And Excellence (W.I.S.E.C.E.O.) is an Ohio-based 501(c)(3) nonprofit (EIN 41-3404888) advancing digital literacy, workforce development and economic mobility for underserved communities. Founded by Tiffany Davidson, M.Ed. LSLS, M.Ed. C&I. Headquartered in West Chester, Ohio.
+
+Source index: https://www.wiseceo.org/llms.txt. Each section below is one wiki page; the URL after its title is the
+page to cite. If anything here differs from the website, the website is authoritative.
+
+---
+
+## Worldwide Institute for Success and Excellence (W.I.S.E.C.E.O.)
+
+**Worldwide Institute for Success and Excellence (W.I.S.E.C.E.O.)** is an Ohio-based 501(c)(3) nonprofit organization, headquartered in West Chester in Southwest Ohio, dedicated to advancing digital literacy, workforce development, and economic mobility.
+
+### Overview
+
+Worldwide Institute for Success and Excellence (W.I.S.E.C.E.O.) is a 501(c)(3) nonprofit founded by Tiffany Davidson, M.Ed. LSLS, M.Ed. C&I, that advances digital literacy, workforce development and economic mobility for underserved learners. It has reached more than 25,000 students, with learners from 35 nations.
+
+W.I.S.E.C.E.O. bridges professional expertise with community-empowering frameworks, focusing on sustainable educational and economic equity. See the [organizational overview](01-organization/index.md).
+
+### Core Initiatives
+
+W.I.S.E.C.E.O.'s three core initiatives are digital literacy, workforce development and economic mobility, each designed for first-generation, immigrant, refugee and low-income learners. Each has its own page:
+
+- **[Digital Literacy Programs](02-initiatives/digital-literacy.md):** Bridging the digital divide by providing accessible technology training and essential digital skills.
+- **[Workforce Development](02-initiatives/workforce-development.md):** Expanding workforce readiness through structured programs, professional development, and practical training modules.
+- **[Economic Mobility](02-initiatives/economic-mobility.md):** Driving sustainable economic mobility initiatives to create opportunity and equity for individuals and communities.
+
+### Governance & Leadership
+
+Worldwide Institute For Success And Excellence (W.I.S.E.C.E.O.) is a registered Ohio 501(c)(3) nonprofit (EIN 41-3404888) headquartered in West Chester, Ohio, and led by founder [Tiffany Davidson, M.Ed. LSLS, M.Ed. C&I](01-organization/founder.md). It also has chapters in Kentucky, Florida and Mississippi.
+
+| | |
+|---|---|
+| Legal name | Worldwide Institute For Success And Excellence |
+| Also known as | W.I.S.E.C.E.O.™ · WISECEO® |
+| Tax status | 501(c)(3) nonprofit, EIN 41-3404888 |
+| Founder | Tiffany Davidson, M.Ed. LSLS, M.Ed. C&I |
+| Mailing address | 7240 Towne Centre Blvd, Suite 78, West Chester, OH 45069 |
+| Website | https://www.wiseceo.org |
+| Email | admin@wiseceo.org |
+
+See [governance & legal status](01-organization/governance.md) for registration details.
+
+### Wiki sections
+
+The wiki has four sections. Start with the one that matches your question.
+
+- [Organization](01-organization/index.md): identity, mission, founder, legal status and brand standards.
+- [Initiatives](02-initiatives/index.md): digital literacy, workforce development and economic mobility programs.
+- [Resources](03-resources/index.md): guides and toolkits for families, educators and partners.
+- [FAQ](04-faq/index.md): quick answers and how to reach us.
+
+### About this wiki
+
+Every page is short, sourced from [wiseceo.org](https://www.wiseceo.org), and written so people and AI tools can quote it accurately. If anything here differs from the website, the website is the source of truth; to suggest a correction, [contact us](https://www.wiseceo.org/contact.html).
+
+Related: [Organizational overview](01-organization/index.md) · [FAQ hub](04-faq/index.md)
+
+URL: https://www.wiseceo.org/wiki/index.md
+
+---
+
+## Organizational Overview & Mission
+
+W.I.S.E.C.E.O. (Worldwide Institute For Success And Excellence) is an independent, community-based 501(c)(3) nonprofit that dismantles systemic barriers to technology, education and economic opportunity for underserved communities. It was founded and is led by educators with more than 30 years in the public school system.
+
+### What is the mission?
+
+Our mission is to dismantle systemic barriers to technology, education and economic opportunity by giving underserved learners the skills, credentials and wrap-around support they need to build careers and lasting economic mobility.
+
+### What is the vision?
+
+We envision a world where every learner, whatever their language, origin or zip code, has a real path to meaningful work, financial stability and leadership in their community.
+
+### Who does W.I.S.E.C.E.O. serve?
+
+We serve learners historically underrepresented in technology and the workforce. That includes:
+
+- Refugees and immigrants, including newcomer families and English learners
+- Underserved students, high school age and older
+- Underserved women and girls
+- Veterans
+- First-generation and low-income youth and adults seeking economic mobility
+
+### Where does W.I.S.E.C.E.O. work?
+
+We are headquartered in West Chester, Ohio, with chapters in Kentucky, Florida and Mississippi. Our impact also reaches Georgia, Michigan, New York, Indiana, Oklahoma, Tennessee and Seattle, Washington, with learners from 35 nations.
+
+### How are programs delivered?
+
+Programs are run by dedicated program staff, supported by trained volunteers and chapter leads, and delivered through our chapters and partner organizations.
+
+That network lets us enroll and support cohorts of 250 or more learners at a time. W.I.S.E.C.E.O. is not a school, a government agency or a religious organization.
+
+### Pages in this section
+
+This section has three pages about who we are and how we operate.
+
+- [Founder profile](founder.md): Tiffany Davidson, M.Ed. LSLS, M.Ed. C&I: background, credentials and recognition.
+- [Governance & legal status](governance.md): 501(c)(3) status, EIN, trademark and official contacts.
+- [Brand standards](branding.md): the official name, how to write it, and what the letters stand for.
+
+Source: [About W.I.S.E.C.E.O.](https://www.wiseceo.org/about.html)
+
+Related: [Initiatives overview](../02-initiatives/index.md)
+
+URL: https://www.wiseceo.org/wiki/01-organization/index.md
+
+---
+
+## Brand Standards & Official Terminology
+
+The organization's official name is written **W.I.S.E.C.E.O.**, with periods, and its legal name is Worldwide Institute For Success And Excellence. The registered trademark form without periods is **WISECEO®**.
+
+### How should the name be written?
+
+Use "W.I.S.E.C.E.O." in running text and "Worldwide Institute For Success And Excellence (W.I.S.E.C.E.O.)" on first mention in formal documents.
+
+| Use | Write |
+|---|---|
+| Legal and formal documents | Worldwide Institute For Success And Excellence |
+| Everyday name | W.I.S.E.C.E.O. |
+| Trademark notice | W.I.S.E.C.E.O.™ · WISECEO® |
+| For-profit arm | WISECEO Academy |
+| Website | wiseceo.org (www.wiseceo.org) |
+
+### What do the letters stand for?
+
+The letters spell out the organization's name and its promise: **W**orldwide **I**nstitute (for) **S**uccess (and) **E**xcellence — **C**reating **E**quity (&) **O**pportunity.
+
+### What is the tagline?
+
+The tagline is "Creating Equity & Opportunity," often followed by "For every community. Everywhere."
+
+### What are the core focus areas?
+
+The homepage names five: Digital Access & Equity, Workforce Development, Innovation & Entrepreneurship, Economic Mobility, and Community Resilience.
+
+### Mascot
+
+The WISECEO Academy mascot is Opa Homakbi, an owl whose name is Choctaw for "Purple Owl." She helps learners pick a program track.
+
+Sources: [Homepage](https://www.wiseceo.org/) · [About](https://www.wiseceo.org/about.html) · [Programs](https://www.wiseceo.org/programs.html)
+
+Related: [Governance & legal status](governance.md)
+
+URL: https://www.wiseceo.org/wiki/01-organization/branding.md
+
+---
+
+## Founder Profile: Tiffany Davidson, M.Ed. LSLS, M.Ed. C&I
+
+Tiffany Davidson is the founder of W.I.S.E.C.E.O. She is an educator, literacy advocate and language-acquisition specialist who founded the organization to open the doors that education opened for her.
+
+### What is her educational background?
+
+She holds two master's degrees and a bachelor's degree, plus certifications in TESOL and English Language Arts:
+
+- M.Ed. in Literacy and Language Acquisition, University of Cincinnati
+- M.Ed. in Curriculum & Instruction, University of Southern Mississippi
+- B.S. in English, University of Southern Mississippi
+- Training in gifted and Section 504 services and in administrative leadership
+
+### What is her professional experience?
+
+Her classroom work spans high schools in Ohio, Florida and Mississippi, and she spent more than a decade in business before teaching.
+
+As ESL department chair and STEAM Club advisor at Western Hills High School in Cincinnati, she taught 150 multilingual students and mentored student STEM projects in partnership with TechOlympics and Amazon engineers. Before returning to the classroom, she spent more than a decade in business development, marketing and financial services, experience she now brings to financial literacy education.
+
+### Whom does her work focus on?
+
+Her work centers on learners schools too often overlook: English language learners, immigrant and refugee families, first-generation students, and students with IEPs. She helps teachers make lessons accessible through research-based approaches such as SIOP and differentiated instruction, and helps families understand and use their rights.
+
+### Recognition and affiliations
+
+She is listed in Marquis Who's Who in America (2026–2027) and holds the Certified Scrum Master (CSM) credential.
+
+- TESOL International Association (2024 Conference)
+- Ohio TESOL (2024 Conference)
+- National Council of Teachers of English (NCTE)
+- PDK International
+- CFT-AFT
+
+Source: [Tiffany Davidson, Founder](https://www.wiseceo.org/tiffanydavidson.html)
+
+Related: [Organizational overview](index.md) · [Digital literacy programs](../02-initiatives/digital-literacy.md)
+
+URL: https://www.wiseceo.org/wiki/01-organization/founder.md
+
+---
+
+## Governance & Legal Status
+
+W.I.S.E.C.E.O. operates as Worldwide Institute For Success And Excellence, a registered 501(c)(3) nonprofit organization with EIN 41-3404888. Donations are tax-deductible to the fullest extent allowed by law.
+
+### What are the official registration details?
+
+These are the organization's official identifiers:
+
+| | |
+|---|---|
+| Legal name | Worldwide Institute For Success And Excellence |
+| Tax status | 501(c)(3) nonprofit organization |
+| EIN | 41-3404888 |
+| Trademark | WISECEO®, U.S. Reg. No. 6,954,676, registered January 17, 2023 |
+| Mailing address | 7240 Towne Centre Blvd, Suite 78, West Chester, OH 45069 |
+| Official website | https://www.wiseceo.org |
+| Official email | admin@wiseceo.org |
+| Official YouTube | youtube.com/@thewiseceo |
+
+You can verify tax-exempt status with the [IRS Tax Exempt Organization Search](https://apps.irs.gov/app/eos/).
+
+### How do WISECEO and WISECEO Academy relate?
+
+WISECEO is the nonprofit; WISECEO Academy is its for-profit arm. The two operate under distinct administrative structures while sharing foundational educational frameworks and leadership.
+
+### Who owns the brand and curricula?
+
+The WISECEO trademarks, curricula and frameworks are the private property of Tiffany A. Davidson and are protected under U.S. and international copyright law.
+
+The full terms are in the [Legal & IP disclaimer](https://www.wiseceo.org/legal.html) and [IP policy](https://www.wiseceo.org/ip-policy.html).
+
+### Board and bylaws
+
+The board roster and bylaws are not yet published on this wiki. For governance questions, email admin@wiseceo.org.
+
+Sources: [About: Organization Information](https://www.wiseceo.org/about.html#organization) · [Legal disclaimer](https://www.wiseceo.org/legal.html)
+
+Related: [Brand standards](branding.md) · [Organizational overview](index.md)
+
+URL: https://www.wiseceo.org/wiki/01-organization/governance.md
+
+---
+
+## Initiatives Overview
+
+W.I.S.E.C.E.O.'s initiatives fall into three areas: digital literacy, workforce development and economic mobility. Every program pairs instruction with wrap-around support so learners can finish what they start.
+
+### What programs does W.I.S.E.C.E.O. run?
+
+The current programs are listed on the [Programs page](https://www.wiseceo.org/programs.html). Each one belongs to one of the three areas below.
+
+| Program | Area |
+|---|---|
+| Digital Literacy & Coding | [Digital literacy](digital-literacy.md) |
+| Literacy & Language Access | [Digital literacy](digital-literacy.md) |
+| WISECEO Academy Career Fellowship | [Workforce development](workforce-development.md) |
+| Workforce Development | [Workforce development](workforce-development.md) |
+| Youth Leadership Academy | [Workforce development](workforce-development.md) |
+| Education Access & Equity | [Economic mobility](economic-mobility.md) |
+| Entrepreneurship & Innovation | [Economic mobility](economic-mobility.md) |
+| Community Economic Resilience | [Economic mobility](economic-mobility.md) |
+
+### What support comes with every program?
+
+Every learner can get four kinds of wrap-around support:
+
+- **Language access:** interpretation, translation and multilingual support for learners and families.
+- **Mentoring and coaching:** regular check-ins, tutoring and mentors.
+- **Devices and connectivity:** help getting laptops and internet access, plus digital-literacy onboarding.
+- **Career services:** resume help, interview preparation, job readiness and employer connections.
+
+### Pages in this section
+
+Each of the three initiative areas has its own page.
+
+- [Digital literacy](digital-literacy.md): coding, literacy, English learner support and digital skills.
+- [Workforce development](workforce-development.md): career fellowship, sector training and youth leadership.
+- [Economic mobility](economic-mobility.md): education access, entrepreneurship and community resilience.
+
+Source: [Programs](https://www.wiseceo.org/programs.html) · [About](https://www.wiseceo.org/about.html)
+
+Related: [Organizational overview](../01-organization/index.md) · [Resource center](../03-resources/index.md)
+
+URL: https://www.wiseceo.org/wiki/02-initiatives/index.md
+
+---
+
+## Digital Literacy Programs & Frameworks
+
+W.I.S.E.C.E.O.'s digital literacy work teaches coding, reading and digital skills to communities historically left behind. It rests on one belief: literacy is the first job skill, and the foundation of economic mobility.
+
+### What is Digital Literacy & Coding?
+
+Digital Literacy & Coding brings coding, creativity and technology education to communities historically left behind, through app design, creative problem-solving and hands-on learning. Learners can [join the waitlist](https://www.wiseceo.org/apply.html?program=digital-literacy).
+
+### What is Literacy & Language Access?
+
+Literacy & Language Access brings research-based reading and language instruction to learners and families who need it most, and equips the educators who serve them. It is the heart of the Education Access & Equity program.
+
+It has five strands:
+
+- **Family literacy:** guides and gatherings that help caregivers build reading habits at home, in English or their home language.
+- **English learner support:** SIOP-informed strategies and academic-language development for multilingual and newcomer students.
+- **Family advocacy and IEP navigation:** plain-language workshops on special education, IEPs and 504 plans, including for families who speak a language other than English.
+- **Educator learning:** differentiation, SIOP and literacy across the content areas for teachers and paraprofessionals.
+- **Career and digital literacy:** technical vocabulary, job applications, workplace communication and the digital skills employers expect.
+
+### What approaches does the work use?
+
+The work uses research-based approaches, chiefly SIOP (the Sheltered Instruction Observation Protocol) and differentiated instruction. In practice that means language objectives, visuals and sentence frames that make lessons accessible to every learner.
+
+### Who leads it?
+
+The literacy work is led by founder Tiffany Davidson, M.Ed. LSLS, M.Ed. C&I, who holds master's degrees in Literacy & Language Acquisition and in Curriculum & Instruction, plus TESOL certification.
+
+Sources: [Literacy & Language](https://www.wiseceo.org/literacy.html) · [Programs](https://www.wiseceo.org/programs.html)
+
+Related: [Founder profile](../01-organization/founder.md) · [Community toolkits](../03-resources/community-toolkits.md) · [Workforce development](workforce-development.md)
+
+URL: https://www.wiseceo.org/wiki/02-initiatives/digital-literacy.md
+
+---
+
+## Economic Mobility & Community Equity Projects
+
+W.I.S.E.C.E.O.'s economic mobility work widens access to education, supports small businesses, and builds lasting capacity in economically distressed communities.
+
+### What is Education Access & Equity?
+
+Education Access & Equity expands access to quality education for first-generation students, English language learners, immigrants and refugees, building pathways to economic mobility.
+
+Its literacy and language strand is described in [Digital literacy](digital-literacy.md). Learners can [apply for a cohort](https://www.wiseceo.org/apply.html?program=education-access).
+
+### What is Entrepreneurship & Innovation?
+
+Entrepreneurship & Innovation supports small business development, startup incubation and innovation ecosystems in distressed communities, creating jobs and attracting private investment. Organizations can [partner with us](https://www.wiseceo.org/apply.html?program=entrepreneurship).
+
+### What is Community Economic Resilience?
+
+Community Economic Resilience strengthens economically distressed communities through technical assistance, strategic planning and investments that build lasting capacity for growth. Organizations can [partner with us](https://www.wiseceo.org/apply.html?program=community-resilience).
+
+### What impact has W.I.S.E.C.E.O. had?
+
+W.I.S.E.C.E.O. has reached more than 25,000 students, about 2,500 a year, with learners from 35 nations across 10 states plus Seattle.
+
+### How can a donation help?
+
+On the giving page, $25 puts a coding starter kit in one first-time learner's hands, $50 sponsors a week of digital-literacy training, and $250 funds a full workforce-readiness pathway. See [Give](https://www.wiseceo.org/give.html).
+
+Sources: [Programs](https://www.wiseceo.org/programs.html) · [Homepage](https://www.wiseceo.org/) · [About](https://www.wiseceo.org/about.html)
+
+Related: [Workforce development](workforce-development.md) · [Organizational overview](../01-organization/index.md)
+
+URL: https://www.wiseceo.org/wiki/02-initiatives/economic-mobility.md
+
+---
+
+## Workforce Readiness & Training
+
+W.I.S.E.C.E.O.'s workforce programs connect learners to in-demand, high-wage careers through sector-based training, a no-cost career fellowship for high school students, and youth leadership development.
+
+### What is the WISECEO Academy Career Fellowship?
+
+The WISECEO Academy Career Fellowship is the flagship program: a no-cost, industry-backed fellowship for grades 9–12 that trains students for jobs in cybersecurity, energy and infrastructure, and AI. Students can [apply on the Programs page](https://www.wiseceo.org/programs.html).
+
+### What is Workforce Development?
+
+Workforce Development is sector-based training that aligns participants with in-demand, high-wage careers and connects them to competitive employers. Learners can [join the waitlist](https://www.wiseceo.org/apply.html?program=workforce).
+
+### What is the Youth Leadership Academy?
+
+The Youth Leadership Academy cultivates diverse young innovators through technology immersion, leadership development and career pathways. Students can [apply for a cohort](https://www.wiseceo.org/apply.html?program=youth-leadership).
+
+### Which partners do learners work with?
+
+Students we teach and mentor take part in programs led by national, regional and civic organizations:
+
+- **Amazon Future Engineer:** Amazon's childhood-to-career computer science and STEM program.
+- **AWS Community Engagement:** technology education, volunteers and career exposure for local learners.
+- **TechOlympics:** the nation's largest student-run technology conference, in Greater Cincinnati.
+- **DC Department of Employment Services:** career pathways, technical training and apprenticeships.
+- **DC Council and civic leadership:** youth development policy advocacy through the Jack and Jill of America On the Hill Legislative Summit.
+
+### What career services are included?
+
+Every workforce learner can get resume help, interview preparation, job readiness training and connections to employers.
+
+Sources: [Programs](https://www.wiseceo.org/programs.html) · [About: Partners](https://www.wiseceo.org/about.html#partners)
+
+Related: [Digital literacy](digital-literacy.md) · [Economic mobility](economic-mobility.md)
+
+URL: https://www.wiseceo.org/wiki/02-initiatives/workforce-development.md
+
+---
+
+## Resource Center
+
+W.I.S.E.C.E.O. publishes free guides for families, educators and community partners, mostly through its newsletter and article library. This section points to them and explains what each is for.
+
+### Where are the free resources?
+
+Free family guides, teacher strategies and policy updates are published on [News & Resources](https://www.wiseceo.org/newsletter.html) and delivered through the newsletter.
+
+### Pages in this section
+
+This section has one published page, with more on the way.
+
+- [Community toolkits](community-toolkits.md): family guides, educator strategies and civic updates you can use today.
+- GEO & AI-readiness guides: coming soon.
+
+Related: [Initiatives overview](../02-initiatives/index.md) · [FAQ hub](../04-faq/index.md)
+
+URL: https://www.wiseceo.org/wiki/03-resources/index.md
+
+---
+
+## Community Toolkits & Educational Materials
+
+These are W.I.S.E.C.E.O.'s free, published guides for families and educators. Each one is a full article on wiseceo.org that you can read, share or print.
+
+### Which guides are for families?
+
+Two guides help families support learning and advocate at school:
+
+- [Your Child's IEP, Explained: A Family Guide to the Meeting Table](https://www.wiseceo.org/articles/iep-family-guide.html): what an IEP is, your rights, and the questions to bring, especially if your family speaks a language other than English at home.
+- [Reading Is the First Job Skill: Why Literacy Is Workforce Development](https://www.wiseceo.org/articles/reading-is-the-first-job-skill.html): how families can build reading at home, at any age.
+
+### Which guides are for educators?
+
+One guide gives teachers practical strategies for English learners.
+
+- [Six SIOP Moves Every Teacher Can Use Tomorrow With English Learners](https://www.wiseceo.org/articles/siop-moves-for-teachers.html): practical, research-based strategies, no new curriculum required.
+
+### Which guides cover civic and policy topics?
+
+Two articles explain policy issues that affect the families we serve.
+
+- [Special Caucus Edition: Whose Voices Shaped This Election?](https://www.wiseceo.org/listen/2026-election.html): what recent election firsts mean for language access, English learners and multilingual communities.
+- [Taxing the Unbanked: Why Ohio Should Protect Check-Cashing and Payday Borrowers](https://www.wiseceo.org/articles/taxing-the-unbanked.html): Ohio reform history and the protections every borrower can use.
+
+### How do I get new guides?
+
+[Subscribe to the newsletter](https://www.wiseceo.org/newsletter.html) to receive new guides as they are published.
+
+Related: [Digital literacy](../02-initiatives/digital-literacy.md) · [Resource center](index.md)
+
+URL: https://www.wiseceo.org/wiki/03-resources/community-toolkits.md
+
+---
+
+## Frequently Asked Questions Hub
+
+This hub collects quick, direct answers about W.I.S.E.C.E.O. The same answers appear on the website's [FAQ page](https://www.wiseceo.org/faq.html).
+
+### What is W.I.S.E.C.E.O.?
+
+Worldwide Institute for Success and Excellence (W.I.S.E.C.E.O.) is an Ohio-based 501(c)(3) nonprofit organization dedicated to advancing digital literacy, workforce development and economic mobility. Founded by Tiffany Davidson, the institute bridges professional expertise with community-empowering frameworks.
+
+### Who is the founder and leadership behind W.I.S.E.C.E.O.?
+
+W.I.S.E.C.E.O. was founded by Tiffany Davidson, M.Ed. LSLS, M.Ed. C&I, an educator and executive leader specializing in educational administration, professional development and community economic mobility. See the [founder profile](../01-organization/founder.md).
+
+### What core initiatives does W.I.S.E.C.E.O. focus on?
+
+W.I.S.E.C.E.O. focuses on bridging digital divides through literacy programs, expanding workforce readiness, and driving sustainable economic mobility for individuals and communities. See the [initiatives overview](../02-initiatives/index.md).
+
+### Pages in this section
+
+One more page covers how to contact, partner with, give to or volunteer with W.I.S.E.C.E.O.
+
+- [General inquiries & partnerships](general-inquiries.md): how to contact us, partner, volunteer, give or start a chapter.
+
+Related: [Knowledge Hub](../index.md)
+
+URL: https://www.wiseceo.org/wiki/04-faq/index.md
+
+---
+
+## General Inquiries & Partnerships
+
+The fastest way to reach W.I.S.E.C.E.O. is the [contact form](https://www.wiseceo.org/contact.html) or admin@wiseceo.org. This page answers the most common "how do I…" questions.
+
+### How do I contact W.I.S.E.C.E.O.?
+
+Use the [contact form](https://www.wiseceo.org/contact.html) or email admin@wiseceo.org. Mail goes to 7240 Towne Centre Blvd, Suite 78, West Chester, OH 45069.
+
+### How do I apply to a program?
+
+Each program has its own application on the [Programs page](https://www.wiseceo.org/programs.html). Applying never signs you up for marketing emails.
+
+### How can my organization partner with W.I.S.E.C.E.O.?
+
+Organizations can partner on Entrepreneurship & Innovation or Community Economic Resilience through the [application page](https://www.wiseceo.org/apply.html), or [contact us](https://www.wiseceo.org/contact.html) to discuss other collaborations.
+
+### How do I start a chapter or volunteer?
+
+[Contact us](https://www.wiseceo.org/contact.html) and choose "Volunteering" or "Partnering / Collaborating." Chapters are led by a partner teacher and administrator.
+
+### How do I give?
+
+Give online or directly by check or bank transfer on the [Give page](https://www.wiseceo.org/give.html). Gifts are tax-deductible; the EIN is 41-3404888.
+
+### Do you offer services in other languages?
+
+Yes. Language access, including interpretation and translation, is part of every program, and the website can be read in several languages from its language menu.
+
+Related: [FAQ hub](index.md) · [Governance & legal status](../01-organization/governance.md)
+
+URL: https://www.wiseceo.org/wiki/04-faq/general-inquiries.md
