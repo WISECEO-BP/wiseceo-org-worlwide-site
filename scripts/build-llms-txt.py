@@ -66,7 +66,8 @@ lines = [
     "for underserved communities. Founded by Tiffany Davidson, M.Ed. LSLS, M.Ed. C&I. Headquartered in "
     "West Chester, Ohio.",
     "",
-    "The wiki pages below are short, sourced Markdown files intended for quoting. "
+    "The wiki pages below are short, sourced Markdown files intended for quoting; "
+    f"{SITE}/llms-full.txt has all of them in one file. "
     "If anything here differs from the website, the website is authoritative.",
     "",
     "## Website",
@@ -87,4 +88,29 @@ lines = [
     "",
 ]
 (ROOT / "llms.txt").write_text("\n".join(lines), encoding="utf-8")
+
+# llms-full.txt: the full text of every published wiki page in one file, so an AI tool
+# can read the whole Knowledge Hub in a single request.
+full = [
+    "# W.I.S.E.C.E.O. Knowledge Hub (full text)",
+    "",
+    "> " + lines[2][2:],
+    "",
+    f"Source index: {SITE}/llms.txt. Each section below is one wiki page; the URL after its title is the",
+    "page to cite. If anything here differs from the website, the website is authoritative.",
+    "",
+]
+for path in sorted((ROOT / "wiki").rglob("*.md"),
+                   key=lambda p: (p.parent != ROOT / "wiki", p.parent.as_posix(), p.name != "index.md", p.name)):
+    text = path.read_text(encoding="utf-8")
+    meta = frontmatter(text)
+    if meta.get("status", "").strip() == "draft":
+        continue
+    body = re.sub(r"^---\n.*?\n---\n", "", text, flags=re.S).strip()
+    # Shift every heading down one level so each page title is an H2 under the file's H1.
+    body = re.sub(r"^(#{1,5}) ", lambda m: "#" + m.group(1) + " ", body, flags=re.M)
+    rel = path.relative_to(ROOT).as_posix()
+    full += ["---", "", body, "", f"URL: {SITE}/{rel}", ""]
+(ROOT / "llms-full.txt").write_text("\n".join(full), encoding="utf-8")
+print(f"Wrote llms-full.txt ({sum(len(l.split()) for l in full)} words)")
 print(f"Wrote llms.txt ({sum(1 for l in lines if l.startswith('- '))} links)")
