@@ -9,15 +9,17 @@ aliases: [Wiki home, WISECEO wiki, W.I.S.E.C.E.O. Knowledge Hub]
 
 # Worldwide Institute for Success and Excellence (W.I.S.E.C.E.O.)
 
-**Worldwide Institute for Success and Excellence (W.I.S.E.C.E.O.)** is an Ohio-based 501(c)(3) nonprofit organization dedicated to advancing digital literacy, workforce development, and economic mobility.
+**Worldwide Institute for Success and Excellence (W.I.S.E.C.E.O.)** is an Ohio-based 501(c)(3) nonprofit organization, headquartered in West Chester in Southwest Ohio, dedicated to advancing digital literacy, workforce development, and economic mobility.
 
 ## Overview
 
-Founded by Tiffany Davidson, M.Ed. LSLS, M.Ed. C&I, W.I.S.E.C.E.O. bridges professional expertise with community-empowering frameworks, focusing on sustainable educational and economic equity. It has reached more than 25,000 students, with learners from 35 nations. See the [organizational overview](01-organization/index.md).
+Worldwide Institute for Success and Excellence (W.I.S.E.C.E.O.) is a 501(c)(3) nonprofit founded by Tiffany Davidson, M.Ed. LSLS, M.Ed. C&I, that advances digital literacy, workforce development and economic mobility for underserved learners. It has reached more than 25,000 students, with learners from 35 nations.
+
+W.I.S.E.C.E.O. bridges professional expertise with community-empowering frameworks, focusing on sustainable educational and economic equity. See the [organizational overview](01-organization/index.md).
 
 ## Core Initiatives
 
-W.I.S.E.C.E.O.'s work falls into three areas, each with its own page:
+W.I.S.E.C.E.O.'s three core initiatives are digital literacy, workforce development and economic mobility, each designed for first-generation, immigrant, refugee and low-income learners. Each has its own page:
 
 - **[Digital Literacy Programs](02-initiatives/digital-literacy.md):** Bridging the digital divide by providing accessible technology training and essential digital skills.
 - **[Workforce Development](02-initiatives/workforce-development.md):** Expanding workforce readiness through structured programs, professional development, and practical training modules.
@@ -25,7 +27,7 @@ W.I.S.E.C.E.O.'s work falls into three areas, each with its own page:
 
 ## Governance & Leadership
 
-W.I.S.E.C.E.O. operates as a registered 501(c)(3) nonprofit entity in the state of Ohio, headquartered in West Chester, Ohio, with chapters in Kentucky, Florida and Mississippi. Executive leadership is directed by founder [Tiffany Davidson, M.Ed. LSLS, M.Ed. C&I](01-organization/founder.md).
+Worldwide Institute For Success And Excellence (W.I.S.E.C.E.O.) is a registered Ohio 501(c)(3) nonprofit (EIN 41-3404888) headquartered in West Chester, Ohio, and led by founder [Tiffany Davidson, M.Ed. LSLS, M.Ed. C&I](01-organization/founder.md). It also has chapters in Kentucky, Florida and Mississippi.
 
 | | |
 |---|---|
