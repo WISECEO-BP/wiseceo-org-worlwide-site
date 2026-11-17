@@ -51,3 +51,17 @@ form.addEventListener('submit',function(e){
 if(location.hash==='#give-once'){form.querySelector('[name=default_interval][value=o]').checked=true;}
 update();
 })();
+/* Campaign total: edit data-raised / data-goal / data-updated on #gp-progress in give.html. */
+(function(){
+var p=document.getElementById('gp-progress');if(!p)return;
+var raised=parseFloat(p.dataset.raised)||0,goal=parseFloat(p.dataset.goal)||0;
+function usd(n){return '$'+n.toLocaleString('en-US',{minimumFractionDigits:n%1?2:0,maximumFractionDigits:2});}
+document.getElementById('gp-raised').textContent=usd(raised);
+if(p.dataset.updated)document.getElementById('gp-updated').textContent=p.dataset.updated;
+if(goal>0){
+  var pct=Math.min(100,Math.round(raised/goal*100)),bar=document.getElementById('gp-bar'),gt=document.getElementById('gp-goal-text');
+  gt.textContent='of '+usd(goal)+' goal ('+pct+'%)';gt.hidden=false;
+  bar.setAttribute('aria-valuemax',goal);bar.setAttribute('aria-valuenow',raised);bar.setAttribute('aria-valuetext',usd(raised)+' of '+usd(goal));
+  bar.hidden=false;requestAnimationFrame(function(){document.getElementById('gp-bar-fill').style.width=pct+'%';});
+}
+})();
