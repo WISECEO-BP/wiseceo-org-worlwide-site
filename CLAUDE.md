@@ -1,6 +1,12 @@
-# wiseceo.org — notes for Claude
+# CLAUDE.md - W.I.S.E.C.E.O. GEO & Site Guidelines
 
 Static HTML site plus Node serverless functions in `/api`, deployed by Vercel from `main`.
+
+## Core Identity & Mission
+- **Organization:** Worldwide Institute for Success and Excellence (W.I.S.E.C.E.O.) - an Ohio-based 501(c)(3) nonprofit dedicated to digital literacy, workforce development, and economic mobility.
+- **Founder & Leadership:** Tiffany Davidson, M.Ed. LSLS, M.Ed. C&I.
+- **Official address:** 7240 Towne Centre Blvd, Suite 78, West Chester, OH 45069 (the registered address printed in the footer; never Mason).
+- **Canonical domain:** `https://www.wiseceo.org` (with `www`). Official LinkedIn: `linkedin.com/company/thewiseceo`.
 
 ## Publishing changes
 - The site owner has asked Claude to **merge its own pull requests**, so they don't have to approve each one.
@@ -11,3 +17,26 @@ Static HTML site plus Node serverless functions in `/api`, deployed by Vercel fr
 - Every registration form must include the required checkbox: "By registering, you agree to the terms and policies set forth at wiseceo.org/legal." (linked to /legal.html), checked in the browser and in the `/api` handler.
 - After changing page text, run `python3 scripts/build-search-index.py`.
 - Never ask the owner to paste API keys or tokens into chat; they belong in Vercel or Airtable settings.
+- Don't name third-party vendors in visible page copy unless the owner approves (the privacy policy is the exception; ask before changing it).
+
+## Automated GEO Rules for Every Content Addition
+Whenever new pages, wiki entries, or blog posts are created or edited in this repository:
+1. **Mini-Answer Formatting:** Ensure major headings are immediately followed by 1-to-2-sentence direct answers for RAG extraction.
+2. **Technical Signals:** Automatically include `<link rel="canonical">`, Open Graph metadata, and structured JSON-LD Organization/Article schema with correct author bylines. (Wiki pages get these from `scripts/build-wiki.py`.)
+3. **Markdown Chunking & Discovery:** Keep wiki files modular and automatically update `llms.txt` when new markdown paths are added (`python3 scripts/build-llms-txt.py`; `build-wiki.py` runs it for you).
+4. **No Phantom Links:** Never link to non-existent external knowledge graph entries (such as uncreated Wikipedia or Wikidata pages).
+
+## Wiki Maintenance & Styling Rules
+The Knowledge Hub lives in `/wiki/`. Edit the Markdown (`*.md`); the `.html` pages are generated.
+1. **Wikipedia Aesthetic:** Style all pages under `/wiki/` with a clean, encyclopedic layout featuring a sticky sidebar table of contents, clear section headings, and neutral, authoritative phrasing. (Layout: `wiki/wiki.css`, dark-mode toggle: `wiki/wiki.js`.)
+2. **Automatic Sitemap & llms.txt Update:** Whenever a new wiki page is added under `/wiki/`, automatically update the root sitemap and regenerate the `llms.txt` file so AI search crawlers instantly index the new markdown path. One command does all of it:
+   ```sh
+   python3 scripts/build-wiki.py && python3 scripts/build-search-index.py
+   ```
+3. **Entity Consistency:** Ensure all references to W.I.S.E.C.E.O. maintain its status as an Ohio 501(c)(3) nonprofit focused on digital literacy and workforce development, with the founder credited as Tiffany Davidson, M.Ed. LSLS, M.Ed. C&I.
+
+### Writing a wiki page
+- Frontmatter: `title`, `date`, `tags: [a, b]`; optional `description`, `seo_title`, `aliases`. Add `status: draft` to keep a page out of the site, sitemap and `llms.txt` until it is approved; don't link to drafts.
+- Use only the Markdown `build-wiki.py` supports: `#`/`##`/`###` headings, paragraphs, `-` lists, pipe tables, `> [!NOTE]` callouts, bold, italic, code, and relative `.md` links.
+- Every fact must come from a live wiseceo.org page (cite it in a `Source:` line); end with a `Related:` line. Each folder keeps an `index.md` that links every page in it.
+- Check links with the obsidian-notes `vault_lint.py wiki` when available.

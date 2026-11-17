@@ -37,7 +37,7 @@ def main_content(src):
 
 
 entries = []
-for path in sorted(list(ROOT.glob("*.html")) + list(ROOT.glob("articles/*.html")) + list(ROOT.glob("about/**/*.html"))):
+for path in sorted(list(ROOT.glob("*.html")) + list(ROOT.glob("articles/*.html")) + list(ROOT.glob("about/**/*.html")) + list(ROOT.glob("wiki/**/*.html"))):
     src = path.read_text(encoding="utf-8")
     if re.search(r'<meta name="robots" content="[^"]*noindex', src):
         continue  # e.g. 404.html and the student registration form
