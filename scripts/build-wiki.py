@@ -304,6 +304,10 @@ def build_page(md_path, published):
     css = f"{up}wiki.css"
     head = (
         '<!DOCTYPE html><html lang="en"><head>'
+        # "/wiki" (no slash) is served by a rewrite; move to "/wiki/" so relative links resolve.
+        + ('<script>if(location.pathname==="/wiki")location.replace("/wiki/"+location.search+location.hash)</script>'
+           if rel == "index.md" else "")
+        +
         # Apply the saved theme before first paint so dark mode doesn't flash.
         '<script>try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>'
         '<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>'
