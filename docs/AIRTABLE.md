@@ -6,7 +6,8 @@ environment variables; it is never sent to the browser.
 
 | Form | Endpoint | What it writes |
 |---|---|---|
-| Contact (`/contact.html`) | `POST /api/contact` | Upserts the sender in **Website Contacts** (matched on Email), adds a row to **Website Messages** linked to them. Web3Forms still emails the team as before. |
+| Contact (`/contact.html`) | `POST /api/contact` | Checks the email is real, upserts the sender in **Website Contacts** (matched on Email), and adds a row to **Website Messages** with Status **Awaiting confirmation** and a **Confirm Link**. See *Contact-form email confirmation* below. |
+| Confirm page (`/confirm.html`) | `POST /api/confirm` | Verifies the signed link and changes the message's Status to **New**. |
 | Newsletter (`/newsletter.html` ×2, `/contact.html`) | `POST /api/subscribe` | Upserts the subscriber in **Website Contacts** with **Newsletter** checked. Also subscribes them on beehiiv if beehiiv keys are set. |
 
 Every record also captures the **Language** the visitor was reading the site in
@@ -77,16 +78,81 @@ Any base works: the code only needs the base ID and the two table names.
 | Contact | Link to Website Contacts *(optional; messages still save without it)* |
 | Page | Single line text |
 | Submitted At | Date with time |
-| Status | Single select: New / In progress / Replied / Closed |
+| Status | Single select: Awaiting confirmation / New / In progress / Replied / Closed |
 | Assigned To | Single line text *(staff only)* |
+| Confirm Link | URL *(set by the site; emailed to the sender)* |
+| Confirmed At | Date with time *(set when the sender confirms)* |
 
 Single-select options are created automatically the first time a new value
 arrives (the API uses `typecast`).
 
+## Contact-form email confirmation
+
+Messages reach the team only after the sender proves they own their email address.
+Everything runs from Airtable, so staff can change the wording, recipients or
+on/off state without touching the website.
+
+```
+Visitor sends form ─► Airtable row: Status = Awaiting confirmation, Confirm Link filled in
+                       └─ Automation 1 emails the sender the Confirm Link
+Sender clicks link ─► /confirm.html ─► "Confirm my message" button ─► Status = New
+                       └─ Automation 2 emails the team
+```
+
+Links are signed and expire after 7 days. The confirm page uses a button rather
+than confirming on page load, because email security scanners open links
+automatically. Unconfirmed rows stay as *Awaiting confirmation*; filter them out of
+staff views and delete old ones whenever you like.
+
+### Turn it on (about 10 minutes, all in Airtable)
+
+Do these together. The site starts sending "check your email" messages as soon as
+the **Confirm Link** field exists.
+
+1. **Add two fields** to **Website Messages**: `Confirm Link` (URL) and
+   `Confirmed At` (Date, include time). Names must match exactly. Or re-run
+   `scripts/airtable-setup.mjs`, which adds them if missing.
+2. **Automation 1: "Confirm contact message"**
+   - Trigger: *When a record matches conditions*, table **Website Messages**:
+     `Status` is `Awaiting confirmation` **and** `Confirm Link` is not empty.
+   - Action: *Send email*
+     - To: the record's **Email**
+     - Subject: `Please confirm your message to W.I.S.E.C.E.O.`
+     - Message:
+       ```
+       Hi {Name},
+
+       Thank you for contacting W.I.S.E.C.E.O. To make sure your message reaches
+       our team, please confirm your email address:
+
+       {Confirm Link}
+
+       This link works for 7 days. If you didn't contact us, you can ignore this
+       email and nothing will be sent.
+
+       W.I.S.E.C.E.O. · Worldwide Institute For Success And Excellence
+       ```
+3. **Automation 2: "New confirmed message → team"**
+   - Trigger: *When a record matches conditions*, table **Website Messages**:
+     `Status` is `New`.
+   - Action: *Send email* to `admin@wiseceo.org` (or a team list) with
+     Name, Email, Interest, Language and Message. Set **Reply-to** to the record's Email.
+4. Turn both automations **on**, then send yourself a test message from `/contact.html`.
+
+To switch confirmation off, delete or rename the **Confirm Link** field. The form
+then saves messages as **New** and emails the team directly, as before.
+
+Airtable automation runs count toward your plan's monthly limit (each message uses
+about two runs).
+
 ## What visitors see
 
-- **Contact:** success if Airtable *or* the email notification gets through. If
-  both fail, their email app opens with the message filled in.
+- **Contact:** a real-address check first (typos like `gmial.com` get a "Did you
+  mean…?" prompt; throwaway inboxes and domains that can't receive mail are
+  refused). Then "Almost done! Please check your email" with the confirm-link
+  step. Without the **Confirm Link** field it says "Thank you!" and emails the team
+  directly as before. If the server can't be reached, their email app opens with
+  the message filled in.
 - **Newsletter:** with beehiiv keys set, "You're subscribed! Check your inbox."
   Without them, they're saved to Airtable and asked to confirm on the beehiiv
   page so newsletter emails actually reach them. If saving fails, they get a
@@ -101,5 +167,6 @@ arrives (the API uses `typecast`).
   Origin check. There is no rate limiting; if spam becomes a problem, add Vercel
   Firewall rules or a CAPTCHA.
 - Airtable allows 5 requests per second per base, which is far above this site's traffic.
-- Staff email alerts for new messages still come from Web3Forms. You can also add
-  an Airtable automation ("When record created" in Website Messages → send email).
+- Staff alerts for contact messages come from Airtable Automation 2 once
+  confirmation is on (Web3Forms only while it's off). The program application
+  form still alerts the team through Web3Forms.

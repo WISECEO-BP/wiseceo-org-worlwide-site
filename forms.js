@@ -52,23 +52,24 @@ if(cf){
     d.language=siteLanguage();d.page=location.pathname;d.allowTypo=allowTypo;
     cfEmail.removeAttribute('aria-invalid');
     setStatus(st,'info','Sending…');busy(cf,true);
-    // The server checks the email is real before anything is saved or emailed to the team.
-    // If it rejects the address we stop here; if the server is unreachable we still deliver by email.
+    // The server checks the email is real, then saves the message as "Awaiting confirmation".
+    // Airtable emails the sender a confirm link; our team is alerted only once they confirm.
+    // If the server can't be reached, the visitor's own email app opens instead.
     postJSON('/api/contact',d).then(function(r){return r;},function(){return {};}).then(function(r){
+      busy(cf,false);
       if(r.status===400&&r.error==='email'){emailProblem(st,r);return;}
-      var saved=r.ok===true;
-      postJSON('https://api.web3forms.com/submit',{access_key:WEB3FORMS_KEY,subject:subject,
+      if(r.ok===true&&r.confirm===true){
+        setStatus(st,'ok','<b>Almost done! Please check your email.</b><br>We sent a confirmation link to <b>'+esc(d.email)+'</b>. Click it within 7 days so your message reaches our team. Don’t see it? Check your spam or junk folder.');
+        cf.reset();allowTypo=false;
+      }else if(r.ok===true){
+        // Saved, but email confirmation isn't switched on in Airtable yet: alert the team the old way.
+        postJSON('https://api.web3forms.com/submit',{access_key:WEB3FORMS_KEY,subject:subject,
           from_name:'wiseceo.org contact form',name:d.name,email:d.email,replyto:d.email,
-          interest:d.interest||'',language:d.language,message:d.message})
-        .then(function(x){return x.success===true;},function(){return false;})
-        .then(function(mailed){
-          busy(cf,false);
-          if(saved||mailed){
-            setStatus(st,'ok','Thank you! Your message has been received — we’ll be in touch soon.');cf.reset();allowTypo=false;
-          }else{
-            setStatus(st,'info','Opening your email app so your message reaches us…');mailFallback(d);
-          }
-        });
+          interest:d.interest||'',language:d.language,message:d.message}).catch(function(){});
+        setStatus(st,'ok','Thank you! Your message has been received — we’ll be in touch soon.');cf.reset();allowTypo=false;
+      }else{
+        setStatus(st,'info','Opening your email app so your message reaches us…');mailFallback(d);
+      }
     });
   });
 }

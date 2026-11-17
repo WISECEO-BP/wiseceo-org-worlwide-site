@@ -60,6 +60,22 @@ async function createMessage(fields, contactId) {
   }
 }
 
+async function getRecord(table, id) {
+  const c = config();
+  const res = await fetch(`${API}/${c.baseId}/${encodeURIComponent(table)}/${encodeURIComponent(id)}`, {
+    headers: { Authorization: `Bearer ${c.token}` },
+  });
+  if (res.status === 404) return null;
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok) throw new Error(`Airtable ${res.status}: ${(data.error && (data.error.message || data.error.type)) || 'request failed'}`);
+  return data;
+}
+
+async function updateRecord(table, id, fields) {
+  const data = await airtable('PATCH', table, { records: [{ id, fields }], typecast: true });
+  return data.records[0];
+}
+
 // Add one row to any table, optionally in another base the token can access. Returns the record id.
 async function createRecord(table, fields, baseId) {
   const data = await airtable('POST', table, { records: [{ fields }], typecast: true }, baseId);
@@ -121,4 +137,4 @@ function guard(req, res) {
   return body;
 }
 
-module.exports = { upsertContact, createMessage, createRecord, clean, guard, send, EMAIL_RE };
+module.exports = { config, upsertContact, createMessage, createRecord, getRecord, updateRecord, clean, guard, send, EMAIL_RE };
