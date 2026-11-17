@@ -17,9 +17,13 @@ Two guides help families support learning and advocate at school:
 
 ## Which guides are for educators?
 
+One guide gives teachers practical strategies for English learners.
+
 - [Six SIOP Moves Every Teacher Can Use Tomorrow With English Learners](https://www.wiseceo.org/articles/siop-moves-for-teachers.html): practical, research-based strategies, no new curriculum required.
 
 ## Which guides cover civic and policy topics?
+
+Two articles explain policy issues that affect the families we serve.
 
 - [Special Caucus Edition: Whose Voices Shaped This Election?](https://www.wiseceo.org/listen/2026-election.html): what recent election firsts mean for language access, English learners and multilingual communities.
 - [Taxing the Unbanked: Why Ohio Should Protect Check-Cashing and Payday Borrowers](https://www.wiseceo.org/articles/taxing-the-unbanked.html): Ohio reform history and the protections every borrower can use.

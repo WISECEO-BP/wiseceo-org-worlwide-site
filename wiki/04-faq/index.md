@@ -23,6 +23,8 @@ W.I.S.E.C.E.O. focuses on bridging digital divides through literacy programs, ex
 
 ## Pages in this section
 
+One more page covers how to contact, partner with, give to or volunteer with W.I.S.E.C.E.O.
+
 - [General inquiries & partnerships](general-inquiries.md): how to contact us, partner, volunteer, give or start a chapter.
 
 Related: [Knowledge Hub](../index.md)

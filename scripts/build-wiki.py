@@ -41,6 +41,15 @@ LANGUAGES = [
     ("zh-CN", "中文 (简体)", "Chinese (Simplified)"),
 ]
 RTL = {"ar", "fa", "ps"}
+# Official terminology published as a schema.org DefinedTermSet on the brand page
+# (every term and definition is taken from that page and the About page).
+BRAND_TERMS = [
+    ("W.I.S.E.C.E.O.", "Everyday name of Worldwide Institute For Success And Excellence, an Ohio 501(c)(3) nonprofit."),
+    ("Worldwide Institute For Success And Excellence", "Legal name of the 501(c)(3) nonprofit that operates as W.I.S.E.C.E.O. (EIN 41-3404888)."),
+    ("WISECEO®", "Registered trademark form of the name, U.S. Reg. No. 6,954,676, registered January 17, 2023."),
+    ("WISECEO Academy", "The for-profit arm of WISECEO, operating under a distinct administrative structure."),
+    ("Creating Equity & Opportunity", "The organization's tagline; also the meaning of the letters C.E.O. in W.I.S.E.C.E.O."),
+]
 SECTIONS = [  # sidebar "Knowledge Hub" list, in order
     ("index.md", "Main page"),
     ("01-organization/index.md", "Organization"),
@@ -293,6 +302,24 @@ def build_page(md_path, published):
     }
     if date:
         ld["datePublished"] = ld["dateModified"] = date
+    graph = [ld]
+    # Breadcrumbs: Knowledge Hub > section > page
+    trail = [("Knowledge Hub", page_url("index.md"))]
+    if depth and not rel.endswith("/index.md"):
+        section = rel.split("/")[0]
+        trail.append((next((t for p, t in SECTIONS if p.startswith(section + "/")), section),
+                      page_url(section + "/index.md")))
+    if rel != "index.md":
+        trail.append((plain(h1), url))
+    graph.append({"@type": "BreadcrumbList", "@id": url + "#breadcrumb",
+                  "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": n, "item": u}
+                                      for i, (n, u) in enumerate(trail)]})
+    ld["breadcrumb"] = {"@id": url + "#breadcrumb"}
+    if rel == "01-organization/branding.md":
+        graph.append({"@type": "DefinedTermSet", "@id": url + "#terms",
+                      "name": "W.I.S.E.C.E.O. official terminology", "url": url,
+                      "hasDefinedTerm": [{"@type": "DefinedTerm", "name": n, "description": d,
+                                          "inDefinedTermSet": {"@id": url + "#terms"}} for n, d in BRAND_TERMS]})
     if isinstance(meta.get("tags"), list):
         ld["keywords"] = ", ".join(t for t in meta["tags"] if t not in ("index", "draft"))
 
@@ -324,7 +351,7 @@ def build_page(md_path, published):
         '<link rel="icon" type="image/webp" href="/logo.webp"/>'
         f'<link rel="stylesheet" href="{css}"/>'
         f'<link rel="alternate" type="text/markdown" href="{md_path.name}"/>'
-        f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>'
+        f'<script type="application/ld+json">{json.dumps({"@context": "https://schema.org", "@graph": [{k: v for k, v in n.items() if k != "@context"} for n in graph]}, ensure_ascii=False)}</script>'
         '</head>'
     )
     body = (

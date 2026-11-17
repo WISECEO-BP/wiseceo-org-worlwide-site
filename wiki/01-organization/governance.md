@@ -31,7 +31,9 @@ WISECEO is the nonprofit; WISECEO Academy is its for-profit arm. The two operate
 
 ## Who owns the brand and curricula?
 
-The WISECEO trademarks, curricula and frameworks are the private property of Tiffany A. Davidson and are protected under U.S. and international copyright law. The full terms are in the [Legal & IP disclaimer](https://www.wiseceo.org/legal.html) and [IP policy](https://www.wiseceo.org/ip-policy.html).
+The WISECEO trademarks, curricula and frameworks are the private property of Tiffany A. Davidson and are protected under U.S. and international copyright law.
+
+The full terms are in the [Legal & IP disclaimer](https://www.wiseceo.org/legal.html) and [IP policy](https://www.wiseceo.org/ip-policy.html).
 
 ## Board and bylaws
 
