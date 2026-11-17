@@ -1,0 +1,45 @@
+{
+  "name": "W.I.S.E.C.E.O. — Worldwide Institute For Success And Excellence",
+  "alternateName": "WISECEO",
+  "description": "W.I.S.E.C.E.O. is a 501(c)(3) nonprofit creating equity and opportunity through digital literacy, workforce development, literacy and language access, and economic mobility for underserved communities.",
+  "url": "https://www.wiseceo.org/",
+  "type": "Nonprofit 501(c)(3)",
+  "taxID": "41-3404888",
+  "headquarters": "7240 Towne Centre Blvd, Suite 78, West Chester, OH 45069, US",
+  "founder": "Tiffany Davidson",
+  "email": "admin@wiseceo.org",
+  "impact": {
+    "studentsReached": "25,000+",
+    "studentsPerYear": "2,500+",
+    "yearsInPublicEducation": "30+",
+    "nationsReached": 35
+  },
+  "chapters": [
+    "Kentucky",
+    "Florida",
+    "Mississippi"
+  ],
+  "topics": [
+    "Digital literacy",
+    "Workforce development",
+    "Literacy and language access",
+    "English learners",
+    "Economic mobility",
+    "Entrepreneurship",
+    "Youth leadership"
+  ],
+  "keyPages": {
+    "about": "https://www.wiseceo.org/about.html",
+    "programs": "https://www.wiseceo.org/programs.html",
+    "literacy": "https://www.wiseceo.org/literacy.html",
+    "apply": "https://www.wiseceo.org/apply.html",
+    "give": "https://www.wiseceo.org/give.html",
+    "news": "https://www.wiseceo.org/newsletter.html",
+    "contact": "https://www.wiseceo.org/contact.html",
+    "faq": "https://www.wiseceo.org/faq.html",
+    "wiki": "https://www.wiseceo.org/wiki/"
+  },
+  "feed": "https://www.wiseceo.org/feed.xml",
+  "llms": "https://www.wiseceo.org/llms.txt",
+  "lastModified": "2026-11-17"
+}

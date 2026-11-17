@@ -1,0 +1,20 @@
+# ai.txt for www.wiseceo.org
+# W.I.S.E.C.E.O. (Worldwide Institute For Success And Excellence), a 501(c)(3) nonprofit.
+# AI crawlers and assistants may read and cite public pages on this site.
+# Please cite "W.I.S.E.C.E.O." and link to the page you quote.
+
+User-Agent: *
+Allow: /
+Disallow: /api/
+Disallow: /register.html
+Disallow: /student-signup.html
+Disallow: /studentregistration.html
+
+# Machine-readable summaries
+Summary: https://www.wiseceo.org/ai/summary.json
+FAQ: https://www.wiseceo.org/ai/faq.json
+Services: https://www.wiseceo.org/ai/service.json
+LLMs: https://www.wiseceo.org/llms.txt
+Feed: https://www.wiseceo.org/feed.xml
+Sitemap: https://www.wiseceo.org/sitemap.xml
+Contact: admin@wiseceo.org
