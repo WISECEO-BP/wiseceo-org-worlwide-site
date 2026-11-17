@@ -38,3 +38,7 @@ The wiki pages below are short, sourced Markdown files intended for quoting. If 
 - [Master Legal & IP Disclaimer](https://www.wiseceo.org/legal.html): Master legal, intellectual property and brand disclaimer for WISECEO, WISECEO Academy and all affiliated programs operated by Tiffany A. Davidson.
 - [Intellectual Property & Partner Licensing Notice](https://www.wiseceo.org/ip-policy.html): Public notice on the intellectual property, brand, contractual scope and partner licensing terms for Tiffany A. Davidson, WISECEO and affiliated educational initiatives.
 - [Accessibility](https://www.wiseceo.org/accessibility.html): How W.I.S.E.C.E.O. makes its website usable for every family: language options, high contrast, keyboard access, and how to report a barrier.
+- [Machine-readable summary](https://www.wiseceo.org/ai/summary.json)
+- [FAQ (JSON)](https://www.wiseceo.org/ai/faq.json)
+- [Services (JSON)](https://www.wiseceo.org/ai/service.json)
+- [RSS feed](https://www.wiseceo.org/feed.xml)

@@ -6,7 +6,7 @@ Static HTML site plus Node serverless functions in `/api`, deployed by Vercel fr
 - **Organization:** Worldwide Institute for Success and Excellence (W.I.S.E.C.E.O.) - an Ohio-based 501(c)(3) nonprofit dedicated to digital literacy, workforce development, and economic mobility.
 - **Founder & Leadership:** Tiffany Davidson, M.Ed. LSLS, M.Ed. C&I.
 - **Official address:** 7240 Towne Centre Blvd, Suite 78, West Chester, OH 45069 (the registered address printed in the footer; never Mason).
-- **Canonical domain:** `https://www.wiseceo.org` (with `www`). Official LinkedIn: `linkedin.com/company/thewiseceo`.
+- **Canonical domain:** `https://www.wiseceo.org` (with `www`). Official LinkedIn: `linkedin.com/company/wiseceo`.
 
 ## Publishing changes
 - The site owner has asked Claude to **merge its own pull requests**, so they don't have to approve each one.

@@ -1,0 +1,67 @@
+{
+  "organization": "W.I.S.E.C.E.O.",
+  "url": "https://www.wiseceo.org/",
+  "apply": "https://www.wiseceo.org/apply.html",
+  "services": [
+    {
+      "name": "WISECEO Academy Career Fellowship",
+      "audience": "High school students, grades 9–12",
+      "description": "No-cost, industry-backed fellowship in cybersecurity, energy and infrastructure, and AI.",
+      "url": "https://www.wiseceo.org/programs.html"
+    },
+    {
+      "name": "Digital Literacy & Coding",
+      "description": "Coding, creativity, and technology education for communities historically left behind, through app design and hands-on learning.",
+      "url": "https://www.wiseceo.org/programs.html#digital-literacy"
+    },
+    {
+      "name": "Workforce Development",
+      "description": "Sector-based training that aligns participants with in-demand, high-wage careers.",
+      "url": "https://www.wiseceo.org/programs.html#workforce"
+    },
+    {
+      "name": "Entrepreneurship & Innovation",
+      "description": "Small business development, startup incubation, and innovation ecosystems in distressed communities.",
+      "url": "https://www.wiseceo.org/programs.html"
+    },
+    {
+      "name": "Youth Leadership Academy",
+      "description": "Technology immersion, leadership development, and career pathways for young people.",
+      "url": "https://www.wiseceo.org/programs.html#youth-leadership"
+    },
+    {
+      "name": "Education Access & Equity",
+      "audience": "First-generation students, English language learners, immigrants, and refugees",
+      "description": "Literacy and language access, English learner support, family IEP and 504 navigation, and educator learning.",
+      "url": "https://www.wiseceo.org/literacy.html"
+    },
+    {
+      "name": "Community Economic Resilience",
+      "description": "Technical assistance, strategic planning, and capacity-building investments for economically distressed communities.",
+      "url": "https://www.wiseceo.org/programs.html"
+    }
+  ],
+  "wrapAroundSupport": [
+    "Language access (interpretation and translation)",
+    "Mentoring and coaching",
+    "Devices and connectivity",
+    "Career services"
+  ],
+  "siteLanguages": [
+    "English",
+    "Spanish",
+    "Arabic",
+    "French",
+    "Haitian Creole",
+    "Pashto",
+    "Dari / Persian",
+    "Ukrainian",
+    "Swahili",
+    "Somali",
+    "Nepali",
+    "Vietnamese",
+    "Portuguese",
+    "Chinese (Simplified)"
+  ],
+  "languageHelp": "Need help in your language? Contact us and we will connect you with someone who can help: https://www.wiseceo.org/contact.html"
+}

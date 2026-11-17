@@ -80,6 +80,10 @@ lines = [
     "## Optional",
     "",
     *[page_entry(p) for p in POLICIES],
+    f"- [Machine-readable summary]({SITE}/ai/summary.json)",
+    f"- [FAQ (JSON)]({SITE}/ai/faq.json)",
+    f"- [Services (JSON)]({SITE}/ai/service.json)",
+    f"- [RSS feed]({SITE}/feed.xml)",
     "",
 ]
 (ROOT / "llms.txt").write_text("\n".join(lines), encoding="utf-8")
