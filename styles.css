@@ -529,3 +529,12 @@ html.hc .apply-form .check{background:#000;color:#fff;border-color:#fff}
 #donate .gp-direct-note{font-size:.88rem}
 @media (max-width:560px){#donate .gp-ways-list,#donate .gp-direct-grid{grid-template-columns:1fr}#donate .gp-prog-amount b{font-size:1.7rem}}
 .form-status .link-btn{background:none;border:0;padding:0;font:inherit;font-weight:700;color:inherit;text-decoration:underline;cursor:pointer}
+.faq-section{background:var(--white);padding:90px 20px;border-top:1px solid var(--light-border)}
+.faq-inner{max-width:760px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--light-border)}
+.faq-item summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;font-size:1.05rem;font-weight:600;color:var(--dark)}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";font-size:1.4rem;font-weight:400;color:var(--blue);flex:0 0 auto}
+.faq-item[open] summary::after{content:"\2212"}
+.faq-item summary:focus-visible{outline:2px solid var(--blue);outline-offset:4px;border-radius:4px}
+.faq-item p{margin:0 0 20px;color:#3a3a3c;line-height:1.7}
