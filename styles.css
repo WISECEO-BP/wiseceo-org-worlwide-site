@@ -538,3 +538,15 @@ html.hc .apply-form .check{background:#000;color:#fff;border-color:#fff}
 .faq-item[open] summary::after{content:"\2212"}
 .faq-item summary:focus-visible{outline:2px solid var(--blue);outline-offset:4px;border-radius:4px}
 .faq-item p{margin:0 0 20px;color:#3a3a3c;line-height:1.7}
+/* FAQ page (/faq.html): grows into a wiki, so every answer has its own link */
+.faq-page{border-top:0;padding-top:100px}
+.faq-page h1.section-title{margin-bottom:12px}
+.faq-lead{color:var(--gray);font-size:1.05rem;line-height:1.6;margin:0 0 24px}
+.faq-toc{background:var(--off-white);border:1px solid var(--light-border);border-radius:14px;padding:16px 20px;margin:0 0 28px}
+.faq-toc h2{font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gray);margin:0 0 8px}
+.faq-toc ul{margin:0;padding-left:18px}
+.faq-toc li{margin:6px 0;line-height:1.45}
+.faq-toc a,.faq-more a,.faq-permalink a{color:var(--blue);font-weight:600}
+.faq-page .faq-item{scroll-margin-top:90px}
+.faq-permalink{font-size:.85rem;margin-top:-4px}
+.faq-more{margin-top:28px;color:var(--gray)}
