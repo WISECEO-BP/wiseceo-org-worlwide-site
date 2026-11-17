@@ -28,7 +28,7 @@ Whenever new pages, wiki entries, or blog posts are created or edited in this re
 
 ## Wiki Maintenance & Styling Rules
 The Knowledge Hub lives in `/wiki/`. Edit the Markdown (`*.md`); the `.html` pages are generated.
-1. **Wikipedia Aesthetic:** Style all pages under `/wiki/` with a clean, encyclopedic layout featuring a sticky sidebar table of contents, clear section headings, and neutral, authoritative phrasing. (Layout: `wiki/wiki.css`, dark-mode toggle: `wiki/wiki.js`.)
+1. **Wikipedia Aesthetic:** Style all pages under `/wiki/` with a clean, encyclopedic layout featuring a sticky sidebar table of contents, clear section headings, and neutral, authoritative phrasing. (Layout: `wiki/wiki.css`; Contents hide/show, dark mode, language links and main-page search: `wiki/wiki.js`.) Every page opens with the central header (title, subtitle, globe logo); the main page adds the language list and search. To use the globe artwork instead of the drawn globe, add `images/globe-logo.png` and rebuild. Never show article counts or other figures we can't source.
 2. **Automatic Sitemap & llms.txt Update:** Whenever a new wiki page is added under `/wiki/`, automatically update the root sitemap and regenerate the `llms.txt` file so AI search crawlers instantly index the new markdown path. One command does all of it:
    ```sh
    python3 scripts/build-wiki.py && python3 scripts/build-search-index.py
