@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>W.I.S.E.C.E.O. News &amp; Resources</title>
+    <link>https://www.wiseceo.org/newsletter.html</link>
+    <atom:link href="https://www.wiseceo.org/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Free guides for families and educators from W.I.S.E.C.E.O.: literacy, family advocacy, workforce pathways and economic mobility.</description>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 17 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Six SIOP Moves Every Teacher Can Use Tomorrow With English Learners</title>
+      <link>https://www.wiseceo.org/articles/siop-moves-for-teachers.html</link>
+      <guid isPermaLink="true">https://www.wiseceo.org/articles/siop-moves-for-teachers.html</guid>
+      <description>Practical, research-based strategies from a literacy advocate and ESL educator — no new curriculum required</description>
+      <pubDate>Sun, 18 Oct 2026 12:00:00 +0000</pubDate>
+      <dc:creator>Tiffany Davidson</dc:creator>
+      <enclosure url="https://www.wiseceo.org/images/news/siop-moves-for-teachers.jpg" type="image/jpeg" length="0"/>
+    </item>
+    <item>
+      <title>Reading Is the First Job Skill: Why Literacy Is Workforce Development</title>
+      <link>https://www.wiseceo.org/articles/reading-is-the-first-job-skill.html</link>
+      <guid isPermaLink="true">https://www.wiseceo.org/articles/reading-is-the-first-job-skill.html</guid>
+      <description>Every career pathway — healthcare, manufacturing, the trades, technology — starts with reading. Here's how families can build it at home, at any age.</description>
+      <pubDate>Sat, 17 Oct 2026 12:00:00 +0000</pubDate>
+      <dc:creator>Tiffany Davidson</dc:creator>
+      <enclosure url="https://www.wiseceo.org/images/news/reading-is-the-first-job-skill.jpg" type="image/jpeg" length="0"/>
+    </item>
+    <item>
+      <title>Your Child's IEP, Explained: A Family Guide to the Meeting Table</title>
+      <link>https://www.wiseceo.org/articles/iep-family-guide.html</link>
+      <guid isPermaLink="true">https://www.wiseceo.org/articles/iep-family-guide.html</guid>
+      <description>What an IEP is, what your rights are, and the questions to bring — especially if your family speaks a language other than English at home</description>
+      <pubDate>Fri, 16 Oct 2026 12:00:00 +0000</pubDate>
+      <dc:creator>Tiffany Davidson</dc:creator>
+      <enclosure url="https://www.wiseceo.org/images/news/iep-family-guide.jpg" type="image/jpeg" length="0"/>
+    </item>
+    <item>
+      <title>Taxing the Unbanked: Why Ohio Should Protect Check-Cashing and Payday Borrowers</title>
+      <link>https://www.wiseceo.org/articles/taxing-the-unbanked.html</link>
+      <guid isPermaLink="true">https://www.wiseceo.org/articles/taxing-the-unbanked.html</guid>
+      <description>A proposed revenue idea, more than a decade of Ohio reform, and the protections every borrower can use today</description>
+      <pubDate>Thu, 15 Oct 2026 12:00:00 +0000</pubDate>
+      <dc:creator>Tiffany Davidson</dc:creator>
+      <enclosure url="https://www.wiseceo.org/images/news/taxing-the-unbanked.jpg" type="image/jpeg" length="0"/>
+    </item>
+  </channel>
+</rss>

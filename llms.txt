@@ -1,0 +1,41 @@
+# W.I.S.E.C.E.O. — Worldwide Institute For Success And Excellence
+
+> W.I.S.E.C.E.O. is a 501(c)(3) nonprofit (EIN 41-3404888) headquartered in West Chester, Ohio, creating equity and opportunity through digital literacy, workforce development, literacy and language access, and economic mobility for underserved communities. Led by educators with 30+ years in public education, it has reached more than 25,000 students, with chapters in Kentucky, Florida and Mississippi and impact across 35 nations.
+
+W.I.S.E.C.E.O. serves refugees and immigrants (including newcomer families and English learners), underserved students of high school age and older, underserved women and girls, veterans, and first-generation and low-income youth and adults. Founder: Tiffany Davidson, M.Ed. LSLS, M.Ed. C&I.
+
+## About
+
+- [About W.I.S.E.C.E.O.](https://www.wiseceo.org/about.html): Mission, vision, who we serve, wrap-around supports, where we serve, partners
+- [Our Founder, Tiffany Davidson](https://www.wiseceo.org/tiffanydavidson.html): Educator, literacy advocate and language-acquisition specialist
+- [Newsroom](https://www.wiseceo.org/about/newsroom/): Announcements and recognition
+- [Contact](https://www.wiseceo.org/contact.html): Questions, volunteering, partnerships and language assistance
+
+## Programs
+
+- [Programs](https://www.wiseceo.org/programs.html): WISECEO Academy Career Fellowship (no-cost, grades 9–12: cybersecurity, energy and infrastructure, AI), Digital Literacy & Coding, Workforce Development, Entrepreneurship & Innovation, Youth Leadership Academy, Education Access & Equity, Community Economic Resilience
+- [Literacy & Language Access](https://www.wiseceo.org/literacy.html): Family literacy, English learner (SIOP) support, IEP and 504 navigation, educator learning
+- [Apply to a program](https://www.wiseceo.org/apply.html): Program intake form
+
+## Articles and resources
+
+- [Six SIOP Moves Every Teacher Can Use Tomorrow With English Learners](https://www.wiseceo.org/articles/siop-moves-for-teachers.html): Research-based strategies for teachers of English learners
+- [Reading Is the First Job Skill](https://www.wiseceo.org/articles/reading-is-the-first-job-skill.html): Why literacy is workforce development, and how families can build it at home
+- [Your Child's IEP, Explained](https://www.wiseceo.org/articles/iep-family-guide.html): A family guide to IEP meetings, rights and questions to ask
+- [Taxing the Unbanked](https://www.wiseceo.org/articles/taxing-the-unbanked.html): Ohio check-cashing and payday borrower protections
+- [News & Resources](https://www.wiseceo.org/newsletter.html): All articles and the newsletter
+- [Listen: 2026 Election Issue](https://www.wiseceo.org/listen/2026-election.html): Audio edition in several languages
+
+## Support
+
+- [Give](https://www.wiseceo.org/give.html): Membership ($4.99/month) or a one-time gift; donations are tax-deductible
+
+## Optional
+
+- [Machine-readable summary](https://www.wiseceo.org/ai/summary.json)
+- [FAQ](https://www.wiseceo.org/ai/faq.json)
+- [Services](https://www.wiseceo.org/ai/service.json)
+- [RSS feed](https://www.wiseceo.org/feed.xml)
+- [Privacy Policy](https://www.wiseceo.org/privacy.html)
+- [Accessibility](https://www.wiseceo.org/accessibility.html)
+- [Legal Disclaimer](https://www.wiseceo.org/legal.html)
