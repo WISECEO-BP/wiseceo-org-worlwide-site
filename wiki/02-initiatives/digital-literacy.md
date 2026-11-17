@@ -14,7 +14,9 @@ Digital Literacy & Coding brings coding, creativity and technology education to 
 
 ## What is Literacy & Language Access?
 
-Literacy & Language Access brings research-based reading and language instruction to learners and families who need it most, and equips the educators who serve them. It is the heart of the Education Access & Equity program. It has five strands:
+Literacy & Language Access brings research-based reading and language instruction to learners and families who need it most, and equips the educators who serve them. It is the heart of the Education Access & Equity program.
+
+It has five strands:
 
 - **Family literacy:** guides and gatherings that help caregivers build reading habits at home, in English or their home language.
 - **English learner support:** SIOP-informed strategies and academic-language development for multilingual and newcomer students.
@@ -28,7 +30,7 @@ The work uses research-based approaches, chiefly SIOP (the Sheltered Instruction
 
 ## Who leads it?
 
-The literacy work is led by founder Tiffany Davidson, who holds master's degrees in Literacy & Language Acquisition and in Curriculum & Instruction, plus TESOL certification.
+The literacy work is led by founder Tiffany Davidson, M.Ed. LSLS, M.Ed. C&I, who holds master's degrees in Literacy & Language Acquisition and in Curriculum & Instruction, plus TESOL certification.
 
 Sources: [Literacy & Language](https://www.wiseceo.org/literacy.html) · [Programs](https://www.wiseceo.org/programs.html)
 

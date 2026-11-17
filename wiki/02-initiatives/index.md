@@ -34,6 +34,8 @@ Every learner can get four kinds of wrap-around support:
 
 ## Pages in this section
 
+Each of the three initiative areas has its own page.
+
 - [Digital literacy](digital-literacy.md): coding, literacy, English learner support and digital skills.
 - [Workforce development](workforce-development.md): career fellowship, sector training and youth leadership.
 - [Economic mobility](economic-mobility.md): education access, entrepreneurship and community resilience.

@@ -32,11 +32,15 @@ We are headquartered in West Chester, Ohio, with chapters in Kentucky, Florida a
 
 ## How are programs delivered?
 
-Programs are run by dedicated program staff, supported by trained volunteers and chapter leads, and delivered through our chapters and partner organizations. That network lets us enroll and support cohorts of 250 or more learners at a time. W.I.S.E.C.E.O. is not a school, a government agency or a religious organization.
+Programs are run by dedicated program staff, supported by trained volunteers and chapter leads, and delivered through our chapters and partner organizations.
+
+That network lets us enroll and support cohorts of 250 or more learners at a time. W.I.S.E.C.E.O. is not a school, a government agency or a religious organization.
 
 ## Pages in this section
 
-- [Founder profile](founder.md): Tiffany Davidson's background, credentials and recognition.
+This section has three pages about who we are and how we operate.
+
+- [Founder profile](founder.md): Tiffany Davidson, M.Ed. LSLS, M.Ed. C&I: background, credentials and recognition.
 - [Governance & legal status](governance.md): 501(c)(3) status, EIN, trademark and official contacts.
 - [Brand standards](branding.md): the official name, how to write it, and what the letters stand for.
 

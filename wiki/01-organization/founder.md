@@ -20,7 +20,9 @@ She holds two master's degrees and a bachelor's degree, plus certifications in T
 
 ## What is her professional experience?
 
-Her classroom work spans high schools in Ohio, Florida and Mississippi. As ESL department chair and STEAM Club advisor at Western Hills High School in Cincinnati, she taught 150 multilingual students and mentored student STEM projects in partnership with TechOlympics and Amazon engineers. Before returning to the classroom, she spent more than a decade in business development, marketing and financial services, experience she now brings to financial literacy education.
+Her classroom work spans high schools in Ohio, Florida and Mississippi, and she spent more than a decade in business before teaching.
+
+As ESL department chair and STEAM Club advisor at Western Hills High School in Cincinnati, she taught 150 multilingual students and mentored student STEM projects in partnership with TechOlympics and Amazon engineers. Before returning to the classroom, she spent more than a decade in business development, marketing and financial services, experience she now brings to financial literacy education.
 
 ## Whom does her work focus on?
 

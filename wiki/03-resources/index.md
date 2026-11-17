@@ -14,6 +14,8 @@ Free family guides, teacher strategies and policy updates are published on [News
 
 ## Pages in this section
 
+This section has one published page, with more on the way.
+
 - [Community toolkits](community-toolkits.md): family guides, educator strategies and civic updates you can use today.
 - GEO & AI-readiness guides: coming soon.
 

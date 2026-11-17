@@ -10,7 +10,9 @@ W.I.S.E.C.E.O.'s economic mobility work widens access to education, supports sma
 
 ## What is Education Access & Equity?
 
-Education Access & Equity expands access to quality education for first-generation students, English language learners, immigrants and refugees, building pathways to economic mobility. Its literacy and language strand is described in [Digital literacy](digital-literacy.md). Learners can [apply for a cohort](https://www.wiseceo.org/apply.html?program=education-access).
+Education Access & Equity expands access to quality education for first-generation students, English language learners, immigrants and refugees, building pathways to economic mobility.
+
+Its literacy and language strand is described in [Digital literacy](digital-literacy.md). Learners can [apply for a cohort](https://www.wiseceo.org/apply.html?program=education-access).
 
 ## What is Entrepreneurship & Innovation?
 
