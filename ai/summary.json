@@ -35,7 +35,9 @@
     "apply": "https://www.wiseceo.org/apply.html",
     "give": "https://www.wiseceo.org/give.html",
     "news": "https://www.wiseceo.org/newsletter.html",
-    "contact": "https://www.wiseceo.org/contact.html"
+    "contact": "https://www.wiseceo.org/contact.html",
+    "faq": "https://www.wiseceo.org/faq.html",
+    "wiki": "https://www.wiseceo.org/wiki/"
   },
   "feed": "https://www.wiseceo.org/feed.xml",
   "llms": "https://www.wiseceo.org/llms.txt",

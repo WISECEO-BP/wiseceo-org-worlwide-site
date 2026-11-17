@@ -16,12 +16,12 @@
       "permanent": false
     },
     {
-      "source": "/:page([a-z0-9-]+)",
+      "source": "/:page((?!wiki(?:/|$))[a-z0-9-]+)",
       "destination": "/:page.html",
       "permanent": true
     },
     {
-      "source": "/:page([a-z0-9-]+)/",
+      "source": "/:page((?!wiki(?:/|$))[a-z0-9-]+)/",
       "destination": "/:page.html",
       "permanent": true
     },
@@ -79,6 +79,12 @@
           "value": "noindex"
         }
       ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/wiki",
+      "destination": "/wiki/index.html"
     }
   ]
 }

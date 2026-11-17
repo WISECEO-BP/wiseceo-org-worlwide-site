@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.wiseceo.org/</loc></url>
   <url><loc>https://www.wiseceo.org/about.html</loc></url>
+  <url><loc>https://www.wiseceo.org/faq.html</loc></url>
   <url><loc>https://www.wiseceo.org/tiffanydavidson.html</loc></url>
   <url><loc>https://www.wiseceo.org/about/newsroom/</loc></url>
   <url><loc>https://www.wiseceo.org/programs.html</loc></url>
@@ -19,5 +20,17 @@
   <url><loc>https://www.wiseceo.org/articles/iep-family-guide.html</loc></url>
   <url><loc>https://www.wiseceo.org/articles/reading-is-the-first-job-skill.html</loc></url>
   <url><loc>https://www.wiseceo.org/articles/siop-moves-for-teachers.html</loc></url>
-  <url><loc>https://www.wiseceo.org/faq.html</loc></url>
+  <url><loc>https://www.wiseceo.org/wiki/</loc></url>
+  <url><loc>https://www.wiseceo.org/wiki/01-organization/index.html</loc></url>
+  <url><loc>https://www.wiseceo.org/wiki/02-initiatives/index.html</loc></url>
+  <url><loc>https://www.wiseceo.org/wiki/03-resources/index.html</loc></url>
+  <url><loc>https://www.wiseceo.org/wiki/04-faq/index.html</loc></url>
+  <url><loc>https://www.wiseceo.org/wiki/01-organization/branding.html</loc></url>
+  <url><loc>https://www.wiseceo.org/wiki/01-organization/founder.html</loc></url>
+  <url><loc>https://www.wiseceo.org/wiki/01-organization/governance.html</loc></url>
+  <url><loc>https://www.wiseceo.org/wiki/02-initiatives/digital-literacy.html</loc></url>
+  <url><loc>https://www.wiseceo.org/wiki/02-initiatives/economic-mobility.html</loc></url>
+  <url><loc>https://www.wiseceo.org/wiki/02-initiatives/workforce-development.html</loc></url>
+  <url><loc>https://www.wiseceo.org/wiki/03-resources/community-toolkits.html</loc></url>
+  <url><loc>https://www.wiseceo.org/wiki/04-faq/general-inquiries.html</loc></url>
 </urlset>

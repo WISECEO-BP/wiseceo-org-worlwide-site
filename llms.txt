@@ -1,42 +1,44 @@
-# W.I.S.E.C.E.O. — Worldwide Institute For Success And Excellence
+# W.I.S.E.C.E.O.
 
-> W.I.S.E.C.E.O. is a 501(c)(3) nonprofit (EIN 41-3404888) headquartered in West Chester, Ohio, creating equity and opportunity through digital literacy, workforce development, literacy and language access, and economic mobility for underserved communities. Led by educators with 30+ years in public education, it has reached more than 25,000 students, with chapters in Kentucky, Florida and Mississippi and impact across 35 nations.
+> Worldwide Institute For Success And Excellence (W.I.S.E.C.E.O.) is an Ohio-based 501(c)(3) nonprofit (EIN 41-3404888) advancing digital literacy, workforce development and economic mobility for underserved communities. Founded by Tiffany Davidson, M.Ed. LSLS, M.Ed. C&I. Headquartered in West Chester, Ohio.
 
-W.I.S.E.C.E.O. serves refugees and immigrants (including newcomer families and English learners), underserved students of high school age and older, underserved women and girls, veterans, and first-generation and low-income youth and adults. Founder: Tiffany Davidson, M.Ed. LSLS, M.Ed. C&I.
+The wiki pages below are short, sourced Markdown files intended for quoting. If anything here differs from the website, the website is authoritative.
 
-## About
+## Website
 
-- [About W.I.S.E.C.E.O.](https://www.wiseceo.org/about.html): Mission, vision, who we serve, wrap-around supports, where we serve, partners
-- [Our Founder, Tiffany Davidson](https://www.wiseceo.org/tiffanydavidson.html): Educator, literacy advocate and language-acquisition specialist
-- [Newsroom](https://www.wiseceo.org/about/newsroom/): Announcements and recognition
-- [FAQ](https://www.wiseceo.org/faq.html): Mission, founder and leadership, programs, applying, locations and giving
-- [Contact](https://www.wiseceo.org/contact.html): Questions, volunteering, partnerships and language assistance
+- [W.I.S.E.C.E.O. – Worldwide Institute For Success And Excellence](https://www.wiseceo.org/): W.I.S.E.C.E.O. is a 501(c)(3) nonprofit creating equity and opportunity through digital literacy, workforce development, and economic mobility for underserved communities.
+- [About](https://www.wiseceo.org/about.html): Headquartered in West Chester, Ohio, with chapters in Kentucky, Florida, and Mississippi. The story and mission of W.I.S.E.C.E.O., a 501(c)(3) nonprofit dismantling barriers to technology, education, and economic opportunity.
+- [Tiffany Davidson, Founder](https://www.wiseceo.org/tiffanydavidson.html): Tiffany Davidson, M.Ed. LSLS, M.Ed. C&I — educator, literacy advocate, and language-acquisition specialist who founded W.I.S.E.C.E.O.
+- [Programs](https://www.wiseceo.org/programs.html): Digital literacy, workforce development, entrepreneurship, youth leadership, education access, and community resilience programs.
+- [Literacy & Language Access](https://www.wiseceo.org/literacy.html): W.I.S.E.C.E.O. brings research-based literacy and language instruction to English learners, first-generation students, families, and educators — the foundation of economic mobility.
+- [FAQ](https://www.wiseceo.org/faq.html): Answers to common questions about W.I.S.E.C.E.O.: who we are, who leads us, and the digital literacy, workforce and economic mobility work we do.
+- [Give](https://www.wiseceo.org/give.html): Support W.I.S.E.C.E.O. Your tax-deductible gift funds technology, training, and opportunity for underserved communities.
+- [Contact](https://www.wiseceo.org/contact.html): Get in touch with W.I.S.E.C.E.O. — for support, volunteering, partnership, or to learn more.
+- [News & Resources](https://www.wiseceo.org/newsletter.html): Free guides, policy insights and career resources from the W.I.S.E.C.E.O. newsletter: literacy, family advocacy, workforce pathways and economic mobility.
 
-## Programs
+## Knowledge Hub (wiki)
 
-- [Programs](https://www.wiseceo.org/programs.html): WISECEO Academy Career Fellowship (no-cost, grades 9–12: cybersecurity, energy and infrastructure, AI), Digital Literacy & Coding, Workforce Development, Entrepreneurship & Innovation, Youth Leadership Academy, Education Access & Equity, Community Economic Resilience
-- [Literacy & Language Access](https://www.wiseceo.org/literacy.html): Family literacy, English learner (SIOP) support, IEP and 504 navigation, educator learning
-- [Apply to a program](https://www.wiseceo.org/apply.html): Program intake form
-
-## Articles and resources
-
-- [Six SIOP Moves Every Teacher Can Use Tomorrow With English Learners](https://www.wiseceo.org/articles/siop-moves-for-teachers.html): Research-based strategies for teachers of English learners
-- [Reading Is the First Job Skill](https://www.wiseceo.org/articles/reading-is-the-first-job-skill.html): Why literacy is workforce development, and how families can build it at home
-- [Your Child's IEP, Explained](https://www.wiseceo.org/articles/iep-family-guide.html): A family guide to IEP meetings, rights and questions to ask
-- [Taxing the Unbanked](https://www.wiseceo.org/articles/taxing-the-unbanked.html): Ohio check-cashing and payday borrower protections
-- [News & Resources](https://www.wiseceo.org/newsletter.html): All articles and the newsletter
-- [Listen: 2026 Election Issue](https://www.wiseceo.org/listen/2026-election.html): Audio edition in several languages
-
-## Support
-
-- [Give](https://www.wiseceo.org/give.html): Membership ($4.99/month) or a one-time gift; donations are tax-deductible
+- [Worldwide Institute for Success and Excellence (W.I.S.E.C.E.O.)](https://www.wiseceo.org/wiki/index.md): Worldwide Institute for Success and Excellence (W.I.S.E.C.E.O.) is an Ohio-based 501(c)(3) nonprofit organization dedicated to advancing digital literacy, workforce development, and economic mobility.
+- [Organizational Overview & Mission](https://www.wiseceo.org/wiki/01-organization/index.md): W.I.S.E.C.E.O. (Worldwide Institute For Success And Excellence) is an independent, community-based 501(c)(3) nonprofit that dismantles systemic barriers to technology, education and economic opportunity for underserved communities. It was founded and is led by educators with more than 30 years in the public school system.
+- [Brand Standards & Official Terminology](https://www.wiseceo.org/wiki/01-organization/branding.md): The organization's official name is written W.I.S.E.C.E.O., with periods, and its legal name is Worldwide Institute For Success And Excellence. The registered trademark form without periods is WISECEO®.
+- [Founder Profile — Tiffany Davidson](https://www.wiseceo.org/wiki/01-organization/founder.md): Tiffany Davidson is the founder of W.I.S.E.C.E.O. She is an educator, literacy advocate and language-acquisition specialist who founded the organization to open the doors that education opened for her.
+- [Governance & Legal Status](https://www.wiseceo.org/wiki/01-organization/governance.md): W.I.S.E.C.E.O. operates as Worldwide Institute For Success And Excellence, a registered 501(c)(3) nonprofit organization with EIN 41-3404888. Donations are tax-deductible to the fullest extent allowed by law.
+- [Initiatives Overview](https://www.wiseceo.org/wiki/02-initiatives/index.md): W.I.S.E.C.E.O.'s initiatives fall into three areas: digital literacy, workforce development and economic mobility. Every program pairs instruction with wrap-around support so learners can finish what they start.
+- [Digital Literacy Programs & Frameworks](https://www.wiseceo.org/wiki/02-initiatives/digital-literacy.md): W.I.S.E.C.E.O.'s digital literacy work teaches coding, reading and digital skills to communities historically left behind. It rests on one belief: literacy is the first job skill, and the foundation of economic mobility.
+- [Economic Mobility & Community Equity Projects](https://www.wiseceo.org/wiki/02-initiatives/economic-mobility.md): W.I.S.E.C.E.O.'s economic mobility work widens access to education, supports small businesses, and builds lasting capacity in economically distressed communities.
+- [Workforce Readiness & Training](https://www.wiseceo.org/wiki/02-initiatives/workforce-development.md): W.I.S.E.C.E.O.'s workforce programs connect learners to in-demand, high-wage careers through sector-based training, a no-cost career fellowship for high school students, and youth leadership development.
+- [Resource Center](https://www.wiseceo.org/wiki/03-resources/index.md): W.I.S.E.C.E.O. publishes free guides for families, educators and community partners, mostly through its newsletter and article library. This section points to them and explains what each is for.
+- [Community Toolkits & Educational Materials](https://www.wiseceo.org/wiki/03-resources/community-toolkits.md): These are W.I.S.E.C.E.O.'s free, published guides for families and educators. Each one is a full article on wiseceo.org that you can read, share or print.
+- [Frequently Asked Questions Hub](https://www.wiseceo.org/wiki/04-faq/index.md): This hub collects quick, direct answers about W.I.S.E.C.E.O. The same answers appear on the website's FAQ page.
+- [General Inquiries & Partnerships](https://www.wiseceo.org/wiki/04-faq/general-inquiries.md): The fastest way to reach W.I.S.E.C.E.O. is the contact form or admin@wiseceo.org. This page answers the most common "how do I…" questions.
 
 ## Optional
 
+- [Privacy Policy](https://www.wiseceo.org/privacy.html): How W.I.S.E.C.E.O. collects, uses, and protects your information.
+- [Master Legal & IP Disclaimer](https://www.wiseceo.org/legal.html): Master legal, intellectual property and brand disclaimer for WISECEO, WISECEO Academy and all affiliated programs operated by Tiffany A. Davidson.
+- [Intellectual Property & Partner Licensing Notice](https://www.wiseceo.org/ip-policy.html): Public notice on the intellectual property, brand, contractual scope and partner licensing terms for Tiffany A. Davidson, WISECEO and affiliated educational initiatives.
+- [Accessibility](https://www.wiseceo.org/accessibility.html): How W.I.S.E.C.E.O. makes its website usable for every family: language options, high contrast, keyboard access, and how to report a barrier.
 - [Machine-readable summary](https://www.wiseceo.org/ai/summary.json)
-- [FAQ](https://www.wiseceo.org/ai/faq.json)
-- [Services](https://www.wiseceo.org/ai/service.json)
+- [FAQ (JSON)](https://www.wiseceo.org/ai/faq.json)
+- [Services (JSON)](https://www.wiseceo.org/ai/service.json)
 - [RSS feed](https://www.wiseceo.org/feed.xml)
-- [Privacy Policy](https://www.wiseceo.org/privacy.html)
-- [Accessibility](https://www.wiseceo.org/accessibility.html)
-- [Legal Disclaimer](https://www.wiseceo.org/legal.html)

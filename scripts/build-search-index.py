@@ -30,6 +30,9 @@ def url_for(path):
 
 def main_content(src):
     """The page body without the shared header, menu, search dialog and footer."""
+    wiki = re.search(r'<main id="top">(.*?)</main>', src, re.S)  # Knowledge Hub pages: article only
+    if wiki:
+        return re.sub(r'<(header|div) class="(wiki-header-container[^"]*|crumbs)".*?<!--/(wiki-header|crumbs)-->', " ", wiki.group(1), flags=re.S)
     start = src.find('<div class="search-modal"')
     start = src.find("</ul></div></div>", start) + len("</ul></div></div>") if start > -1 else 0
     end = src.find('<footer class="site-footer">')
@@ -37,11 +40,12 @@ def main_content(src):
 
 
 entries = []
-for path in sorted(list(ROOT.glob("*.html")) + list(ROOT.glob("articles/*.html")) + list(ROOT.glob("about/**/*.html"))):
+for path in sorted(list(ROOT.glob("*.html")) + list(ROOT.glob("articles/*.html")) + list(ROOT.glob("about/**/*.html")) + list(ROOT.glob("wiki/**/*.html"))):
     src = path.read_text(encoding="utf-8")
     if re.search(r'<meta name="robots" content="[^"]*noindex', src):
         continue  # e.g. 404.html and the student registration form
     title = text(re.search(r"<title>(.*?)</title>", src, re.S).group(1))
+    title = re.sub(r"\s*\|\s*(W\.I\.S\.E\.C\.E\.O\. )?Wiki$", "", title)
     title = re.sub(r"\s*[—–-]\s*W\.I\.S\.E\.C\.E\.O\..*$", "", title) or "Home"
     if path == ROOT / "index.html":
         title = "Home"

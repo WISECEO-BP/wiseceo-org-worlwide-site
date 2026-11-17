@@ -186,3 +186,14 @@ if(modal){
   });
 }
 })();
+
+/* ---- Open a <details> answer when its link (#id) is visited or clicked ---- */
+(function(){
+  function openHash(){
+    var id=decodeURIComponent(location.hash.slice(1));if(!id)return;
+    var el=document.getElementById(id);
+    if(el&&el.tagName==='DETAILS'){el.open=true;el.scrollIntoView({block:'start'});}
+  }
+  window.addEventListener('hashchange',openHash);
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',openHash);else openHash();
+})();
