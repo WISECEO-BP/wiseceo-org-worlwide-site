@@ -528,3 +528,4 @@ html.hc .apply-form .check{background:#000;color:#fff;border-color:#fff}
 #donate .gp-direct a{color:var(--blue);font-weight:600}
 #donate .gp-direct-note{font-size:.88rem}
 @media (max-width:560px){#donate .gp-ways-list,#donate .gp-direct-grid{grid-template-columns:1fr}#donate .gp-prog-amount b{font-size:1.7rem}}
+.form-status .link-btn{background:none;border:0;padding:0;font:inherit;font-weight:700;color:inherit;text-decoration:underline;cursor:pointer}

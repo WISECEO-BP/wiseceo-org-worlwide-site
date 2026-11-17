@@ -1,0 +1,37 @@
+name: GEO & AI-SEO Compliance Audit
+
+on:
+  # After each successful Vercel production deploy, so we audit the site that just went live
+  # (a plain push to main would race the deploy and audit the previous version).
+  deployment_status:
+  schedule:
+    # Weekly on Mondays at 8:00 AM UTC to catch external drift
+    - cron: '0 8 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    if: >-
+      github.event_name != 'deployment_status' ||
+      (github.event.deployment_status.state == 'success' &&
+       github.event.deployment.environment == 'Production')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install GEO Optimizer CLI
+        # Pinned: this package releases several times a week; bump deliberately.
+        run: |
+          python -m pip install --upgrade pip
+          pip install geo-optimizer-skill==4.23.0
+
+      - name: Run AI-SEO & GEO Audit
+        run: |
+          geo audit --url https://www.wiseceo.org --threshold 80 --format github --no-plugins
