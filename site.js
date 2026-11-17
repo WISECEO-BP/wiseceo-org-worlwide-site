@@ -57,8 +57,9 @@ if(lang!=='en'){
 }
 
 /* ---- Give menu + membership link ---- */
-// One place to change the membership checkout link (e.g. a dedicated Donorbox membership campaign).
-var MEMBERSHIP_URL='https://donorbox.org/wiseceo-donate-today?default_interval=m&amount=4.99';
+// One place to change where membership buttons go. Keep visitors on our own giving page;
+// the Donorbox checkout is reached only from the give.html form.
+var MEMBERSHIP_URL='/give.html#membership';
 $$('[data-membership-link]').forEach(function(a){a.href=MEMBERSHIP_URL;});
 var giveBtn=$('[data-give-toggle]'),givePanel=$('#give-panel');
 function setGive(open){
