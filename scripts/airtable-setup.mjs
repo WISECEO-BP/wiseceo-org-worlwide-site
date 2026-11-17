@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // Creates the "Website Contacts" and "Website Messages" tables the site's forms write to.
-// Safe to re-run: tables that already exist are left alone.
+// Safe to re-run: tables that already exist are left alone, and missing fields the
+// contact-form email confirmation needs (Confirm Link, Confirmed At) are added.
 //
 //   AIRTABLE_TOKEN=pat... AIRTABLE_BASE_ID=app... node scripts/airtable-setup.mjs
 //
@@ -75,10 +76,26 @@ if (existing[MESSAGES]) {
       { name: 'Contact', type: 'multipleRecordLinks', options: { linkedTableId: contacts.id } },
       { name: 'Page', type: 'singleLineText' },
       { name: 'Submitted At', type: 'dateTime', options: DATETIME },
-      { name: 'Status', type: 'singleSelect', options: select('New', 'In progress', 'Replied', 'Closed') },
+      { name: 'Status', type: 'singleSelect', options: select('Awaiting confirmation', 'New', 'In progress', 'Replied', 'Closed') },
       { name: 'Assigned To', type: 'singleLineText' },
+      { name: 'Confirm Link', type: 'url' },
+      { name: 'Confirmed At', type: 'dateTime', options: DATETIME },
     ],
   });
   console.log(`+ created "${MESSAGES}"`);
+}
+
+// Email confirmation fields (added later): create them on an existing Messages table if missing.
+const messages = existing[MESSAGES];
+if (messages) {
+  const have = new Set(messages.fields.map((f) => f.name));
+  for (const field of [
+    { name: 'Confirm Link', type: 'url', description: 'Emailed to the sender by the "Confirm contact message" automation.' },
+    { name: 'Confirmed At', type: 'dateTime', options: DATETIME },
+  ]) {
+    if (have.has(field.name)) { console.log(`✓ "${MESSAGES}" has "${field.name}"`); continue; }
+    await api('POST', `/tables/${messages.id}/fields`, field);
+    console.log(`+ added "${field.name}" to "${MESSAGES}"`);
+  }
 }
 console.log('Done. Now add AIRTABLE_TOKEN and AIRTABLE_BASE_ID in Vercel (see docs/AIRTABLE.md).');
