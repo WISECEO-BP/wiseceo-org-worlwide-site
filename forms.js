@@ -27,25 +27,48 @@ if(cf){
       .map(function(k){return k.charAt(0).toUpperCase()+k.slice(1)+': '+d[k];}).join('\n\n');
     window.location.href='mailto:admin@wiseceo.org?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
   };
+  var cfEmail=cf.querySelector('[name=email]'),allowTypo=false;
+  cfEmail.addEventListener('input',function(){allowTypo=false;});
+  var EMAIL_MSG={
+    format:'Please check your email address. It should look like name@example.com.',
+    disposable:'Please use a personal or work email address. Temporary inboxes can’t receive our reply.',
+    no_mail:'We couldn’t find a mailbox for that email domain. Please check the spelling after the @.'
+  };
+  var esc=function(t){return String(t).replace(/[<>&"]/g,function(c){return {'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c];});};
+  function emailProblem(st,r){
+    busy(cf,false);cfEmail.setAttribute('aria-invalid','true');
+    if(r.reason==='typo'&&r.suggestion){
+      setStatus(st,'err','Did you mean <b>'+esc(r.suggestion)+'</b>? <button type="button" class="link-btn" data-fix>Yes, use that</button> · <button type="button" class="link-btn" data-keep>No, my address is correct</button>');
+      st.querySelector('[data-fix]').onclick=function(){cfEmail.value=r.suggestion;cfEmail.removeAttribute('aria-invalid');cf.requestSubmit();};
+      st.querySelector('[data-keep]').onclick=function(){allowTypo=true;cfEmail.removeAttribute('aria-invalid');cf.requestSubmit();};
+    }else{
+      setStatus(st,'err',EMAIL_MSG[r.reason]||EMAIL_MSG.format);cfEmail.focus();
+    }
+  }
   cf.addEventListener('submit',function(e){
     e.preventDefault();
     var st=document.getElementById('contactStatus'),d=formData(cf);
     if(d.botcheck)return;
-    d.language=siteLanguage();d.page=location.pathname;
+    d.language=siteLanguage();d.page=location.pathname;d.allowTypo=allowTypo;
+    cfEmail.removeAttribute('aria-invalid');
     setStatus(st,'info','Sending…');busy(cf,true);
-    // Airtable keeps the record; Web3Forms emails the team. Either one getting through is a success.
-    var toAirtable=postJSON('/api/contact',d).then(function(r){return r.ok===true;},function(){return false;});
-    var toEmail=postJSON('https://api.web3forms.com/submit',{access_key:WEB3FORMS_KEY,subject:subject,
-        from_name:'wiseceo.org contact form',name:d.name,email:d.email,replyto:d.email,
-        interest:d.interest||'',language:d.language,message:d.message})
-      .then(function(r){return r.success===true;},function(){return false;});
-    Promise.all([toAirtable,toEmail]).then(function(res){
-      busy(cf,false);
-      if(res[0]||res[1]){
-        setStatus(st,'ok','Thank you! Your message has been received — we’ll be in touch soon.');cf.reset();
-      }else{
-        setStatus(st,'info','Opening your email app so your message reaches us…');mailFallback(d);
-      }
+    // The server checks the email is real before anything is saved or emailed to the team.
+    // If it rejects the address we stop here; if the server is unreachable we still deliver by email.
+    postJSON('/api/contact',d).then(function(r){return r;},function(){return {};}).then(function(r){
+      if(r.status===400&&r.error==='email'){emailProblem(st,r);return;}
+      var saved=r.ok===true;
+      postJSON('https://api.web3forms.com/submit',{access_key:WEB3FORMS_KEY,subject:subject,
+          from_name:'wiseceo.org contact form',name:d.name,email:d.email,replyto:d.email,
+          interest:d.interest||'',language:d.language,message:d.message})
+        .then(function(x){return x.success===true;},function(){return false;})
+        .then(function(mailed){
+          busy(cf,false);
+          if(saved||mailed){
+            setStatus(st,'ok','Thank you! Your message has been received — we’ll be in touch soon.');cf.reset();allowTypo=false;
+          }else{
+            setStatus(st,'info','Opening your email app so your message reaches us…');mailFallback(d);
+          }
+        });
     });
   });
 }

@@ -2,6 +2,7 @@
 // Upserts the sender into "Website Contacts" (matched on Email) and adds a
 // row to "Website Messages" linked to that contact.
 const { upsertContact, createMessage, clean, guard, send, EMAIL_RE } = require('./_lib/airtable');
+const { checkEmail } = require('./_lib/email-check');
 
 const INTERESTS = [
   'Receiving support / services',
@@ -24,6 +25,12 @@ module.exports = async function handler(req, res) {
 
   if (!name || !EMAIL_RE.test(email) || !message) {
     return send(res, 400, { ok: false, error: 'invalid', fields: { name: !name, email: !EMAIL_RE.test(email), message: !message } });
+  }
+
+  // Only real, deliverable addresses: no throwaway inboxes, no domains that can't receive mail.
+  const verdict = await checkEmail(email, { allowTypo: body.allowTypo === true });
+  if (!verdict.ok) {
+    return send(res, 400, { ok: false, error: 'email', reason: verdict.reason, suggestion: verdict.suggestion || '' });
   }
 
   const now = new Date().toISOString();
