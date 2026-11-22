@@ -60,7 +60,13 @@ function writeLangCookie(lang){
 var lang=currentLang();
 langSelects.forEach(function(s){
   s.value=lang;if(s.value!==lang)s.value='en';
-  s.addEventListener('change',function(){writeLangCookie(s.value);location.reload();});
+  s.addEventListener('change',function(){
+    if(s.value!=='en'&&!allowed('translate')){
+      if(!window.confirm('Translation is provided by an outside service that receives the page text and sets a cookie to remember your language. Turn on translation?')){s.value=currentLang();if(s.value!==currentLang())s.value='en';return;}
+      var c=readConsent()||{};c.translate=true;saveConsent(c);
+    }
+    writeLangCookie(s.value);location.reload();
+  });
 });
 if(lang!=='en'){
   var holder=document.createElement('div');holder.id='google_translate_element';document.body.appendChild(holder);
@@ -93,6 +99,7 @@ if(giveBtn&&givePanel){
 /* ---- Lightweight YouTube embeds: load the player only when someone presses play ---- */
 $$('[data-yt]').forEach(function(a){
   a.addEventListener('click',function(e){
+    if(!allowed('video'))return; // videos not allowed: follow the link to the video site
     e.preventDefault();
     var f=document.createElement('iframe');
     var id=a.getAttribute('data-yt');f.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0&loop=1&playlist='+id;
@@ -136,6 +143,73 @@ if(menu){
   menu.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu();else trap(menu,e);});
   window.addEventListener('resize',function(){if(window.innerWidth>960)closeMenu(false);});
 }
+
+/* ---- Privacy choices (cookie notice + "Your Privacy Choices" window) ----
+   Saved in this browser as localStorage "wise-consent": {"v":1,"translate":bool,"video":bool,"forms":bool}.
+   Strictly necessary settings (dark mode, high contrast, these choices) are always on and stay in the browser.
+   The one "Functional Cookies" switch allows the outside services together:
+   translate = the language menu, video = playing videos here, forms = embedded sign-up forms.
+   The site uses no performance (analytics) or targeting (advertising) cookies; the window says so. */
+var CONSENT_KEY='wise-consent',CATS=['translate','video','forms'];
+function readConsent(){try{var c=JSON.parse(localStorage.getItem(CONSENT_KEY));return c&&c.v===1?c:null;}catch(e){return null;}}
+function allowed(cat){var c=readConsent();return !!(c&&c[cat]);}
+function saveConsent(vals){
+  var c={v:1};CATS.forEach(function(k){c[k]=!!vals[k];});
+  try{localStorage.setItem(CONSENT_KEY,JSON.stringify(c));}catch(e){}
+  applyConsent();
+}
+function syncState(i){var st=i.parentNode.querySelector('.cs-state');if(st)st.textContent=i.checked?'Enabled':'Disabled';}
+function applyConsent(){
+  // Embedded forms: load only when allowed; otherwise show a button that allows and loads them.
+  $$('iframe[data-consent-src]').forEach(function(f){
+    var hold=f.parentNode.querySelector('.consent-hold');
+    if(allowed('forms')){if(!f.getAttribute('src'))f.setAttribute('src',f.getAttribute('data-consent-src'));f.hidden=false;if(hold)hold.hidden=true;}
+    else{f.hidden=true;if(hold)hold.hidden=false;}
+  });
+  var c=readConsent(),on=!!(c&&c.translate&&c.video&&c.forms);
+  $$('[data-consent-toggle]').forEach(function(i){i.checked=on;syncState(i);});
+}
+var PRIVACY='<a href="/privacy.html">Privacy Policy</a>';
+var bar=document.createElement('div');
+bar.className='consent-bar';bar.setAttribute('role','region');bar.setAttribute('aria-label','Privacy choices');bar.hidden=true;
+bar.innerHTML='<div class="consent-inner"><div class="consent-text"><h2 class="consent-title">Your Privacy Choices</h2>'+
+  '<p>We save a few settings in your browser, like dark mode and your language, so the site works the way you set it. '+
+  'Some features (translation, videos and sign-up forms) come from outside services that may set their own cookies. '+
+  'Click “Accept all Cookies” to allow them, or “Manage Preferences” to choose which we may use. See our '+PRIVACY+'.</p></div>'+
+  '<div class="consent-actions"><button type="button" class="btn-primary" data-consent-all>Accept all Cookies</button>'+
+  '<button type="button" class="btn-secondary" data-consent-essential>Necessary only</button>'+
+  '<button type="button" class="consent-link" data-consent-open>Manage Preferences</button></div></div>';
+var dlg=document.createElement('div');
+dlg.className='consent-dialog';dlg.setAttribute('role','dialog');dlg.setAttribute('aria-modal','true');dlg.setAttribute('aria-labelledby','consent-h');dlg.hidden=true;
+function cat(key,title,status,text){
+  var side=key?'<label class="consent-switch"><input type="checkbox" data-consent-toggle="'+key+'"><span class="sr-only">Allow '+title.toLowerCase()+'</span><span class="cs-track" aria-hidden="true"><span class="cs-thumb"></span></span><span class="cs-state" aria-hidden="true"></span></label>'
+               :'<span class="consent-always">'+status+'</span>';
+  return '<div class="consent-cat"><details><summary><span class="cc-name">'+title+'</span></summary><p>'+text+'</p></details>'+side+'</div>';
+}
+dlg.innerHTML='<div class="consent-backdrop" data-consent-close></div><div class="consent-panel">'+
+  '<div class="consent-head"><h2 id="consent-h">Your Privacy Choices</h2><button type="button" class="nav-icon-btn" data-consent-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>'+
+  '<p class="consent-intro">When you visit a website, it may store or read information in your browser, often as cookies. That information can be about your preferences or your device, and it helps the site work the way you expect. You choose which kinds we may use. Select a category to learn more and change your settings. For more about cookies on our website, see our '+PRIVACY+'.</p>'+
+  cat('','Strictly Necessary Cookies','Required','These keep the site working and remember the choices you make here, like dark mode, high contrast and these privacy settings. They are saved only in your browser, are never sent to us, and can’t be turned off.')+
+  cat('functional','Functional Cookies','','These turn on features from outside services: translating pages from the language menu, playing our videos on the page, and showing program sign-up forms. Those services may set their own cookies. If this is off, the language menu asks before translating, videos open on the video site, and you can still load a sign-up form when you need it.')+
+  cat('','Performance Cookies','Not used','These would measure how visitors use the site. We don’t use them.')+
+  cat('','Targeting Cookies','Not used','These would be used for advertising. We don’t use them.')+
+  '<div class="consent-actions"><button type="button" class="btn-primary" data-consent-save>Save My Choices</button><button type="button" class="btn-secondary" data-consent-all>Accept all Cookies</button></div></div>';
+document.body.appendChild(bar);document.body.appendChild(dlg);
+var dlgReturn=null;
+function openPrefs(){applyConsent();dlgReturn=document.activeElement;dlg.hidden=false;root.classList.add('consent-open');var f=$('summary',dlg);if(f)f.focus();}
+function closePrefs(){if(dlg.hidden)return;dlg.hidden=true;root.classList.remove('consent-open');if(dlgReturn&&dlgReturn.focus)dlgReturn.focus();}
+function done(vals){saveConsent(vals);bar.hidden=true;closePrefs();}
+$$('[data-consent-all]').forEach(function(b){b.addEventListener('click',function(){done({translate:1,video:1,forms:1});});});
+$$('[data-consent-essential]').forEach(function(b){b.addEventListener('click',function(){done({});});});
+$$('[data-consent-save]').forEach(function(b){b.addEventListener('click',function(){
+  var t=$('[data-consent-toggle]',dlg),on=!!(t&&t.checked);done({translate:on,video:on,forms:on});});});
+$$('[data-consent-toggle]',dlg).forEach(function(i){i.addEventListener('change',function(){syncState(i);});});
+$$('[data-consent-close]',dlg).forEach(function(b){b.addEventListener('click',closePrefs);});
+dlg.addEventListener('keydown',function(e){if(e.key==='Escape')closePrefs();else trap(dlg,e);});
+document.addEventListener('click',function(e){var o=e.target.closest&&e.target.closest('[data-consent-open]');if(o){e.preventDefault();openPrefs();}});
+$$('[data-consent-load]').forEach(function(b){b.addEventListener('click',function(){var c=readConsent()||{};c.forms=true;saveConsent(c);bar.hidden=true;});});
+if(!readConsent())bar.hidden=false;
+applyConsent();
 
 /* ---- Search ---- */
 var modal=$('#search-modal'),input=$('#search-input'),results=$('#search-results'),status=$('#search-status');
