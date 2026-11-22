@@ -12,7 +12,7 @@ W.I.S.E.C.E.O.'s economic mobility work widens access to education, supports sma
 
 Education Access & Equity expands access to quality education for first-generation students, English language learners, immigrants and refugees, building pathways to economic mobility.
 
-Its literacy and language strand is described in [Digital literacy](digital-literacy.md). Learners can [apply for a cohort](https://www.wiseceo.org/apply.html?program=education-access).
+Its literacy and language strand is described in [Digital literacy](digital-literacy.md). Learners can [join the interest list](https://www.wiseceo.org/apply.html?program=education-access).
 
 ## What is Entrepreneurship & Innovation?
 
@@ -24,7 +24,7 @@ Community Economic Resilience strengthens economically distressed communities th
 
 ## What impact has W.I.S.E.C.E.O. had?
 
-W.I.S.E.C.E.O. has reached more than 25,000 students, about 2,500 a year, with learners from 35 nations across 10 states plus Seattle.
+W.I.S.E.C.E.O. has served more than 25,000 learners and community members, about 2,500 a year, with learners from 35 nations across 10 states plus Seattle.
 
 ## How can a donation help?
 

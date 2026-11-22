@@ -6,19 +6,19 @@ tags: [initiatives, workforce, careers, youth]
 
 # Workforce Readiness & Training
 
-W.I.S.E.C.E.O.'s workforce programs connect learners to in-demand, high-wage careers through sector-based training, a no-cost career fellowship for high school students, and youth leadership development.
-
-## What is the WISECEO Academy Career Fellowship?
-
-The WISECEO Academy Career Fellowship is the flagship program: a no-cost, industry-backed fellowship for grades 9–12 that trains students for jobs in cybersecurity, energy and infrastructure, and AI. Students can [apply on the Programs page](https://www.wiseceo.org/programs.html).
+W.I.S.E.C.E.O.'s workforce programs connect learners to in-demand, high-wage careers through sector-based training and youth career and technology programs.
 
 ## What is Workforce Development?
 
 Workforce Development is sector-based training that aligns participants with in-demand, high-wage careers and connects them to competitive employers. Learners can [join the waitlist](https://www.wiseceo.org/apply.html?program=workforce).
 
-## What is the Youth Leadership Academy?
+## What is the Youth Career & Tech Initiative?
 
-The Youth Leadership Academy cultivates diverse young innovators through technology immersion, leadership development and career pathways. Students can [apply for a cohort](https://www.wiseceo.org/apply.html?program=youth-leadership).
+The Youth Career & Tech Initiative cultivates diverse young innovators through technology immersion, leadership development and career pathways. Young people can [join the interest list](https://www.wiseceo.org/apply.html?program=youth-leadership).
+
+## Is WISECEO Academy part of W.I.S.E.C.E.O.?
+
+No. WISECEO Academy (wiseceoacademy.com) is a separate for-profit enterprise that runs its own career fellowships and paid training. W.I.S.E.C.E.O. programs are listed on the [Programs page](https://www.wiseceo.org/programs.html).
 
 ## Which partners do learners work with?
 

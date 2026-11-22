@@ -5,7 +5,7 @@
 const { upsertContact, createMessage, clean, guard, send, EMAIL_RE } = require('./_lib/airtable');
 
 const PROGRAMS = {
-  'youth-leadership': 'Youth Leadership Academy',
+  'youth-leadership': 'Youth Career & Tech Initiative',
   'education-access': 'Education Access & Equity',
   'digital-literacy': 'Digital Literacy & Coding',
   'workforce': 'Workforce Development',

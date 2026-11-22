@@ -16,9 +16,8 @@ The current programs are listed on the [Programs page](https://www.wiseceo.org/p
 |---|---|
 | Digital Literacy & Coding | [Digital literacy](digital-literacy.md) |
 | Literacy & Language Access | [Digital literacy](digital-literacy.md) |
-| WISECEO Academy Career Fellowship | [Workforce development](workforce-development.md) |
 | Workforce Development | [Workforce development](workforce-development.md) |
-| Youth Leadership Academy | [Workforce development](workforce-development.md) |
+| Youth Career & Tech Initiative | [Workforce development](workforce-development.md) |
 | Education Access & Equity | [Economic mobility](economic-mobility.md) |
 | Entrepreneurship & Innovation | [Economic mobility](economic-mobility.md) |
 | Community Economic Resilience | [Economic mobility](economic-mobility.md) |

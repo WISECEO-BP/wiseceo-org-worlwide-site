@@ -46,7 +46,7 @@ MENU = [
                 ("Digital Literacy & Coding", "/programs.html#digital-literacy"),
                 ("Workforce Development", "/programs.html#workforce"),
                 ("Entrepreneurship & Innovation", "/programs.html#entrepreneurship"),
-                ("Youth Leadership Academy", "/programs.html#youth-leadership"),
+                ("Youth Career & Tech Initiative", "/programs.html#youth-leadership"),
                 ("Community Economic Resilience", "/programs.html#community-resilience"),
             ]),
             ("Learning & access", [

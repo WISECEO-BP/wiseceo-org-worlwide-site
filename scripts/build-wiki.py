@@ -47,7 +47,7 @@ BRAND_TERMS = [
     ("W.I.S.E.C.E.O.", "Everyday name of Worldwide Institute For Success And Excellence, an Ohio 501(c)(3) nonprofit."),
     ("Worldwide Institute For Success And Excellence", "Legal name of the 501(c)(3) nonprofit that operates as W.I.S.E.C.E.O. (EIN 41-3404888)."),
     ("WISECEO®", "Registered trademark form of the name, U.S. Reg. No. 6,954,676, registered January 17, 2023."),
-    ("WISECEO Academy", "The for-profit arm of WISECEO, operating under a distinct administrative structure."),
+    ("WISECEO Academy", "A separate for-profit enterprise (wiseceoacademy.com), legally and administratively distinct from W.I.S.E.C.E.O."),
     ("Creating Equity & Opportunity", "The organization's tagline; also the meaning of the letters C.E.O. in W.I.S.E.C.E.O."),
 ]
 SECTIONS = [  # sidebar "Knowledge Hub" list, in order

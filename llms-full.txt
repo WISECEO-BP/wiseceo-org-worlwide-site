@@ -121,7 +121,7 @@ Use "W.I.S.E.C.E.O." in running text and "Worldwide Institute For Success And Ex
 | Legal and formal documents | Worldwide Institute For Success And Excellence |
 | Everyday name | W.I.S.E.C.E.O. |
 | Trademark notice | W.I.S.E.C.E.O.™ · WISECEO® |
-| For-profit arm | WISECEO Academy |
+| Separate for-profit entity | WISECEO Academy (wiseceoacademy.com) |
 | Website | wiseceo.org (www.wiseceo.org) |
 
 ### What do the letters stand for?
@@ -138,7 +138,7 @@ The homepage names five: Digital Access & Equity, Workforce Development, Innovat
 
 ### Mascot
 
-The WISECEO Academy mascot is Opa Homakbi, an owl whose name is Choctaw for "Purple Owl." She helps learners pick a program track.
+W.I.S.E.C.E.O.'s community guide is Opa Homakbi, an owl whose name is Choctaw for "Purple Owl." She welcomes visitors on the Programs page.
 
 Sources: [Homepage](https://www.wiseceo.org/) · [About](https://www.wiseceo.org/about.html) · [Programs](https://www.wiseceo.org/programs.html)
 
@@ -212,7 +212,7 @@ You can verify tax-exempt status with the [IRS Tax Exempt Organization Search](h
 
 ### How do WISECEO and WISECEO Academy relate?
 
-WISECEO is the nonprofit; WISECEO Academy is its for-profit arm. The two operate under distinct administrative structures while sharing foundational educational frameworks and leadership.
+WISECEO, the 501(c)(3) nonprofit, and WISECEO Academy (wiseceoacademy.com), a separate for-profit enterprise, are legally and administratively distinct entities. Both license foundational instructional frameworks owned by Tiffany Davidson.
 
 ### Who owns the brand and curricula?
 
@@ -244,9 +244,8 @@ The current programs are listed on the [Programs page](https://www.wiseceo.org/p
 |---|---|
 | Digital Literacy & Coding | [Digital literacy](digital-literacy.md) |
 | Literacy & Language Access | [Digital literacy](digital-literacy.md) |
-| WISECEO Academy Career Fellowship | [Workforce development](workforce-development.md) |
 | Workforce Development | [Workforce development](workforce-development.md) |
-| Youth Leadership Academy | [Workforce development](workforce-development.md) |
+| Youth Career & Tech Initiative | [Workforce development](workforce-development.md) |
 | Education Access & Equity | [Economic mobility](economic-mobility.md) |
 | Entrepreneurship & Innovation | [Economic mobility](economic-mobility.md) |
 | Community Economic Resilience | [Economic mobility](economic-mobility.md) |
@@ -320,7 +319,7 @@ W.I.S.E.C.E.O.'s economic mobility work widens access to education, supports sma
 
 Education Access & Equity expands access to quality education for first-generation students, English language learners, immigrants and refugees, building pathways to economic mobility.
 
-Its literacy and language strand is described in [Digital literacy](digital-literacy.md). Learners can [apply for a cohort](https://www.wiseceo.org/apply.html?program=education-access).
+Its literacy and language strand is described in [Digital literacy](digital-literacy.md). Learners can [join the interest list](https://www.wiseceo.org/apply.html?program=education-access).
 
 ### What is Entrepreneurship & Innovation?
 
@@ -332,7 +331,7 @@ Community Economic Resilience strengthens economically distressed communities th
 
 ### What impact has W.I.S.E.C.E.O. had?
 
-W.I.S.E.C.E.O. has reached more than 25,000 students, about 2,500 a year, with learners from 35 nations across 10 states plus Seattle.
+W.I.S.E.C.E.O. has served more than 25,000 learners and community members, about 2,500 a year, with learners from 35 nations across 10 states plus Seattle.
 
 ### How can a donation help?
 
@@ -348,19 +347,19 @@ URL: https://www.wiseceo.org/wiki/02-initiatives/economic-mobility.md
 
 ## Workforce Readiness & Training
 
-W.I.S.E.C.E.O.'s workforce programs connect learners to in-demand, high-wage careers through sector-based training, a no-cost career fellowship for high school students, and youth leadership development.
-
-### What is the WISECEO Academy Career Fellowship?
-
-The WISECEO Academy Career Fellowship is the flagship program: a no-cost, industry-backed fellowship for grades 9–12 that trains students for jobs in cybersecurity, energy and infrastructure, and AI. Students can [apply on the Programs page](https://www.wiseceo.org/programs.html).
+W.I.S.E.C.E.O.'s workforce programs connect learners to in-demand, high-wage careers through sector-based training and youth career and technology programs.
 
 ### What is Workforce Development?
 
 Workforce Development is sector-based training that aligns participants with in-demand, high-wage careers and connects them to competitive employers. Learners can [join the waitlist](https://www.wiseceo.org/apply.html?program=workforce).
 
-### What is the Youth Leadership Academy?
+### What is the Youth Career & Tech Initiative?
 
-The Youth Leadership Academy cultivates diverse young innovators through technology immersion, leadership development and career pathways. Students can [apply for a cohort](https://www.wiseceo.org/apply.html?program=youth-leadership).
+The Youth Career & Tech Initiative cultivates diverse young innovators through technology immersion, leadership development and career pathways. Young people can [join the interest list](https://www.wiseceo.org/apply.html?program=youth-leadership).
+
+### Is WISECEO Academy part of W.I.S.E.C.E.O.?
+
+No. WISECEO Academy (wiseceoacademy.com) is a separate for-profit enterprise that runs its own career fellowships and paid training. W.I.S.E.C.E.O. programs are listed on the [Programs page](https://www.wiseceo.org/programs.html).
 
 ### Which partners do learners work with?
 
