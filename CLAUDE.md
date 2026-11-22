@@ -16,6 +16,8 @@ Static HTML site plus Node serverless functions in `/api`, deployed by Vercel fr
 ## Conventions
 - Every registration form must include the required checkbox: "By registering, you agree to the terms and policies set forth at wiseceo.org/legal." (linked to /legal.html), checked in the browser and in the `/api` handler.
 - After changing page text, run `python3 scripts/build-search-index.py`.
+- The main menu (desktop dropdowns and mobile accordion) is generated: edit `MENU` in `scripts/build-nav.py`, then run `python3 scripts/build-nav.py && python3 scripts/build-search-index.py`. Don't hand-edit the menu in pages.
+- Don't change article header images unless the owner asks.
 - Never ask the owner to paste API keys or tokens into chat; they belong in Vercel or Airtable settings.
 - Don't name third-party vendors in visible page copy unless the owner approves (the privacy policy is the exception; ask before changing it).
 

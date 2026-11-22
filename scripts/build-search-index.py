@@ -13,7 +13,9 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 SKIP_IDS = {"hero", "contactForm", "contactStatus", "apply-form", "apply-sub", "apply-title",
             "search-title", "search-status", "search-results", "search-input", "mobile-menu", "search-modal",
             # Generic page wrappers reused across pages; the page entry already covers them.
-            "about", "programs", "contact", "newsletter", "articles"}
+            "about", "programs", "contact", "newsletter", "articles",
+            # Main-menu dropdown panels (scripts/build-nav.py).
+            "mega-about", "mega-programs", "mega-news", "mega-involved"}
 
 
 def text(fragment):
