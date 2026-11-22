@@ -27,7 +27,7 @@ You can verify tax-exempt status with the [IRS Tax Exempt Organization Search](h
 
 ## How do WISECEO and WISECEO Academy relate?
 
-WISECEO is the nonprofit; WISECEO Academy is its for-profit arm. The two operate under distinct administrative structures while sharing foundational educational frameworks and leadership.
+WISECEO, the 501(c)(3) nonprofit, and WISECEO Academy (wiseceoacademy.com), a separate for-profit enterprise, are legally and administratively distinct entities. Both license foundational instructional frameworks owned by Tiffany Davidson.
 
 ## Who owns the brand and curricula?
 

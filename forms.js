@@ -77,7 +77,7 @@ if(cf){
 /* ---------- Program application ---------- */
 var af=document.getElementById('applyForm');
 if(af){
-  var TITLES={'youth-leadership':'Apply for the Youth Leadership Academy cohort.','education-access':'Apply for the Education Access & Equity cohort.',
+  var TITLES={'youth-leadership':'Join the interest list for the Youth Career & Tech Initiative.','education-access':'Join the interest list for Education Access & Equity.',
     'digital-literacy':'Join the waitlist for Digital Literacy & Coding.','workforce':'Join the waitlist for Workforce Development.',
     'entrepreneurship':'Partner with us on Entrepreneurship & Innovation.','community-resilience':'Partner with us on Community Economic Resilience.'};
   var prog=af.querySelector('[name=program]'),who=af.querySelector('[name=applicant]'),gWrap=document.getElementById('af-guardian-wrap');

@@ -4,12 +4,6 @@
   "apply": "https://www.wiseceo.org/apply.html",
   "services": [
     {
-      "name": "WISECEO Academy Career Fellowship",
-      "audience": "High school students, grades 9–12",
-      "description": "No-cost, industry-backed fellowship in cybersecurity, energy and infrastructure, and AI.",
-      "url": "https://www.wiseceo.org/programs.html"
-    },
-    {
       "name": "Digital Literacy & Coding",
       "description": "Coding, creativity, and technology education for communities historically left behind, through app design and hands-on learning.",
       "url": "https://www.wiseceo.org/programs.html#digital-literacy"
@@ -25,7 +19,7 @@
       "url": "https://www.wiseceo.org/programs.html"
     },
     {
-      "name": "Youth Leadership Academy",
+      "name": "Youth Career & Tech Initiative",
       "description": "Technology immersion, leadership development, and career pathways for young people.",
       "url": "https://www.wiseceo.org/programs.html#youth-leadership"
     },

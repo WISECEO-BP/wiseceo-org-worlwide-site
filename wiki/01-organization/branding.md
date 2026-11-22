@@ -18,7 +18,7 @@ Use "W.I.S.E.C.E.O." in running text and "Worldwide Institute For Success And Ex
 | Legal and formal documents | Worldwide Institute For Success And Excellence |
 | Everyday name | W.I.S.E.C.E.O. |
 | Trademark notice | W.I.S.E.C.E.O.™ · WISECEO® |
-| For-profit arm | WISECEO Academy |
+| Separate for-profit entity | WISECEO Academy (wiseceoacademy.com) |
 | Website | wiseceo.org (www.wiseceo.org) |
 
 ## What do the letters stand for?
@@ -35,7 +35,7 @@ The homepage names five: Digital Access & Equity, Workforce Development, Innovat
 
 ## Mascot
 
-The WISECEO Academy mascot is Opa Homakbi, an owl whose name is Choctaw for "Purple Owl." She helps learners pick a program track.
+W.I.S.E.C.E.O.'s community guide is Opa Homakbi, an owl whose name is Choctaw for "Purple Owl." She welcomes visitors on the Programs page.
 
 Sources: [Homepage](https://www.wiseceo.org/) · [About](https://www.wiseceo.org/about.html) · [Programs](https://www.wiseceo.org/programs.html)
 
