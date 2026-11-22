@@ -130,7 +130,7 @@ the **Confirm Link** field exists.
        This link works for 7 days. If you didn't contact us, you can ignore this
        email and nothing will be sent.
 
-       W.I.S.E.C.E.O. · Worldwide Institute For Success And Excellence
+       W.I.S.E.C.E.O. · Worldwide Institute for Success and Excellence
        ```
 3. **Automation 2: "New confirmed message → team"**
    - Trigger: *When a record matches conditions*, table **Website Messages**:

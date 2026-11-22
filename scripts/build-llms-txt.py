@@ -61,7 +61,7 @@ def wiki_entries():
 lines = [
     "# W.I.S.E.C.E.O.",
     "",
-    "> Worldwide Institute For Success And Excellence (W.I.S.E.C.E.O.) is an Ohio-based 501(c)(3) "
+    "> Worldwide Institute for Success and Excellence (W.I.S.E.C.E.O.) is an Ohio-based 501(c)(3) "
     "nonprofit (EIN 41-3404888) advancing digital literacy, workforce development and economic mobility "
     "for underserved communities. Founded by Tiffany Davidson, M.Ed. LSLS, M.Ed. C&I. Headquartered in "
     "West Chester, Ohio.",

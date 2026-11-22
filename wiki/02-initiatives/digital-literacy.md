@@ -19,7 +19,7 @@ Literacy & Language Access brings research-based reading and language instructio
 It has five strands:
 
 - **Family literacy:** guides and gatherings that help caregivers build reading habits at home, in English or their home language.
-- **English learner support:** SIOP-informed strategies and academic-language development for multilingual and newcomer students.
+- **English learner support:** SIOP-informed strategies and academic-language development for multilingual and newcomer learners.
 - **Family advocacy and IEP navigation:** plain-language workshops on special education, IEPs and 504 plans, including for families who speak a language other than English.
 - **Educator learning:** differentiation, SIOP and literacy across the content areas for teachers and paraprofessionals.
 - **Career and digital literacy:** technical vocabulary, job applications, workplace communication and the digital skills employers expect.

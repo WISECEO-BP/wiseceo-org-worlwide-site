@@ -22,7 +22,7 @@ No. WISECEO Academy (wiseceoacademy.com) is a separate for-profit enterprise tha
 
 ## Which partners do learners work with?
 
-Students we teach and mentor take part in programs led by national, regional and civic organizations:
+Learners we mentor take part in programs led by national, regional and civic organizations:
 
 - **Amazon Future Engineer:** Amazon's childhood-to-career computer science and STEM program.
 - **AWS Community Engagement:** technology education, volunteers and career exposure for local learners.

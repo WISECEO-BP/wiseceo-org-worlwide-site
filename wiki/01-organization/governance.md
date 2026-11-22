@@ -6,7 +6,7 @@ tags: [organization, governance, legal]
 
 # Governance & Legal Status
 
-W.I.S.E.C.E.O. operates as Worldwide Institute For Success And Excellence, a registered 501(c)(3) nonprofit organization with EIN 41-3404888. Donations are tax-deductible to the fullest extent allowed by law.
+W.I.S.E.C.E.O. operates as Worldwide Institute for Success and Excellence, a registered 501(c)(3) nonprofit organization with EIN 41-3404888. Donations are tax-deductible to the fullest extent allowed by law.
 
 ## What are the official registration details?
 
@@ -14,7 +14,7 @@ These are the organization's official identifiers:
 
 | | |
 |---|---|
-| Legal name | Worldwide Institute For Success And Excellence |
+| Legal name | Worldwide Institute for Success and Excellence |
 | Tax status | 501(c)(3) nonprofit organization |
 | EIN | 41-3404888 |
 | Trademark | WISECEO®, U.S. Reg. No. 6,954,676, registered January 17, 2023 |

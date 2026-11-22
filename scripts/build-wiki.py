@@ -44,8 +44,8 @@ RTL = {"ar", "fa", "ps"}
 # Official terminology published as a schema.org DefinedTermSet on the brand page
 # (every term and definition is taken from that page and the About page).
 BRAND_TERMS = [
-    ("W.I.S.E.C.E.O.", "Everyday name of Worldwide Institute For Success And Excellence, an Ohio 501(c)(3) nonprofit."),
-    ("Worldwide Institute For Success And Excellence", "Legal name of the 501(c)(3) nonprofit that operates as W.I.S.E.C.E.O. (EIN 41-3404888)."),
+    ("W.I.S.E.C.E.O.", "Everyday name of Worldwide Institute for Success and Excellence, an Ohio 501(c)(3) nonprofit."),
+    ("Worldwide Institute for Success and Excellence", "Legal name of the 501(c)(3) nonprofit that operates as W.I.S.E.C.E.O. (EIN 41-3404888)."),
     ("WISECEO®", "Registered trademark form of the name, U.S. Reg. No. 6,954,676, registered January 17, 2023."),
     ("WISECEO Academy", "A separate for-profit enterprise (wiseceoacademy.com), legally and administratively distinct from W.I.S.E.C.E.O."),
     ("Creating Equity & Opportunity", "The organization's tagline; also the meaning of the letters C.E.O. in W.I.S.E.C.E.O."),
@@ -297,7 +297,7 @@ def build_page(md_path, published):
         "about": {"@id": ORG_ID},
         "author": {"@type": "Person", "@id": FOUNDER_ID, "name": "Tiffany Davidson",
                    "honorificSuffix": "M.Ed. LSLS, M.Ed. C&I", "url": SITE + "/tiffanydavidson"},
-        "publisher": {"@type": "NGO", "@id": ORG_ID, "name": "Worldwide Institute For Success And Excellence",
+        "publisher": {"@type": "NGO", "@id": ORG_ID, "name": "Worldwide Institute for Success and Excellence",
                       "logo": SITE + "/logo.webp"},
     }
     if date:
@@ -381,7 +381,7 @@ def build_page(md_path, published):
         f'<div class="wiki-body">{content}</div>'
         '<footer class="wiki-foot">'
         + (f"Last updated {html.escape(date)}. " if date else "")
-        + 'Published by <a href="/">Worldwide Institute For Success And Excellence (W.I.S.E.C.E.O.)</a>, '
+        + 'Published by <a href="/">Worldwide Institute for Success and Excellence (W.I.S.E.C.E.O.)</a>, '
         'a 501(c)(3) nonprofit · West Chester, Ohio.</footer>'
         f'</main><script src="{up}wiki.js" defer></script></body></html>'
     )

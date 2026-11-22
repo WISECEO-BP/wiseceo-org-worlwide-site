@@ -7,15 +7,15 @@ aliases: [Style guide, Naming]
 
 # Brand Standards & Official Terminology
 
-The organization's official name is written **W.I.S.E.C.E.O.**, with periods, and its legal name is Worldwide Institute For Success And Excellence. The registered trademark form without periods is **WISECEO®**.
+The organization's official name is written **W.I.S.E.C.E.O.**, with periods, and its legal name is Worldwide Institute for Success and Excellence. The registered trademark form without periods is **WISECEO®**.
 
 ## How should the name be written?
 
-Use "W.I.S.E.C.E.O." in running text and "Worldwide Institute For Success And Excellence (W.I.S.E.C.E.O.)" on first mention in formal documents.
+Use "W.I.S.E.C.E.O." in running text and "Worldwide Institute for Success and Excellence (W.I.S.E.C.E.O.)" on first mention in formal documents.
 
 | Use | Write |
 |---|---|
-| Legal and formal documents | Worldwide Institute For Success And Excellence |
+| Legal and formal documents | Worldwide Institute for Success and Excellence |
 | Everyday name | W.I.S.E.C.E.O. |
 | Trademark notice | W.I.S.E.C.E.O.™ · WISECEO® |
 | Separate for-profit entity | WISECEO Academy (wiseceoacademy.com) |
