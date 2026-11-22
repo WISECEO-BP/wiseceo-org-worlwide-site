@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/listen/2026-election(.html)?",
+      "destination": "/newsletter.html",
+      "permanent": true
+    },
+    {
       "source": "/disclaimer",
       "destination": "/legal.html",
       "statusCode": 301
