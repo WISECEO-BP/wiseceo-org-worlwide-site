@@ -14,7 +14,7 @@ Workforce Development is sector-based training that aligns participants with in-
 
 ## What is the Youth Career & Tech Initiative?
 
-The Youth Career & Tech Initiative cultivates diverse young innovators through technology immersion, leadership development and career pathways. Young people can [join the interest list](https://www.wiseceo.org/apply.html?program=youth-leadership).
+The Youth Career & Tech Initiative offers out-of-school career exploration, technical skill-building and community mentorship that help young people build practical readiness and economic mobility. Young people can [join the interest list](https://www.wiseceo.org/apply.html?program=youth-leadership).
 
 ## Is WISECEO Academy part of W.I.S.E.C.E.O.?
 
