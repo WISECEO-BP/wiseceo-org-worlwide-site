@@ -27,6 +27,22 @@ function setHC(on,save){
 setHC(root.classList.contains('hc'),false);
 hcToggles.forEach(function(t){t.addEventListener('click',function(){setHC(!root.classList.contains('hc'),true);});});
 
+/* ---- Dark mode (saved as "theme", the same setting the Knowledge Hub uses) ---- */
+var themeToggles=$$('[data-theme-toggle]');
+function isDark(){return root.getAttribute('data-theme')==='dark';}
+function setTheme(dark,save){
+  if(dark)root.setAttribute('data-theme','dark');else root.removeAttribute('data-theme');
+  themeToggles.forEach(function(t){t.setAttribute('aria-checked',dark?'true':'false');});
+  if(save)store('theme',dark?'dark':'light');
+}
+setTheme(isDark(),false);
+themeToggles.forEach(function(t){t.addEventListener('click',function(){setTheme(!isDark(),true);});});
+if(window.matchMedia){
+  var mq=matchMedia('(prefers-color-scheme: dark)');
+  var follow=function(e){if(store('theme')===null)setTheme(e.matches,false);};
+  if(mq.addEventListener)mq.addEventListener('change',follow);else if(mq.addListener)mq.addListener(follow);
+}
+
 /* ---- Language (Google Website Translator, loaded only when a language is chosen) ---- */
 var langSelects=$$('[data-lang-select]');
 function currentLang(){var m=document.cookie.match(/(?:^|;\s*)googtrans=\/[^\/;]*\/([^;]+)/);return m?decodeURIComponent(m[1]):'en';}
