@@ -13,7 +13,7 @@ aliases: [Wiki home, WISECEO wiki, W.I.S.E.C.E.O. Knowledge Hub]
 
 ## Overview
 
-Worldwide Institute for Success and Excellence (W.I.S.E.C.E.O.) is a 501(c)(3) nonprofit founded by Tiffany Davidson, M.Ed. LSLS, M.Ed. C&I, that advances digital literacy, workforce development and economic mobility for underserved learners. It has reached more than 25,000 students, with learners from 35 nations.
+Worldwide Institute for Success and Excellence (W.I.S.E.C.E.O.) is a 501(c)(3) nonprofit founded by Tiffany Davidson, M.Ed. LSLS, M.Ed. C&I, that advances digital literacy, workforce development and economic mobility for underserved learners. It has served more than 25,000 learners and community members, with learners from 35 nations.
 
 W.I.S.E.C.E.O. bridges professional expertise with community-empowering frameworks, focusing on sustainable educational and economic equity. See the [organizational overview](01-organization/index.md).
 
@@ -27,11 +27,11 @@ W.I.S.E.C.E.O.'s three core initiatives are digital literacy, workforce developm
 
 ## Governance & Leadership
 
-Worldwide Institute For Success And Excellence (W.I.S.E.C.E.O.) is a registered Ohio 501(c)(3) nonprofit (EIN 41-3404888) headquartered in West Chester, Ohio, and led by founder [Tiffany Davidson, M.Ed. LSLS, M.Ed. C&I](01-organization/founder.md). It also has chapters in Kentucky, Florida and Mississippi.
+Worldwide Institute for Success and Excellence (W.I.S.E.C.E.O.) is a registered Ohio 501(c)(3) nonprofit (EIN 41-3404888) headquartered in West Chester, Ohio, and led by founder [Tiffany Davidson, M.Ed. LSLS, M.Ed. C&I](01-organization/founder.md). It also has chapters in Kentucky, Florida and Mississippi.
 
 | | |
 |---|---|
-| Legal name | Worldwide Institute For Success And Excellence |
+| Legal name | Worldwide Institute for Success and Excellence |
 | Also known as | W.I.S.E.C.E.O.™ · WISECEO® |
 | Tax status | 501(c)(3) nonprofit, EIN 41-3404888 |
 | Founder | Tiffany Davidson, M.Ed. LSLS, M.Ed. C&I |

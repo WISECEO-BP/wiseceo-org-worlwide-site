@@ -6,7 +6,7 @@ tags: [organization, mission]
 
 # Organizational Overview & Mission
 
-W.I.S.E.C.E.O. (Worldwide Institute For Success And Excellence) is an independent, community-based 501(c)(3) nonprofit that dismantles systemic barriers to technology, education and economic opportunity for underserved communities. It was founded and is led by educators with more than 30 years in the public school system.
+W.I.S.E.C.E.O. (Worldwide Institute for Success and Excellence) is an independent, community-based 501(c)(3) nonprofit that dismantles systemic barriers to technology, education and economic opportunity for underserved communities. It was founded by veteran educators.
 
 ## What is the mission?
 
@@ -21,7 +21,7 @@ We envision a world where every learner, whatever their language, origin or zip 
 We serve learners historically underrepresented in technology and the workforce. That includes:
 
 - Refugees and immigrants, including newcomer families and English learners
-- Underserved students, high school age and older
+- Underserved teens and adults
 - Underserved women and girls
 - Veterans
 - First-generation and low-income youth and adults seeking economic mobility
@@ -34,7 +34,7 @@ We are headquartered in West Chester, Ohio, with chapters in Kentucky, Florida a
 
 Programs are run by dedicated program staff, supported by trained volunteers and chapter leads, and delivered through our chapters and partner organizations.
 
-That network lets us enroll and support cohorts of 250 or more learners at a time. W.I.S.E.C.E.O. is not a school, a government agency or a religious organization.
+That network lets us welcome and support groups of 250 or more learners at a time. W.I.S.E.C.E.O. is not a school, a government agency or a religious organization.
 
 ## Pages in this section
 
