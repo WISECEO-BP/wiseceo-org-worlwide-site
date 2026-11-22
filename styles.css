@@ -559,18 +559,15 @@ html.hc .apply-form .check{background:#000;color:#fff;border-color:#fff}
 .mega-btn.active,.mega-link.active{color:var(--blue)}
 .mega-chev{width:14px;height:14px;transition:transform .2s}
 .mega-btn[aria-expanded="true"] .mega-chev{transform:rotate(180deg)}
-.mega-panel{position:absolute;top:100%;left:0;right:0;background:var(--white);border-top:1px solid var(--light-border);box-shadow:0 18px 40px rgba(0,0,0,.14);z-index:1050}
+.mega-item{position:relative}
+.mega-btn,.mega-link{border-bottom-width:4px}
+.mega-panel{position:absolute;top:100%;left:0;min-width:300px;background:var(--white);border:1px solid var(--light-border);border-radius:4px;box-shadow:0 12px 32px rgba(0,0,0,.14);padding:18px 0;z-index:1050}
+.mega-item:nth-last-child(2) .mega-panel{left:auto;right:0}
 .mega-panel[hidden]{display:none}
-.mega-inner{max-width:1100px;margin:0 auto;padding:32px 40px 36px;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px}
-.mega-intro{border-right:1px solid var(--light-border);padding-right:32px}
-.mega-kicker{font-size:1.35rem;font-weight:700;letter-spacing:-.02em;color:var(--dark);margin-bottom:10px}
-.mega-intro p:not(.mega-kicker){color:#3a3a3c;font-size:.95rem;line-height:1.6;margin-bottom:16px}
-.mega-more{color:var(--blue)!important;font-weight:700;font-size:.92rem!important;opacity:1!important}
-.mega-col h3{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--gray);margin-bottom:12px}
-.mega-col ul{list-style:none;margin:0;padding:0}
-.mega-col a{display:block;padding:7px 0;font-size:.95rem!important;font-weight:500;color:var(--dark)!important;opacity:1!important}
-.mega-col a:hover,.mega-col a:focus-visible{color:var(--blue)!important;text-decoration:underline}
-.mega-col a[aria-current="page"]{color:var(--blue)!important;font-weight:700}
+.drop-list{list-style:none;margin:0;padding:0}
+.drop-list a{display:block;padding:11px 32px;white-space:nowrap;font-size:1.02rem!important;font-weight:400;color:#4a4a4f!important;opacity:1!important}
+.drop-list a:hover,.drop-list a:focus-visible{color:var(--blue)!important;background:var(--off-white)}
+.drop-list a[aria-current="page"]{color:var(--blue)!important;font-weight:600}
 @media(max-width:960px){.mega-nav{display:none}}
 @media(prefers-reduced-motion:reduce){.mega-chev{transition:none}}
 html.hc .mega-panel{border:2px solid #000!important}
