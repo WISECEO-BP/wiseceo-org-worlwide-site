@@ -19,6 +19,7 @@ Static HTML site plus Node serverless functions in `/api`, deployed by Vercel fr
 - The main menu (desktop dropdowns and mobile accordion) is generated: edit `MENU` in `scripts/build-nav.py`, then run `python3 scripts/build-nav.py && python3 scripts/build-search-index.py`. Don't hand-edit the menu in pages.
 - Don't change article header images unless the owner asks.
 - Dark mode: `html[data-theme="dark"]` swaps the color variables in `styles.css` (saved as localStorage `theme`, shared with the wiki). Use `var(--…)` colors in new CSS, not hard-coded hex, so new sections work in both modes.
+- Voice: headlines and calls to action center the people W.I.S.E.C.E.O. serves (learners, families, communities), not the organization. Write "Every learner deserves an open door," not "Help us open more doors."
 - Never ask the owner to paste API keys or tokens into chat; they belong in Vercel or Airtable settings.
 - Don't name third-party vendors in visible page copy unless the owner approves (the privacy policy is the exception; ask before changing it).
 
