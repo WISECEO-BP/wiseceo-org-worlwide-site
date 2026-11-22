@@ -19,6 +19,11 @@ Static HTML site plus Node serverless functions in `/api`, deployed by Vercel fr
 - Never ask the owner to paste API keys or tokens into chat; they belong in Vercel or Airtable settings.
 - Don't name third-party vendors in visible page copy unless the owner approves (the privacy policy is the exception; ask before changing it).
 
+## Newsletter & Blog
+- Don't put the newsletter feed or full newsletter issues on wiseceo.org; link to `https://newsletter.wiseceo.org/subscribe` instead. Partner programs (Microsoft, GitLab) exclude political, religious and policy-influencing organizations.
+- `/blog.html` lists only posts that pass this screen: no election coverage or results, no candidates or parties, no urging lawmakers or the public to support or oppose a policy or bill, and no religious content. Practical guides on literacy, language access, family resources and workforce readiness qualify. If a post is borderline, ask the owner before adding it.
+- When adding a post, add its card and its `BlogPosting` entry in the page's JSON-LD, then run `python3 scripts/build-search-index.py`.
+
 ## Automated GEO Rules for Every Content Addition
 Whenever new pages, wiki entries, or blog posts are created or edited in this repository:
 1. **Mini-Answer Formatting:** Ensure major headings are immediately followed by 1-to-2-sentence direct answers for RAG extraction.
